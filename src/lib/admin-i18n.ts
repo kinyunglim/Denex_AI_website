@@ -7,6 +7,7 @@ import { cookies } from 'next/headers';
  */
 const dict = {
   'zh-Hant': {
+    orders: '訂單', needsReview: '待審批訂單', approve: '批准並開始製作', reject: '拒絕', retry: '重試製作', rejectReason: '拒絕原因（會通知客人）', orderStatus: '狀態', package: '方案', theme: '風格', languages: '語言', addOns: '加購', customer: '聯絡人', business: '公司', oneOffFee: '製作費', monthlyFee: '月費', depositHeld: '訂金', productionLog: '製作記錄', repo: '項目位置', answersJson: '下載 answers.json', history: '進度', holdAge: '預授權已過 {d} 日（Stripe 約 7 日後失效）', goLive: '上線清單', workerHint: '批准後，喺你部電腦執行 corepack yarn order:worker 就會自動生成網站。',
     dashboard: '總覽', contacts: '客戶', inbox: '查詢', import: '匯入匯出', bookings: '預約', bookingSetup: '預約設定',
     payments: '收款', products: '產品', team: '團隊', logout: '登出', viewSite: '查看網站',
     contactsTotal: '客戶總數', unhandled: '未處理查詢', upcoming: '即將預約', revenueMonth: '本月收款',
@@ -29,6 +30,7 @@ const dict = {
     admin: '後台', importSource: '匯入', catalogSource: '產品查詢', bookingSource: '預約', noModule: '此模組未啟用。',
   },
   en: {
+    orders: 'Orders', needsReview: 'Orders to review', approve: 'Approve & start production', reject: 'Reject', retry: 'Retry production', rejectReason: 'Reason (sent to the customer)', orderStatus: 'Status', package: 'Package', theme: 'Theme', languages: 'Languages', addOns: 'Add-ons', customer: 'Contact', business: 'Business', oneOffFee: 'Build fee', monthlyFee: 'Monthly', depositHeld: 'Deposit', productionLog: 'Production log', repo: 'Project folder', answersJson: 'Download answers.json', history: 'History', holdAge: 'Card hold is {d} days old (Stripe releases it after about 7 days)', goLive: 'Go-live checklist', workerHint: 'After approval, run corepack yarn order:worker on your computer and the site is generated automatically.',
     dashboard: 'Dashboard', contacts: 'Contacts', inbox: 'Inbox', import: 'Import / export', bookings: 'Bookings', bookingSetup: 'Booking setup',
     payments: 'Payments', products: 'Products', team: 'Team', logout: 'Log out', viewSite: 'View site',
     contactsTotal: 'Contacts', unhandled: 'Open enquiries', upcoming: 'Upcoming bookings', revenueMonth: 'Revenue this month',

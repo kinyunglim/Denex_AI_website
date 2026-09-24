@@ -17,7 +17,8 @@
     "client:init": "tsx scripts/client-init.ts",
     "client:check": "tsx scripts/client-check.ts",
     "dev:preview": "node scripts/dev-memory.mjs --preview",
-    "admin:create": "tsx scripts/create-admin.ts"
+    "admin:create": "tsx scripts/create-admin.ts",
+    "order:worker": "tsx scripts/order-worker.ts"
   },
   "dependencies": {
     "@googleapis/calendar": "^16.0.0",

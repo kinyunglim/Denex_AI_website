@@ -18,6 +18,7 @@ export default async function AdminAppLayout({ children }: { children: ReactNode
 
   const items: NavItem[] = [
     { href: '/admin', label: t('dashboard') },
+    { href: '/admin/orders', label: t('orders') },
     { href: '/admin/contacts', label: t('contacts') },
     { href: '/admin/inbox', label: t('inbox') },
     ...(cfg.modules.booking ? [{ href: '/admin/bookings', label: t('bookings') }, { href: '/admin/bookings/setup', label: t('bookingSetup') }] : []),

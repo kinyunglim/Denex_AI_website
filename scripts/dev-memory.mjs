@@ -3,11 +3,14 @@
 //   yarn dev:memory [--theme warm] [--port 3000] [--preview] [--dist .next-other]
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { MongoMemoryReplSet } from 'mongodb-memory-server';
 
 // Run from the project root even when launched from elsewhere.
 const root = fileURLToPath(new URL('..', import.meta.url));
 process.chdir(root);
+
+// Pin the MongoDB binary (shared cache in ~/.cache/mongodb-binaries) before the library loads.
+process.env.MONGOMS_VERSION ||= '8.0.12';
+const { MongoMemoryReplSet } = await import('mongodb-memory-server');
 
 const args = process.argv.slice(2);
 const flag = (name, fallback) => {
@@ -33,7 +36,8 @@ if (preview) {
     const seed = spawn(process.execPath, ['scripts/seed-demo.mjs', '--theme', theme], { env, stdio: 'inherit' });
     seed.on('exit', (code) => (code === 0 ? resolve() : reject(new Error(`seed failed (${code})`))));
   });
-  console.log(`\n[dev-memory] In-memory MongoDB ready (${theme} demo data). Admin login: admin / admin\n`);
+  console.log(`\n[dev-memory] In-memory MongoDB ready (${theme} demo data). Admin login: admin / admin`);
+  console.log(`[dev-memory] MONGODB_URI=${env.MONGODB_URI} MONGODB_DB=${env.MONGODB_DB}\n`);
 }
 
 const nextBin = fileURLToPath(new URL('../node_modules/next/dist/bin/next', import.meta.url));

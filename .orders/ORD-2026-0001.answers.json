@@ -1,0 +1,34 @@
+{
+  "slug": "sharp-barber-club",
+  "business": {
+    "name": {
+      "zh-Hant": "剪型所",
+      "en": "Sharp Barber Club"
+    },
+    "phone": "+852 2388 0000",
+    "whatsapp": "",
+    "email": "shop@sharp.example",
+    "address": {
+      "zh-Hant": ""
+    }
+  },
+  "locales": [
+    "zh-Hant",
+    "en",
+    "zh-Hans"
+  ],
+  "theme": "bold",
+  "modules": [
+    "booking",
+    "payments",
+    "stripe"
+  ],
+  "notifyEmails": [
+    "shop@sharp.example"
+  ],
+  "owner": {
+    "name": "Jay Wong",
+    "email": "jay@sharp.example"
+  },
+  "domain": "www.sharp.example"
+}

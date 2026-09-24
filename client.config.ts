@@ -41,9 +41,7 @@ export default defineClientConfig({
     "contact"
   ],
   "notify": {
-    "email": [
-      "kinyunglim@gmail.com"
-    ]
+    "email": []
   },
   "timezone": "Asia/Hong_Kong",
   "currency": "HKD"

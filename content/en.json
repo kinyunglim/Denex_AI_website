@@ -1,58 +1,58 @@
 {
   "hero": {
-    "eyebrow": "Strategy · Digital transformation",
-    "title": "From strategy to execution",
-    "subtitle": "We work alongside leadership teams to turn market opportunities into plans people can actually run.",
-    "cta": "Book a free consultation",
+    "eyebrow": "Websites · Booking · CRM",
+    "title": "A website that actually runs your business, in two weeks",
+    "subtitle": "Customers book, enquire and pay directly, and every one of them lands in your client list. Try the templates first; order when you're happy.",
+    "cta": "Book a free 30-minute call",
     "image": ""
   },
   "services": {
-    "title": "What we do",
+    "title": "What we build",
     "items": [
       {
-        "title": "Market entry",
-        "description": "Research, positioning and entry roadmaps for the Greater Bay Area and Southeast Asia.",
-        "price": ""
+        "title": "Business website",
+        "description": "Traditional Chinese / English / Simplified Chinese, mobile-first, with SEO and Google Business Profile.",
+        "price": "From HK$8,800"
       },
       {
-        "title": "Digital transformation",
-        "description": "Process mapping, system selection and roll-out, from assessment to go-live.",
-        "price": ""
+        "title": "Online booking & payments",
+        "description": "Customers pick their own time; you see the whole week in one screen. Payments issue receipts automatically.",
+        "price": "From HK$16,800"
       },
       {
-        "title": "Brand & communications",
-        "description": "Company story, investor decks and external messaging.",
-        "price": ""
+        "title": "Client management (CRM)",
+        "description": "Import your Excel list in one go; every enquiry, booking and payment per client on one page.",
+        "price": "Included in every plan"
       }
     ]
   },
   "cases": {
-    "title": "Case studies",
+    "title": "Examples",
     "items": [
       {
-        "title": "Retail chain enters Shenzhen",
-        "description": "Site selection, partner matching and launch campaign in six months.",
+        "title": "Fitness studio (physio + personal training)",
+        "description": "Online booking, therapist schedules, client records and receipts, replacing manual spreadsheets.",
         "image": ""
       },
       {
-        "title": "Logistics firm modernises",
-        "description": "Replaced spreadsheets with a cloud CRM; order handling time down 40%.",
+        "title": "B2B seafood export platform",
+        "description": "Trilingual product catalogue with enquiry forms for overseas buyers.",
         "image": ""
       },
       {
-        "title": "Start-up closes Series A",
-        "description": "Rebuilt the business plan and pitch deck ahead of a successful raise.",
+        "title": "Business consultancy",
+        "description": "Corporate website with case studies and consultation contact.",
         "image": ""
       }
     ]
   },
   "about": {
-    "title": "About us",
-    "body": "Summit Advisory was founded by consultants from multinational corporates and investment firms. Good strategy should be simple, measurable and executable by the client's own team.",
+    "title": "How it works",
+    "body": "1. Try the four styles on the Templates page.\n2. Pick a plan and add-ons and order online (the deposit is only charged after we confirm).\n3. We generate your site from our proven system, then tailor it with your copy and photos.\n4. We train your team before launch; hosting, backups and security updates are covered monthly.",
     "image": ""
   },
   "contact": {
-    "title": "Contact us",
-    "body": "Leave your details and we will reply within one business day."
+    "title": "Not sure yet? Let's talk",
+    "body": "Leave your details or book a free 30-minute call."
   }
 }

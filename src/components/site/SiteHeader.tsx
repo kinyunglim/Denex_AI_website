@@ -17,9 +17,12 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
   const name = pickLocalized(business.name, locale);
 
   const anchors = cfg.sections
-    .filter((s) => s !== 'hero')
+    .filter((s) => s === 'cases' || s === 'about')
     .map((s) => ({ href: `/#${s}`, label: t(s) }));
+  // Agency site: templates + pricing come first; section anchors are kept short.
   const links = [
+    { href: '/templates', label: t('templates') },
+    { href: '/pricing', label: t('pricing') },
     ...(cfg.modules.catalog ? [{ href: '/products', label: t('products') }] : []),
   ];
 
@@ -38,11 +41,9 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
         </nav>
         <div className="flex items-center gap-3">
           <LanguageSwitcher locales={routing.locales} />
-          {cfg.modules.booking && (
-            <Link href="/book" className="btn-primary hidden !py-2 sm:inline-flex">
-              {t('book')}
-            </Link>
-          )}
+          <Link href="/order" className="btn-primary hidden !py-2 sm:inline-flex">
+            {t('order')}
+          </Link>
           <details className="relative md:hidden">
             <summary className="cursor-pointer list-none rounded-button border border-line px-3 py-2 text-sm text-ink">{t('menu')}</summary>
             <div className="card absolute right-0 mt-2 flex w-48 flex-col p-2 text-sm">

@@ -31,9 +31,7 @@
     "about",
     "contact"
   ],
-  "notifyEmails": [
-    "kinyunglim@gmail.com"
-  ],
+  "notifyEmails": [],
   "timezone": "Asia/Hong_Kong",
   "currency": "HKD"
 }
