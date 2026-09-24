@@ -1,58 +1,58 @@
 {
   "hero": {
-    "eyebrow": "Physiotherapy · Personal training · Yoga",
-    "title": "Move well, for the long run",
-    "subtitle": "Registered physiotherapists and certified coaches design training around your body.",
-    "cta": "Book now",
+    "eyebrow": "Strategy · Digital transformation",
+    "title": "From strategy to execution",
+    "subtitle": "We work alongside leadership teams to turn market opportunities into plans people can actually run.",
+    "cta": "Book a free consultation",
     "image": ""
   },
   "services": {
-    "title": "Our services",
+    "title": "What we do",
     "items": [
       {
-        "title": "Physio assessment",
-        "description": "Find the root cause of pain and plan treatment and rehab.",
-        "price": "HK$800 / 60 min"
+        "title": "Market entry",
+        "description": "Research, positioning and entry roadmaps for the Greater Bay Area and Southeast Asia.",
+        "price": ""
       },
       {
-        "title": "1:1 personal training",
-        "description": "Strength, fat loss and posture, coached every rep.",
-        "price": "HK$650 / 60 min"
+        "title": "Digital transformation",
+        "description": "Process mapping, system selection and roll-out, from assessment to go-live.",
+        "price": ""
       },
       {
-        "title": "Small-group yoga",
-        "description": "Six people max, so every pose gets attention.",
-        "price": "HK$280 / class"
+        "title": "Brand & communications",
+        "description": "Company story, investor decks and external messaging.",
+        "price": ""
       }
     ]
   },
   "cases": {
-    "title": "Client stories",
+    "title": "Case studies",
     "items": [
       {
-        "title": "Back to running after 3 years of back pain",
-        "description": "After 8 sessions Mandy finished a 10K again.",
+        "title": "Retail chain enters Shenzhen",
+        "description": "Site selection, partner matching and launch campaign in six months.",
         "image": ""
       },
       {
-        "title": "Post-natal recovery",
-        "description": "Progressive training for diastasis recti.",
+        "title": "Logistics firm modernises",
+        "description": "Replaced spreadsheets with a cloud CRM; order handling time down 40%.",
         "image": ""
       },
       {
-        "title": "Desk-job neck pain",
-        "description": "Weekly posture work, clear improvement in six weeks.",
+        "title": "Start-up closes Series A",
+        "description": "Rebuilt the business plan and pitch deck ahead of a successful raise.",
         "image": ""
       }
     ]
   },
   "about": {
-    "title": "About the studio",
-    "body": "Harmony Move opened in Wan Chai in 2019. Treatment and training should connect, so our physios and coaches track your progress together.",
+    "title": "About us",
+    "body": "Summit Advisory was founded by consultants from multinational corporates and investment firms. Good strategy should be simple, measurable and executable by the client's own team.",
     "image": ""
   },
   "contact": {
-    "title": "Questions?",
-    "body": "WhatsApp us or leave a message and we'll get back to you soon."
+    "title": "Contact us",
+    "body": "Leave your details and we will reply within one business day."
   }
 }
