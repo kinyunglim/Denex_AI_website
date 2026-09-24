@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "services": "服务",
+    "cases": "案例",
+    "about": "关于",
+    "contact": "联系",
+    "book": "预约",
+    "products": "产品",
+    "menu": "菜单"
+  },
+  "contact": {
+    "name": "姓名",
+    "phone": "电话",
+    "email": "电邮",
+    "message": "留言",
+    "submit": "提交",
+    "sending": "发送中…",
+    "success": "谢谢！我们已收到你的留言，会尽快回复。",
+    "error": "提交失败，请稍后再试。",
+    "phoneOrEmail": "请填写电话或电邮",
+    "required": "必填",
+    "invalidEmail": "电邮格式不正确",
+    "whatsapp": "WhatsApp 联系我们",
+    "tooMany": "提交次数太多，请稍后再试。"
+  },
+  "booking": {
+    "title": "在线预约",
+    "subtitle": "选服务、选时间，一分钟完成预约。",
+    "service": "服务",
+    "staff": "负责人",
+    "anyStaff": "任何人",
+    "date": "日期",
+    "time": "时间",
+    "noSlots": "当天暂无空档，请选择其他日期。",
+    "yourDetails": "你的资料",
+    "notes": "备注（可选）",
+    "confirm": "确认预约",
+    "booking": "预约中…",
+    "success": "预约成功！",
+    "successBody": "{service} · {staff}\n{when}",
+    "another": "再预约",
+    "minutes": "{n} 分钟",
+    "free": "免费",
+    "back": "返回",
+    "loading": "加载中…",
+    "unavailable": "在线预约暂未开放。",
+    "taken": "这个时间刚刚被预约了，请选择其他时间。"
+  },
+  "catalog": {
+    "title": "产品目录",
+    "subtitle": "查看规格，直接向我们询价。",
+    "all": "全部",
+    "specs": "规格",
+    "inquire": "询价",
+    "company": "公司",
+    "quantity": "数量",
+    "message": "其他要求",
+    "submit": "提交询价",
+    "success": "已收到你的询价，我们会尽快报价。",
+    "back": "返回产品目录",
+    "empty": "暂时没有产品。"
+  },
+  "footer": {
+    "rights": "版权所有",
+    "address": "地址",
+    "phone": "电话",
+    "email": "电邮"
+  },
+  "preview": {
+    "banner": "演示模式：资料不会被保存",
+    "theme": "风格",
+    "getThis": "我想要这个网站"
+  },
+  "payment": {
+    "successTitle": "付款成功",
+    "successBody": "谢谢！我们已收到你的付款，收据会以电邮发送。",
+    "cancelledTitle": "付款已取消",
+    "cancelledBody": "你没有被收费。如有需要请再联系我们。",
+    "home": "返回首页"
+  },
+  "common": {
+    "notFoundTitle": "找不到此页",
+    "notFoundBody": "你要找的页面不存在或已移除。",
+    "home": "返回首页"
+  }
+}

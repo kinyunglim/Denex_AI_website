@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "services": "Services",
+    "cases": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Book",
+    "products": "Products",
+    "menu": "Menu"
+  },
+  "contact": {
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Thanks! We got your message and will reply soon.",
+    "error": "Something went wrong. Please try again.",
+    "phoneOrEmail": "Please give a phone number or email",
+    "required": "Required",
+    "invalidEmail": "Invalid email",
+    "whatsapp": "WhatsApp us",
+    "tooMany": "Too many attempts. Please try again later."
+  },
+  "booking": {
+    "title": "Book online",
+    "subtitle": "Pick a service and a time. Done in a minute.",
+    "service": "Service",
+    "staff": "With",
+    "anyStaff": "Anyone",
+    "date": "Date",
+    "time": "Time",
+    "noSlots": "No free times that day. Please try another date.",
+    "yourDetails": "Your details",
+    "notes": "Notes (optional)",
+    "confirm": "Confirm booking",
+    "booking": "Booking…",
+    "success": "You're booked!",
+    "successBody": "{service} · {staff}\n{when}",
+    "another": "Book another",
+    "minutes": "{n} min",
+    "free": "Free",
+    "back": "Back",
+    "loading": "Loading…",
+    "unavailable": "Online booking isn't open yet.",
+    "taken": "That time was just taken. Please pick another."
+  },
+  "catalog": {
+    "title": "Products",
+    "subtitle": "Browse specs and ask us for a quote.",
+    "all": "All",
+    "specs": "Specifications",
+    "inquire": "Request a quote",
+    "company": "Company",
+    "quantity": "Quantity",
+    "message": "Other requirements",
+    "submit": "Send enquiry",
+    "success": "Thanks, we'll get back to you with a quote soon.",
+    "back": "Back to products",
+    "empty": "No products yet."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "preview": {
+    "banner": "Demo mode: nothing you enter is saved",
+    "theme": "Style",
+    "getThis": "I want this site"
+  },
+  "payment": {
+    "successTitle": "Payment received",
+    "successBody": "Thank you! A receipt will be emailed to you.",
+    "cancelledTitle": "Payment cancelled",
+    "cancelledBody": "You have not been charged. Contact us if you need help.",
+    "home": "Back to home"
+  },
+  "common": {
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for doesn't exist.",
+    "home": "Back to home"
+  }
+}

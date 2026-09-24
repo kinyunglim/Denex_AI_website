@@ -1,0 +1,19 @@
+{
+  "slug": "harmony-move",
+  "business": {
+    "name": { "zh-Hant": "和動體能工作室", "zh-Hans": "和动体能工作室", "en": "Harmony Move Studio" },
+    "phone": "+852 2800 1234",
+    "whatsapp": "+852 9800 1234",
+    "email": "hello@harmonymove.hk",
+    "address": { "zh-Hant": "香港灣仔軒尼詩道 200 號 9 樓", "en": "9/F, 200 Hennessy Road, Wan Chai" }
+  },
+  "locales": ["zh-Hant", "en"],
+  "theme": "warm",
+  "modules": ["booking", "payments"],
+  "sections": ["hero", "services", "cases", "about", "contact"],
+  "notifyEmails": ["owner@harmonymove.hk"],
+  "timezone": "Asia/Hong_Kong",
+  "currency": "HKD",
+  "owner": { "name": "Joyce Chan", "email": "owner@harmonymove.hk" },
+  "domain": "www.harmonymove.hk"
+}

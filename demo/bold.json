@@ -1,0 +1,332 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "剪型所",
+      "zh-Hans": "剪型所",
+      "en": "SHARP. Barber Club"
+    },
+    "phone": "+852 2388 0000",
+    "whatsapp": "+852 9388 0000",
+    "email": "yo@sharp.example",
+    "address": {
+      "zh-Hant": "香港旺角西洋菜南街 1 號 3 樓",
+      "zh-Hans": "香港旺角西洋菜南街 1 号 3 楼",
+      "en": "3/F, 1 Sai Yeung Choi St S, Mong Kok, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "男士理髮 · 造型",
+        "title": "剪得準。企得型。",
+        "subtitle": "經典 fade、剃鬚、造型設計。預約即到，唔使等。",
+        "cta": "預約位置",
+        "image": ""
+      },
+      "services": {
+        "title": "價目",
+        "items": [
+          {
+            "title": "經典剪髮",
+            "description": "洗、剪、吹、造型。",
+            "price": "HK$280"
+          },
+          {
+            "title": "Skin Fade",
+            "description": "零度漸變，線條利落。",
+            "price": "HK$320"
+          },
+          {
+            "title": "熱毛巾剃鬚",
+            "description": "傳統直刀，連面部護理。",
+            "price": "HK$220"
+          }
+        ]
+      },
+      "cases": {
+        "title": "作品",
+        "items": [
+          {
+            "title": "Low Taper",
+            "description": "日常上班都夠企理。",
+            "image": ""
+          },
+          {
+            "title": "Textured Crop",
+            "description": "有層次，易打理。",
+            "image": ""
+          },
+          {
+            "title": "Beard Sculpt",
+            "description": "鬚型設計配合臉型。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "我哋",
+        "body": "三個理髮師，一間小店，一首 playlist。專心剪好每一個頭。",
+        "image": ""
+      },
+      "contact": {
+        "title": "搵我哋",
+        "body": "WhatsApp 最快。或者喺度留言。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "男士理发 · 造型",
+        "title": "剪得准。站得型。",
+        "subtitle": "经典 fade、剃须、造型设计。预约即到，不用等。",
+        "cta": "预约位置",
+        "image": ""
+      },
+      "services": {
+        "title": "价目",
+        "items": [
+          {
+            "title": "经典剪发",
+            "description": "洗、剪、吹、造型。",
+            "price": "HK$280"
+          },
+          {
+            "title": "Skin Fade",
+            "description": "零度渐变，线条利落。",
+            "price": "HK$320"
+          },
+          {
+            "title": "热毛巾剃须",
+            "description": "传统直刀，连面部护理。",
+            "price": "HK$220"
+          }
+        ]
+      },
+      "cases": {
+        "title": "作品",
+        "items": [
+          {
+            "title": "Low Taper",
+            "description": "日常上班都够整齐。",
+            "image": ""
+          },
+          {
+            "title": "Textured Crop",
+            "description": "有层次，易打理。",
+            "image": ""
+          },
+          {
+            "title": "Beard Sculpt",
+            "description": "须型设计配合脸型。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "我们",
+        "body": "三个理发师，一间小店，一张歌单。专心剪好每一个头。",
+        "image": ""
+      },
+      "contact": {
+        "title": "找我们",
+        "body": "WhatsApp 最快。或者在这里留言。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Barbering · Grooming",
+        "title": "Sharp cuts. No waiting.",
+        "subtitle": "Classic fades, hot-towel shaves and styling. Book a chair and walk straight in.",
+        "cta": "Book a chair",
+        "image": ""
+      },
+      "services": {
+        "title": "Prices",
+        "items": [
+          {
+            "title": "Classic cut",
+            "description": "Wash, cut, blow-dry, style.",
+            "price": "HK$280"
+          },
+          {
+            "title": "Skin fade",
+            "description": "Down to zero, clean lines.",
+            "price": "HK$320"
+          },
+          {
+            "title": "Hot-towel shave",
+            "description": "Straight razor plus face care.",
+            "price": "HK$220"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Work",
+        "items": [
+          {
+            "title": "Low taper",
+            "description": "Office-ready, every day.",
+            "image": ""
+          },
+          {
+            "title": "Textured crop",
+            "description": "Layered and easy to style.",
+            "image": ""
+          },
+          {
+            "title": "Beard sculpt",
+            "description": "Shaped to your face.",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "Us",
+        "body": "Three barbers, one small shop, one playlist. Every head gets our full attention.",
+        "image": ""
+      },
+      "contact": {
+        "title": "Find us",
+        "body": "WhatsApp is fastest. Or drop a message here."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "cut",
+        "name": {
+          "zh-Hant": "經典剪髮",
+          "zh-Hans": "经典剪发",
+          "en": "Classic cut"
+        },
+        "durationMin": 45,
+        "price": 280
+      },
+      {
+        "key": "fade",
+        "name": {
+          "zh-Hant": "Skin Fade",
+          "zh-Hans": "Skin Fade",
+          "en": "Skin fade"
+        },
+        "durationMin": 60,
+        "price": 320
+      },
+      {
+        "key": "shave",
+        "name": {
+          "zh-Hant": "熱毛巾剃鬚",
+          "zh-Hans": "热毛巾剃须",
+          "en": "Hot-towel shave"
+        },
+        "durationMin": 30,
+        "price": 220
+      }
+    ],
+    "staff": [
+      {
+        "key": "jay",
+        "name": "Jay",
+        "services": [
+          "cut",
+          "fade",
+          "shave"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 720,
+            "endMin": 1260
+          },
+          {
+            "weekday": 2,
+            "startMin": 720,
+            "endMin": 1260
+          },
+          {
+            "weekday": 3,
+            "startMin": 720,
+            "endMin": 1260
+          },
+          {
+            "weekday": 4,
+            "startMin": 720,
+            "endMin": 1260
+          },
+          {
+            "weekday": 5,
+            "startMin": 720,
+            "endMin": 1260
+          },
+          {
+            "weekday": 6,
+            "startMin": 660,
+            "endMin": 1200
+          }
+        ]
+      },
+      {
+        "key": "ming",
+        "name": "Ming",
+        "services": [
+          "cut",
+          "fade"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 2,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 3,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 4,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 5,
+            "startMin": 660,
+            "endMin": 1200
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Kelvin",
+      "phone": "+85251230001",
+      "tags": [
+        "fade",
+        "regular"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "阿 Wing",
+      "phone": "+85251230002",
+      "tags": [
+        "shave"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Tom",
+      "phone": "+85251230003",
+      "tags": [],
+      "status": "lead"
+    }
+  ]
+}

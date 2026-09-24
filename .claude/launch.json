@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "starter-preview", "runtimeExecutable": "node", "runtimeArgs": ["scripts/dev-memory.mjs", "--preview", "--port", "3100"], "port": 3100 },
+    { "name": "starter-dev", "runtimeExecutable": "node", "runtimeArgs": ["scripts/dev-memory.mjs", "--port", "3200"], "port": 3200 }
+  ]
+}

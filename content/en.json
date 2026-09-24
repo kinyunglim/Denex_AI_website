@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "eyebrow": "Physiotherapy · Personal training · Yoga",
+    "title": "Move well, for the long run",
+    "subtitle": "Registered physiotherapists and certified coaches design training around your body.",
+    "cta": "Book now",
+    "image": ""
+  },
+  "services": {
+    "title": "Our services",
+    "items": [
+      {
+        "title": "Physio assessment",
+        "description": "Find the root cause of pain and plan treatment and rehab.",
+        "price": "HK$800 / 60 min"
+      },
+      {
+        "title": "1:1 personal training",
+        "description": "Strength, fat loss and posture, coached every rep.",
+        "price": "HK$650 / 60 min"
+      },
+      {
+        "title": "Small-group yoga",
+        "description": "Six people max, so every pose gets attention.",
+        "price": "HK$280 / class"
+      }
+    ]
+  },
+  "cases": {
+    "title": "Client stories",
+    "items": [
+      {
+        "title": "Back to running after 3 years of back pain",
+        "description": "After 8 sessions Mandy finished a 10K again.",
+        "image": ""
+      },
+      {
+        "title": "Post-natal recovery",
+        "description": "Progressive training for diastasis recti.",
+        "image": ""
+      },
+      {
+        "title": "Desk-job neck pain",
+        "description": "Weekly posture work, clear improvement in six weeks.",
+        "image": ""
+      }
+    ]
+  },
+  "about": {
+    "title": "About the studio",
+    "body": "Harmony Move opened in Wan Chai in 2019. Treatment and training should connect, so our physios and coaches track your progress together.",
+    "image": ""
+  },
+  "contact": {
+    "title": "Questions?",
+    "body": "WhatsApp us or leave a message and we'll get back to you soon."
+  }
+}

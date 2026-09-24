@@ -1,0 +1,349 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "海匯貿易",
+      "zh-Hans": "海汇贸易",
+      "en": "TideLink Trading"
+    },
+    "phone": "+852 2600 8800",
+    "whatsapp": "+852 9600 8800",
+    "email": "sales@tidelink.example",
+    "address": {
+      "zh-Hant": "香港葵涌貨櫃碼頭路 77 號",
+      "zh-Hans": "香港葵涌货柜码头路 77 号",
+      "en": "77 Container Port Road, Kwai Chung, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "B2B 海產出口",
+        "title": "香港直送，全球冷鏈",
+        "subtitle": "精選港產及華南海產，提供規格、檢疫文件及到岸成本報價。",
+        "cta": "索取報價",
+        "image": ""
+      },
+      "services": {
+        "title": "我們提供",
+        "items": [
+          {
+            "title": "產品採購",
+            "description": "按規格、數量及交期配對供應商。",
+            "price": ""
+          },
+          {
+            "title": "冷鏈物流",
+            "description": "海運及空運冷藏，全程溫度記錄。",
+            "price": ""
+          },
+          {
+            "title": "文件及檢疫",
+            "description": "衛生證書、原產地證明一條龍處理。",
+            "price": ""
+          }
+        ]
+      },
+      "cases": {
+        "title": "合作案例",
+        "items": [
+          {
+            "title": "新加坡酒店集團",
+            "description": "每週穩定供應活蟹及貝類。",
+            "image": ""
+          },
+          {
+            "title": "加拿大進口商",
+            "description": "首次出口乾貨海味，三星期完成清關。",
+            "image": ""
+          },
+          {
+            "title": "中東超市",
+            "description": "急凍蝦類長期合約。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "關於海匯",
+        "body": "海匯擁有 20 年海產貿易經驗，與超過 60 家認證供應商合作，專注品質穩定同準時交貨。",
+        "image": ""
+      },
+      "contact": {
+        "title": "聯絡銷售團隊",
+        "body": "請提供產品、數量同目的地，我們會於 24 小時內報價。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "B2B 海产出口",
+        "title": "香港直送，全球冷链",
+        "subtitle": "精选港产及华南海产，提供规格、检疫文件及到岸成本报价。",
+        "cta": "索取报价",
+        "image": ""
+      },
+      "services": {
+        "title": "我们提供",
+        "items": [
+          {
+            "title": "产品采购",
+            "description": "按规格、数量及交期配对供应商。",
+            "price": ""
+          },
+          {
+            "title": "冷链物流",
+            "description": "海运及空运冷藏，全程温度记录。",
+            "price": ""
+          },
+          {
+            "title": "文件及检疫",
+            "description": "卫生证书、原产地证明一条龙处理。",
+            "price": ""
+          }
+        ]
+      },
+      "cases": {
+        "title": "合作案例",
+        "items": [
+          {
+            "title": "新加坡酒店集团",
+            "description": "每周稳定供应活蟹及贝类。",
+            "image": ""
+          },
+          {
+            "title": "加拿大进口商",
+            "description": "首次出口干货海味，三周完成清关。",
+            "image": ""
+          },
+          {
+            "title": "中东超市",
+            "description": "急冻虾类长期合约。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "关于海汇",
+        "body": "海汇拥有 20 年海产贸易经验，与超过 60 家认证供应商合作，专注品质稳定和准时交货。",
+        "image": ""
+      },
+      "contact": {
+        "title": "联系销售团队",
+        "body": "请提供产品、数量和目的地，我们会于 24 小时内报价。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "B2B seafood export",
+        "title": "From Hong Kong, cold-chain worldwide",
+        "subtitle": "Selected Hong Kong and South China seafood, with specs, health documents and landed-cost quotes.",
+        "cta": "Request a quote",
+        "image": ""
+      },
+      "services": {
+        "title": "What we offer",
+        "items": [
+          {
+            "title": "Sourcing",
+            "description": "Matched suppliers by spec, volume and lead time.",
+            "price": ""
+          },
+          {
+            "title": "Cold-chain logistics",
+            "description": "Refrigerated sea and air freight with full temperature logs.",
+            "price": ""
+          },
+          {
+            "title": "Documents & inspection",
+            "description": "Health certificates and certificates of origin handled end to end.",
+            "price": ""
+          }
+        ]
+      },
+      "cases": {
+        "title": "Case studies",
+        "items": [
+          {
+            "title": "Singapore hotel group",
+            "description": "Weekly supply of live crab and shellfish.",
+            "image": ""
+          },
+          {
+            "title": "Canadian importer",
+            "description": "First dried-seafood shipment cleared in three weeks.",
+            "image": ""
+          },
+          {
+            "title": "Middle East supermarket",
+            "description": "Long-term frozen prawn contract.",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "About TideLink",
+        "body": "Twenty years in seafood trading, working with 60+ certified suppliers. We focus on consistent quality and on-time delivery.",
+        "image": ""
+      },
+      "contact": {
+        "title": "Talk to sales",
+        "body": "Tell us the product, volume and destination and we'll quote within 24 hours."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "call",
+        "name": {
+          "zh-Hant": "視像採購會議",
+          "zh-Hans": "视频采购会议",
+          "en": "Sourcing video call"
+        },
+        "durationMin": 30,
+        "price": 0
+      }
+    ],
+    "staff": [
+      {
+        "key": "leo",
+        "name": "Leo Cheung",
+        "services": [
+          "call"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 2,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 3,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 4,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 5,
+            "startMin": 540,
+            "endMin": 1080
+          }
+        ]
+      }
+    ]
+  },
+  "products": [
+    {
+      "name": {
+        "zh-Hant": "急凍白蝦",
+        "zh-Hans": "急冻白虾",
+        "en": "Frozen white shrimp"
+      },
+      "description": {
+        "zh-Hant": "IQF 單凍，去頭去殼，多種規格。",
+        "zh-Hans": "IQF 单冻，去头去壳，多种规格。",
+        "en": "IQF, peeled and deveined, multiple sizes."
+      },
+      "category": "frozen",
+      "image": "",
+      "specs": [
+        {
+          "label": "Size",
+          "value": "21/25, 26/30, 31/40"
+        },
+        {
+          "label": "Packing",
+          "value": "1kg x 10 / carton"
+        },
+        {
+          "label": "MOQ",
+          "value": "1 x 40' reefer"
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh-Hant": "活肉蟹",
+        "zh-Hans": "活肉蟹",
+        "en": "Live mud crab"
+      },
+      "description": {
+        "zh-Hant": "空運直送，存活率保證。",
+        "zh-Hans": "空运直送，存活率保证。",
+        "en": "Air-flown with guaranteed survival rate."
+      },
+      "category": "live",
+      "image": "",
+      "specs": [
+        {
+          "label": "Weight",
+          "value": "400-600 g"
+        },
+        {
+          "label": "Lead time",
+          "value": "48 h"
+        }
+      ]
+    },
+    {
+      "name": {
+        "zh-Hant": "日曬乾瑤柱",
+        "zh-Hans": "日晒干瑶柱",
+        "en": "Sun-dried scallops"
+      },
+      "description": {
+        "zh-Hant": "原粒乾瑤柱，適合零售包裝。",
+        "zh-Hans": "原粒干瑶柱，适合零售包装。",
+        "en": "Whole dried scallops, retail-pack ready."
+      },
+      "category": "dried",
+      "image": "",
+      "specs": [
+        {
+          "label": "Grade",
+          "value": "L / M / S"
+        },
+        {
+          "label": "Shelf life",
+          "value": "24 months"
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Raj Patel",
+      "email": "raj@importer.example",
+      "tags": [
+        "buyer",
+        "UAE"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "林小姐",
+      "phone": "+8613800138000",
+      "tags": [
+        "supplier"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Hotel Orchid SG",
+      "email": "purchasing@orchid.example",
+      "tags": [
+        "buyer"
+      ],
+      "status": "lead"
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "和動體能工作室",
+      "zh-Hans": "和动体能工作室",
+      "en": "Harmony Move Studio"
+    },
+    "phone": "+852 2800 1234",
+    "whatsapp": "+852 9800 1234",
+    "email": "hello@harmonymove.example",
+    "address": {
+      "zh-Hant": "香港灣仔軒尼詩道 200 號 9 樓",
+      "zh-Hans": "香港湾仔轩尼诗道 200 号 9 楼",
+      "en": "9/F, 200 Hennessy Road, Wan Chai, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "物理治療 · 私人教練 · 瑜伽",
+        "title": "郁得舒服，先會郁得長久",
+        "subtitle": "由註冊物理治療師同認可教練，按你嘅身體狀況度身設計訓練。",
+        "cta": "立即預約",
+        "image": ""
+      },
+      "services": {
+        "title": "我們的服務",
+        "items": [
+          {
+            "title": "物理治療評估",
+            "description": "找出痛症根源，制定治療及復康計劃。",
+            "price": "HK$800 / 60 分鐘"
+          },
+          {
+            "title": "一對一私人訓練",
+            "description": "增肌、減脂、改善姿勢，全程教練陪同。",
+            "price": "HK$650 / 60 分鐘"
+          },
+          {
+            "title": "小班瑜伽",
+            "description": "最多 6 人，照顧每位學員嘅動作細節。",
+            "price": "HK$280 / 堂"
+          }
+        ]
+      },
+      "cases": {
+        "title": "學員故事",
+        "items": [
+          {
+            "title": "腰痛三年，終於可以再跑步",
+            "description": "經過 8 次治療及訓練，Mandy 重新完成 10 公里。",
+            "image": ""
+          },
+          {
+            "title": "產後修復",
+            "description": "針對腹直肌分離嘅漸進式訓練。",
+            "image": ""
+          },
+          {
+            "title": "辦公室肩頸痛",
+            "description": "每週一次姿勢訓練，六星期明顯改善。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "關於工作室",
+        "body": "和動成立於 2019 年，位於灣仔，空間明亮寧靜。我們相信治療同訓練應該連貫，所以治療師同教練會一齊跟進你嘅進度。",
+        "image": ""
+      },
+      "contact": {
+        "title": "有問題？",
+        "body": "WhatsApp 或留言，我們會盡快回覆你。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "物理治疗 · 私人教练 · 瑜伽",
+        "title": "动得舒服，才能动得长久",
+        "subtitle": "由注册物理治疗师和认可教练，按你的身体状况量身设计训练。",
+        "cta": "立即预约",
+        "image": ""
+      },
+      "services": {
+        "title": "我们的服务",
+        "items": [
+          {
+            "title": "物理治疗评估",
+            "description": "找出痛症根源，制定治疗及康复计划。",
+            "price": "HK$800 / 60 分钟"
+          },
+          {
+            "title": "一对一私人训练",
+            "description": "增肌、减脂、改善姿势，全程教练陪同。",
+            "price": "HK$650 / 60 分钟"
+          },
+          {
+            "title": "小班瑜伽",
+            "description": "最多 6 人，照顾每位学员的动作细节。",
+            "price": "HK$280 / 堂"
+          }
+        ]
+      },
+      "cases": {
+        "title": "学员故事",
+        "items": [
+          {
+            "title": "腰痛三年，终于可以再跑步",
+            "description": "经过 8 次治疗及训练，Mandy 重新完成 10 公里。",
+            "image": ""
+          },
+          {
+            "title": "产后修复",
+            "description": "针对腹直肌分离的渐进式训练。",
+            "image": ""
+          },
+          {
+            "title": "办公室肩颈痛",
+            "description": "每周一次姿势训练，六周明显改善。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "关于工作室",
+        "body": "和动成立于 2019 年，位于湾仔，空间明亮宁静。我们相信治疗和训练应该连贯，所以治疗师和教练会一起跟进你的进度。",
+        "image": ""
+      },
+      "contact": {
+        "title": "有问题？",
+        "body": "WhatsApp 或留言，我们会尽快回复你。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Physiotherapy · Personal training · Yoga",
+        "title": "Move well, for the long run",
+        "subtitle": "Registered physiotherapists and certified coaches design training around your body.",
+        "cta": "Book now",
+        "image": ""
+      },
+      "services": {
+        "title": "Our services",
+        "items": [
+          {
+            "title": "Physio assessment",
+            "description": "Find the root cause of pain and plan treatment and rehab.",
+            "price": "HK$800 / 60 min"
+          },
+          {
+            "title": "1:1 personal training",
+            "description": "Strength, fat loss and posture, coached every rep.",
+            "price": "HK$650 / 60 min"
+          },
+          {
+            "title": "Small-group yoga",
+            "description": "Six people max, so every pose gets attention.",
+            "price": "HK$280 / class"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Client stories",
+        "items": [
+          {
+            "title": "Back to running after 3 years of back pain",
+            "description": "After 8 sessions Mandy finished a 10K again.",
+            "image": ""
+          },
+          {
+            "title": "Post-natal recovery",
+            "description": "Progressive training for diastasis recti.",
+            "image": ""
+          },
+          {
+            "title": "Desk-job neck pain",
+            "description": "Weekly posture work, clear improvement in six weeks.",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "About the studio",
+        "body": "Harmony Move opened in Wan Chai in 2019. Treatment and training should connect, so our physios and coaches track your progress together.",
+        "image": ""
+      },
+      "contact": {
+        "title": "Questions?",
+        "body": "WhatsApp us or leave a message and we'll get back to you soon."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "physio",
+        "name": {
+          "zh-Hant": "物理治療評估",
+          "zh-Hans": "物理治疗评估",
+          "en": "Physio assessment"
+        },
+        "durationMin": 60,
+        "price": 800
+      },
+      {
+        "key": "pt",
+        "name": {
+          "zh-Hant": "私人訓練",
+          "zh-Hans": "私人训练",
+          "en": "Personal training"
+        },
+        "durationMin": 60,
+        "price": 650
+      },
+      {
+        "key": "yoga",
+        "name": {
+          "zh-Hant": "小班瑜伽",
+          "zh-Hans": "小班瑜伽",
+          "en": "Small-group yoga"
+        },
+        "durationMin": 75,
+        "price": 280
+      }
+    ],
+    "staff": [
+      {
+        "key": "joyce",
+        "name": "Joyce（物理治療師）",
+        "services": [
+          "physio"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 2,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 3,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 4,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 5,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 6,
+            "startMin": 600,
+            "endMin": 840
+          }
+        ]
+      },
+      {
+        "key": "sam",
+        "name": "Sam（教練）",
+        "services": [
+          "pt",
+          "yoga"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 420,
+            "endMin": 1260
+          },
+          {
+            "weekday": 2,
+            "startMin": 420,
+            "endMin": 1260
+          },
+          {
+            "weekday": 3,
+            "startMin": 420,
+            "endMin": 1260
+          },
+          {
+            "weekday": 4,
+            "startMin": 420,
+            "endMin": 1260
+          },
+          {
+            "weekday": 5,
+            "startMin": 420,
+            "endMin": 1260
+          },
+          {
+            "weekday": 6,
+            "startMin": 540,
+            "endMin": 1020
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Mandy Ho",
+      "phone": "+85261230001",
+      "email": "mandy@example.com",
+      "tags": [
+        "physio",
+        "跑步"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "李先生",
+      "phone": "+85261230002",
+      "tags": [
+        "PT"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Carol",
+      "phone": "+85261230003",
+      "tags": [
+        "yoga"
+      ],
+      "status": "lead"
+    }
+  ]
+}

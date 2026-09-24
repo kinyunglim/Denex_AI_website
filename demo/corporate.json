@@ -1,0 +1,317 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "卓策顧問",
+      "zh-Hans": "卓策顾问",
+      "en": "Summit Advisory"
+    },
+    "phone": "+852 3001 2000",
+    "whatsapp": "+852 9001 2000",
+    "email": "hello@summit-advisory.example",
+    "address": {
+      "zh-Hant": "香港中環皇后大道中 88 號 18 樓",
+      "zh-Hans": "香港中环皇后大道中 88 号 18 楼",
+      "en": "18/F, 88 Queen's Road Central, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "商業策略 · 數碼轉型",
+        "title": "幫企業由策略走到落地",
+        "subtitle": "我們與管理層並肩，將市場機會變成可執行的計劃，並陪伴團隊完成每一步。",
+        "cta": "預約免費諮詢",
+        "image": ""
+      },
+      "services": {
+        "title": "服務範疇",
+        "items": [
+          {
+            "title": "市場進入策略",
+            "description": "大灣區及東南亞市場研究、定位與進入路線圖。",
+            "price": ""
+          },
+          {
+            "title": "數碼轉型",
+            "description": "流程梳理、系統選型與導入，由評估到上線。",
+            "price": ""
+          },
+          {
+            "title": "品牌與傳訊",
+            "description": "企業故事、投資者簡報與對外溝通。",
+            "price": ""
+          }
+        ]
+      },
+      "cases": {
+        "title": "客戶案例",
+        "items": [
+          {
+            "title": "連鎖零售品牌進軍深圳",
+            "description": "六個月內完成選址、合作夥伴配對及開業推廣。",
+            "image": ""
+          },
+          {
+            "title": "物流公司系統升級",
+            "description": "以雲端 CRM 取代 Excel，訂單處理時間減少 40%。",
+            "image": ""
+          },
+          {
+            "title": "初創企業 A 輪融資",
+            "description": "重寫商業計劃與簡報，成功完成融資。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "關於我們",
+        "body": "卓策顧問由一群曾任職跨國企業及投資機構的顧問創立。我們相信好的策略要簡單、可量度，並且由客戶自己的團隊執行得到。",
+        "image": ""
+      },
+      "contact": {
+        "title": "聯絡我們",
+        "body": "留下你的聯絡方法，我們會在一個工作天內回覆。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "商业策略 · 数码转型",
+        "title": "帮企业由策略走到落地",
+        "subtitle": "我们与管理层并肩，将市场机会变成可执行的计划，并陪伴团队完成每一步。",
+        "cta": "预约免费咨询",
+        "image": ""
+      },
+      "services": {
+        "title": "服务范畴",
+        "items": [
+          {
+            "title": "市场进入策略",
+            "description": "大湾区及东南亚市场研究、定位与进入路线图。",
+            "price": ""
+          },
+          {
+            "title": "数码转型",
+            "description": "流程梳理、系统选型与导入，由评估到上线。",
+            "price": ""
+          },
+          {
+            "title": "品牌与传讯",
+            "description": "企业故事、投资者简报与对外沟通。",
+            "price": ""
+          }
+        ]
+      },
+      "cases": {
+        "title": "客户案例",
+        "items": [
+          {
+            "title": "连锁零售品牌进军深圳",
+            "description": "六个月内完成选址、合作伙伴配对及开业推广。",
+            "image": ""
+          },
+          {
+            "title": "物流公司系统升级",
+            "description": "以云端 CRM 取代 Excel，订单处理时间减少 40%。",
+            "image": ""
+          },
+          {
+            "title": "初创企业 A 轮融资",
+            "description": "重写商业计划与简报，成功完成融资。",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "关于我们",
+        "body": "卓策顾问由一群曾任职跨国企业及投资机构的顾问创立。我们相信好的策略要简单、可量度，并且由客户自己的团队执行得到。",
+        "image": ""
+      },
+      "contact": {
+        "title": "联系我们",
+        "body": "留下你的联系方式，我们会在一个工作天内回复。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Strategy · Digital transformation",
+        "title": "From strategy to execution",
+        "subtitle": "We work alongside leadership teams to turn market opportunities into plans people can actually run.",
+        "cta": "Book a free consultation",
+        "image": ""
+      },
+      "services": {
+        "title": "What we do",
+        "items": [
+          {
+            "title": "Market entry",
+            "description": "Research, positioning and entry roadmaps for the Greater Bay Area and Southeast Asia.",
+            "price": ""
+          },
+          {
+            "title": "Digital transformation",
+            "description": "Process mapping, system selection and roll-out, from assessment to go-live.",
+            "price": ""
+          },
+          {
+            "title": "Brand & communications",
+            "description": "Company story, investor decks and external messaging.",
+            "price": ""
+          }
+        ]
+      },
+      "cases": {
+        "title": "Case studies",
+        "items": [
+          {
+            "title": "Retail chain enters Shenzhen",
+            "description": "Site selection, partner matching and launch campaign in six months.",
+            "image": ""
+          },
+          {
+            "title": "Logistics firm modernises",
+            "description": "Replaced spreadsheets with a cloud CRM; order handling time down 40%.",
+            "image": ""
+          },
+          {
+            "title": "Start-up closes Series A",
+            "description": "Rebuilt the business plan and pitch deck ahead of a successful raise.",
+            "image": ""
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Summit Advisory was founded by consultants from multinational corporates and investment firms. Good strategy should be simple, measurable and executable by the client's own team.",
+        "image": ""
+      },
+      "contact": {
+        "title": "Contact us",
+        "body": "Leave your details and we will reply within one business day."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "consult",
+        "name": {
+          "zh-Hant": "免費初步諮詢（30 分鐘）",
+          "zh-Hans": "免费初步咨询（30 分钟）",
+          "en": "Free intro call (30 min)"
+        },
+        "durationMin": 30,
+        "price": 0
+      },
+      {
+        "key": "workshop",
+        "name": {
+          "zh-Hant": "策略工作坊（2 小時）",
+          "zh-Hans": "策略工作坊（2 小时）",
+          "en": "Strategy workshop (2 h)"
+        },
+        "durationMin": 120,
+        "price": 8000
+      }
+    ],
+    "staff": [
+      {
+        "key": "grace",
+        "name": "Grace Lau",
+        "services": [
+          "consult",
+          "workshop"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 570,
+            "endMin": 1080
+          },
+          {
+            "weekday": 2,
+            "startMin": 570,
+            "endMin": 1080
+          },
+          {
+            "weekday": 3,
+            "startMin": 570,
+            "endMin": 1080
+          },
+          {
+            "weekday": 4,
+            "startMin": 570,
+            "endMin": 1080
+          },
+          {
+            "weekday": 5,
+            "startMin": 570,
+            "endMin": 1080
+          }
+        ]
+      },
+      {
+        "key": "ken",
+        "name": "Ken Wong",
+        "services": [
+          "consult"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 600,
+            "endMin": 1020
+          },
+          {
+            "weekday": 2,
+            "startMin": 600,
+            "endMin": 1020
+          },
+          {
+            "weekday": 3,
+            "startMin": 600,
+            "endMin": 1020
+          },
+          {
+            "weekday": 4,
+            "startMin": 600,
+            "endMin": 1020
+          },
+          {
+            "weekday": 5,
+            "startMin": 600,
+            "endMin": 1020
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "陳大文",
+      "phone": "+85291230001",
+      "email": "david.chan@example.com",
+      "tags": [
+        "零售"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Amy Lee",
+      "phone": "+85291230002",
+      "tags": [
+        "logistics"
+      ],
+      "status": "lead"
+    },
+    {
+      "name": "黃志明",
+      "email": "wong@example.com",
+      "tags": [
+        "初創"
+      ],
+      "status": "lead"
+    }
+  ]
+}

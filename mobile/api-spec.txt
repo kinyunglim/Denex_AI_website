@@ -1,0 +1,234 @@
+VCTS Server API Specification (Mobile Integration Guide)
+========================================================
+
+Base URL
+--------
+- Local development: http://localhost:3000
+- All endpoints are under /api
+- Content-Type: application/json
+
+Authentication
+--------------
+- User auth uses Bearer JWT in Authorization header:
+  Authorization: Bearer <userToken>
+- Admin auth returns a separate admin JWT token after 2FA.
+- User tokens are created without an explicit expiry in code.
+- Admin tokens expire in 12 hours.
+
+Common Response Shapes
+----------------------
+- Success responses are JSON objects.
+- Errors typically return:
+  - { "message": "<error message>" }
+  - Validation errors can include { "errors": <zod format> }
+
+Schemas (Data Models)
+---------------------
+User
+- id: string (ObjectId in DB)
+- email: string
+- password: string (min 8 chars; stored hashed)
+- name: string (optional)
+- role: "user" | "admin"
+- isActive: boolean
+- isVerified: boolean
+- otp: { code?: string, expiresAt?: date, type?: "registration" | "password_reset" }
+- createdAt: date
+- updatedAt: date
+
+AdminUser
+- id: string (ObjectId in DB)
+- email: string
+- password: string (min 10 chars; stored hashed)
+- name: string
+- permissions: string[]
+- isActive: boolean
+- otp: { code?: string, expiresAt?: date }
+- lastLogin?: date
+- createdAt: date
+- updatedAt: date
+
+Otp
+- email: string
+- code: string (6 digits)
+- type: "registration" | "password_reset"
+- expiresAt: date
+- createdAt: date
+
+Company
+- id: string (ObjectId in DB)
+- name: string
+- address: string
+- createdAt: date
+- updatedAt: date
+
+Endpoints
+---------
+
+1) Health Check
+POST /api/health
+Response 200:
+{
+  "status": "UP"
+}
+
+2) Send OTP
+POST /api/auth/send-otp
+Body:
+{
+  "email": "user@example.com",
+  "type": "registration" | "password_reset"
+}
+Response 200:
+{
+  "message": "OTP sent successfully. Please check your email."
+}
+Errors:
+- 400 Invalid input
+- 409 User already exists (registration flow)
+- 500 Internal server error
+Notes:
+- OTP validity: 15 minutes
+- OTP is delivered via email
+
+3) Register
+POST /api/auth/register
+Body:
+{
+  "email": "user@example.com",
+  "password": "password123",
+  "name": "Test User",
+  "otp": "123456"
+}
+Response 201:
+{
+  "message": "User registered successfully. You can now login."
+}
+Errors:
+- 400 Invalid input
+- 409 User already exists
+- 500 Internal server error
+
+4) Login
+POST /api/auth/login
+Body:
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+Response 200:
+{
+  "message": "Login successful",
+  "token": "<jwt>",
+  "user": {
+    "id": "<id>",
+    "email": "user@example.com",
+    "name": "Test User",
+    "role": "user"
+  }
+}
+Errors:
+- 400 Invalid input
+- 401 Invalid email or password
+- 403 Please verify your email address before logging in
+- 403 Your account has been deactivated
+- 500 Internal server error
+
+5) Forgot Password (Send OTP)
+POST /api/auth/forgot-password
+Body:
+{
+  "email": "user@example.com"
+}
+Response 200:
+{
+  "message": "If an account exists with this email, you will receive an OTP shortly."
+}
+Errors:
+- 400 Invalid email address
+- 500 Internal server error
+Notes:
+- OTP validity: 15 minutes
+- Response message does not reveal if the user exists
+
+6) Reset Password
+POST /api/auth/reset-password
+Headers:
+Authorization: Bearer <userToken>
+Body:
+{
+  "email": "user@example.com",
+  "oldPassword": "oldPassword123",
+  "newPassword": "newPassword123",
+  "otp": "123456"
+}
+Response 200:
+{
+  "message": "Password updated successfully"
+}
+Errors:
+- 400 Invalid input
+- 400 User not found
+- 400 Invalid OTP
+- 400 OTP has expired
+- 400 Incorrect old password
+- 401 Unauthorized
+- 401 Invalid token
+- 403 Email does not match authenticated user
+- 500 Internal server error
+
+7) Admin Login (Step 1)
+POST /api/admin/auth/login
+Body:
+{
+  "email": "admin@example.com",
+  "password": "adminpassword123"
+}
+Response 200 (standard admin flow):
+{
+  "mfaRequired": true,
+  "email": "admin@example.com"
+}
+Response 200 (default admin enabled with email=admin/password=admin):
+{
+  "mfaRequired": false,
+  "email": "admin",
+  "token": "<admin-jwt>",
+  "admin": {
+    "id": "default-admin-id",
+    "email": "admin@vcts.local",
+    "name": "Default Admin",
+    "permissions": ["all"]
+  }
+}
+Errors:
+- 400 Invalid input
+- 401 Invalid credentials
+- 403 Admin account is deactivated
+- 500 Internal server error
+Notes:
+- Admin OTP validity: 5 minutes
+
+8) Admin Verify OTP (Step 2)
+POST /api/admin/auth/verify-otp
+Body:
+{
+  "email": "admin@example.com",
+  "code": "123456"
+}
+Response 200:
+{
+  "message": "OTP verified successfully",
+  "token": "<admin-jwt>",
+  "admin": {
+    "id": "<id>",
+    "email": "admin@example.com",
+    "name": "Admin Name",
+    "permissions": ["all"]
+  }
+}
+Errors:
+- 400 Invalid input
+- 401 Invalid or expired verification code
+- 401 Invalid session
+- 500 Internal server error

@@ -1,0 +1,17 @@
+{
+  "slug": "agency-site",
+  "business": {
+    "name": { "zh-Hant": "啟點網站工作室", "zh-Hans": "启点网站工作室", "en": "Launchpad Web Studio" },
+    "phone": "",
+    "whatsapp": "",
+    "email": "",
+    "address": { "zh-Hant": "香港", "en": "Hong Kong" }
+  },
+  "locales": ["zh-Hant", "en"],
+  "theme": "corporate",
+  "modules": ["booking", "payments", "stripe"],
+  "sections": ["hero", "services", "cases", "about", "contact"],
+  "notifyEmails": ["kinyunglim@gmail.com"],
+  "timezone": "Asia/Hong_Kong",
+  "currency": "HKD"
+}

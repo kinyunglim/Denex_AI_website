@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "services": "服務",
+    "cases": "案例",
+    "about": "關於",
+    "contact": "聯絡",
+    "book": "預約",
+    "products": "產品",
+    "menu": "選單"
+  },
+  "contact": {
+    "name": "姓名",
+    "phone": "電話",
+    "email": "電郵",
+    "message": "訊息",
+    "submit": "送出",
+    "sending": "傳送中…",
+    "success": "多謝！我們已收到你的訊息，會盡快回覆。",
+    "error": "未能送出，請稍後再試。",
+    "phoneOrEmail": "請填寫電話或電郵",
+    "required": "必填",
+    "invalidEmail": "電郵格式不正確",
+    "whatsapp": "WhatsApp 我們",
+    "tooMany": "提交次數太多，請稍後再試。"
+  },
+  "booking": {
+    "title": "網上預約",
+    "subtitle": "揀服務、時間，一分鐘完成預約。",
+    "service": "服務",
+    "staff": "負責人",
+    "anyStaff": "任何人",
+    "date": "日期",
+    "time": "時間",
+    "noSlots": "呢日暫時冇空檔，請揀另一日。",
+    "yourDetails": "你的資料",
+    "notes": "備註（可選）",
+    "confirm": "確認預約",
+    "booking": "預約中…",
+    "success": "預約成功！",
+    "successBody": "{service} · {staff}\n{when}",
+    "another": "再預約",
+    "minutes": "{n} 分鐘",
+    "free": "免費",
+    "back": "返回",
+    "loading": "載入中…",
+    "unavailable": "網上預約暫時未開放。",
+    "taken": "呢個時間啱啱俾人預約咗，請揀另一個時間。"
+  },
+  "catalog": {
+    "title": "產品目錄",
+    "subtitle": "查看規格，直接向我們查詢報價。",
+    "all": "全部",
+    "specs": "規格",
+    "inquire": "查詢報價",
+    "company": "公司",
+    "quantity": "數量",
+    "message": "其他要求",
+    "submit": "送出查詢",
+    "success": "已收到你的查詢，我們會盡快報價。",
+    "back": "返回產品目錄",
+    "empty": "暫時未有產品。"
+  },
+  "footer": {
+    "rights": "版權所有",
+    "address": "地址",
+    "phone": "電話",
+    "email": "電郵"
+  },
+  "preview": {
+    "banner": "示範模式：資料不會被儲存",
+    "theme": "風格",
+    "getThis": "我想要呢個網站"
+  },
+  "payment": {
+    "successTitle": "付款成功",
+    "successBody": "多謝！我們已收到你的付款，收據會以電郵寄出。",
+    "cancelledTitle": "付款已取消",
+    "cancelledBody": "你未有被收費。如有需要請再聯絡我們。",
+    "home": "返回主頁"
+  },
+  "common": {
+    "notFoundTitle": "找不到此頁",
+    "notFoundBody": "你要找的頁面不存在或已移除。",
+    "home": "返回主頁"
+  }
+}
