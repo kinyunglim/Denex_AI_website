@@ -1,34 +1,30 @@
 {
-  "slug": "sharp-barber-club",
+  "slug": "tide-harbour-seafood",
   "business": {
     "name": {
-      "zh-Hant": "剪型所",
-      "en": "Sharp Barber Club"
+      "zh-Hant": "潮港海產",
+      "en": "Tide Harbour Seafood"
     },
-    "phone": "+852 2388 0000",
+    "phone": "+852 2600 0000",
     "whatsapp": "",
-    "email": "shop@sharp.example",
+    "email": "sales@tideharbour.example",
     "address": {
       "zh-Hant": ""
     }
   },
   "locales": [
-    "zh-Hant",
     "en",
-    "zh-Hans"
+    "zh-Hant"
   ],
-  "theme": "bold",
+  "theme": "product",
   "modules": [
-    "booking",
-    "payments",
-    "stripe"
+    "catalog"
   ],
   "notifyEmails": [
-    "shop@sharp.example"
+    "sales@tideharbour.example"
   ],
   "owner": {
-    "name": "Jay Wong",
-    "email": "jay@sharp.example"
-  },
-  "domain": "www.sharp.example"
+    "name": "Leo Cheung",
+    "email": "leo@tideharbour.example"
+  }
 }

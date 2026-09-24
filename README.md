@@ -1,49 +1,58 @@
-# client-starter
+# Agency site（你的接單網站）
 
-「網站 + CRM」範本。每接一個新客，就複製一份、改 `client.config.ts`，幾日內交貨。
+以 client-starter 生成，再加咗「訂單」模組。客人可以：
 
-以 VTCS 課程範本為底（Next.js 16 + MongoDB + Zod），加入 OnMove 的 CRM／預約／收款，以及 OceanLink 的三語同產品目錄。
+1. **範本**（`/templates`）：即場試玩 4 款風格（iframe 嵌入 client-starter 的示範部署）
+2. **價錢**（`/pricing`）：3 個方案 + 17 項加購服務
+3. **落單**（`/order`）：揀方案、風格、語言、加購，即時計價，提交訂單（可選 Stripe 訂金預授權）
+4. **訂單狀態**（`/order/ORD-…`）
 
-## 快速開始
+你（擁有人）喺 `/admin/orders`：
+
+- 收到通知（電郵 + 可選 Slack/Discord webhook）
+- 按 **批准並開始製作**：收取訂金（Stripe 預授權轉扣款），訂單進入製作隊列
+- 或者 **拒絕**：自動取消預授權，並通知客人
+- 你部電腦行緊 `corepack yarn order:worker` 嘅話，會自動用 client-starter 生成客人嘅網站 repo（複製 → 設定 → 測試 → commit），完成後標記「已交付」，並列出上線清單
+
+## 快速開始（本機）
 
 ```bash
-corepack yarn install
-corepack yarn dev:memory          # 用記憶體資料庫 + 示範資料，唔使裝 MongoDB
+corepack yarn dev:memory --theme corporate           # 接單網站 http://localhost:3000，後台 admin/admin
+cd ../client-starter && corepack yarn dev:preview --port 3100   # 範本預覽（另一個終端機）
 ```
 
-- 網站：http://localhost:3000
-- 後台：http://localhost:3000/admin（開發模式登入：`admin` / `admin`）
-- 睇四款風格：`corepack yarn dev:preview`，然後喺頂部揀風格
+## 設定
 
-## 包括乜嘢
-
-| 類別 | 功能 |
+| 檔案 | 內容 |
 |---|---|
-| 網站 | Hero、服務、案例、關於、聯絡表單、WhatsApp 按鈕、PWA、SEO（sitemap/robots） |
-| 風格 | 4 款：corporate（企業）、warm（溫暖）、product（產品）、bold（大膽），改一個字就轉 |
-| 語言 | 繁中／簡中／英文，揀邊幾種都得 |
-| CRM（核心） | 客戶、標籤、狀態、備註、時間線、網站查詢收件箱、Excel/CSV 匯入（自動對欄位、去重）、Excel 匯出 |
-| 預約（模組） | 網上預約、服務、員工工作時間、休假、防重複預約、後台週曆、確認電郵 |
-| 收款（模組） | 收款記錄、自動收據編號、可列印中英收據、月結 |
-| Stripe（模組） | 付款連結、webhook 自動入賬（不會重複記錄） |
-| Google Calendar（模組） | 預約自動同步 |
-| 產品目錄（模組） | 產品、規格、分類、查詢報價 → 入 CRM |
-| 手機 App（模組） | `mobile/` Flutter 範本（VTCS） |
-| 後台 | 擁有人／員工兩級權限、電郵 OTP 雙重驗證、中英切換 |
+| `agency.config.ts` | 方案、加購、價錢、訂金比例（預設 50%）、範本說明 |
+| `client.config.ts` | 你公司名稱、聯絡資料、**`notify.email`（收訂單通知，記得填）** |
+| `content/*.json` | 主頁文案 |
 
-## 為新客開站
+公司名稱「啟點網站工作室 / Launchpad Web Studio」只係暫定名，請喺 `client.config.ts` 改成你的公司名。
 
-用 Claude Code 嘅 `/new-client` skill，或者手動：
+## 環境變數（除 client-starter 的 `.env.example` 外）
+
+| 變數 | 用途 |
+|---|---|
+| `NEXT_PUBLIC_PREVIEW_BASE_URL` | client-starter 示範部署網址（Vercel project，`PREVIEW_MODE=1`） |
+| `STRIPE_SECRET_KEY` | 有設定先會收訂金；冇設定時訂單直接進入「等待確認」 |
+| `ORDER_STRIPE_WEBHOOK_SECRET` | Stripe webhook `https://你的網址/api/orders/stripe-webhook`，事件：`checkout.session.completed`、`checkout.session.expired` |
+| `ORDER_WEBHOOK_URL` | 可選：Slack / Discord / Make / Zapier 的 incoming webhook，新訂單即時通知 |
+| `CLIENT_STARTER_DIR` | worker 用，預設 `../client-starter` |
+| `CLIENTS_DIR` | worker 生成客人 repo 的位置，預設 `../clients` |
+
+## Worker（自動製作）
 
 ```bash
-corepack yarn client:init --answers answers.json   # 產生 config、內容、.env.local
-corepack yarn client:check                         # 檢查設定同環境變數
-corepack yarn verify                               # lint + 型別 + 測試 + build
-corepack yarn admin:create --email owner@client.com --name "Owner"
+corepack yarn order:worker          # 每 30 秒檢查一次已批准訂單
+corepack yarn order:worker --once   # 只處理一張
 ```
 
-詳細部署步驟：[docs/SETUP.md](docs/SETUP.md)。交畀客人嘅使用說明範本：[docs/HANDOVER.md](docs/HANDOVER.md)。
+- Worker 要連同一個 MongoDB（讀 `.env.local` 的 `MONGODB_URI` / `MONGODB_DB`），所以正式使用時要指向 Atlas。
+- 失敗會記錄完整 log，訂單頁可以按「重試製作」。
+- 生成後嘅上線步驟（Atlas、Vercel、網域、客人帳號）見訂單頁的「上線清單」同 client-starter 的 `docs/SETUP.md`。
 
-## 開發守則
-
-見 [CLAUDE.md](CLAUDE.md)。重點：跟 VTCS 分層（model → DAO → service → route）、模組之間只經 service 溝通、只用 theme token、密碼放 env。
+## 注意
+- Stripe 預授權大約 7 日後自動失效，後台會喺第 4 日起提醒。
+- 首頁「客戶例子」係你之前做過的項目類型，冇寫任何數字；有真實成效數據先好加。

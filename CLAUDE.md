@@ -1,4 +1,4 @@
-# CLAUDE.md — client-starter
+# CLAUDE.md — agency-site (built from client-starter)
 
 Template for client websites + CRM, derived from the VTCS course template (`C:\VTCS-Starter-Template-Project\vctsserver`). Each client gets a copy of this repo (see the `/new-client` skill). Explain changes to the user in numbered steps, separating **what changed** from **what was done**; the user reads Cantonese (Traditional Chinese).
 
@@ -31,3 +31,7 @@ Stack: Next.js 16 (App Router) + MongoDB (Atlas) + Zod 4 + next-intl 4 + Tailwin
 - Preview mode (`PREVIEW_MODE=1`) must never write to the DB or send email; public routes use `PreviewService` there.
 - Secrets only in env (`.env.local` / Vercel). `.env.example` lists every key.
 - Mobile (`mobile/`, Flutter) only matters when `modules.mobile` is on. Any change to an `/api/auth/*` route must be mirrored in `mobile/lib/API/api_endpoints.dart`, `lib/model/` and the provider.
+
+## Agency additions
+- `agency.config.ts` — packages, add-ons, prices, deposit rate. `src/modules/orders/` — pricing (pure), orders service (Stripe manual-capture deposit via `payment-gateway.ts`), notifications, production worker (`production.ts`, `scripts/order-worker.ts`). Admin: `app/admin/(app)/orders`. Public: `app/[locale]/templates|pricing|order`.
+- Keep `src/` in sync with client-starter where possible (merge `template/main`); agency-only code lives in the paths above plus `SiteHeader.tsx` links.
