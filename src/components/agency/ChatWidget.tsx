@@ -171,9 +171,9 @@ export function ChatWidget({ locale, labels }: { locale: string; labels: ChatLab
                 <div key={i} className="max-w-[88%] rounded-card rounded-tl-md bg-surface px-3.5 py-2.5 text-ink shadow-sm">
                   {m.content ? <RichText text={m.content} /> : (
                     <span className="inline-flex gap-1 py-1" aria-label="…">
-                      <span className="h-2 w-2 animate-bounce rounded-full bg-muted/60" />
-                      <span className="h-2 w-2 animate-bounce rounded-full bg-muted/60 [animation-delay:150ms]" />
-                      <span className="h-2 w-2 animate-bounce rounded-full bg-muted/60 [animation-delay:300ms]" />
+                      <span className="h-2 w-2 animate-pulse rounded-full bg-muted/60" />
+                      <span className="h-2 w-2 animate-pulse rounded-full bg-muted/60 [animation-delay:150ms]" />
+                      <span className="h-2 w-2 animate-pulse rounded-full bg-muted/60 [animation-delay:300ms]" />
                     </span>
                   )}
                 </div>
