@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { FormEvent, useMemo, useState } from 'react';
 import { agency, AddOn, ModuleKey } from '@/agency.config';
 import { quote } from '@/src/modules/orders/pricing';
+import { Shot } from './visuals';
 
 type Lang = 'zh-Hant' | 'en';
 type LocaleKey = 'zh-Hant' | 'zh-Hans' | 'en';
@@ -14,7 +15,7 @@ type Api = { ok: true; data: { ref: string; checkoutUrl: string | null } } | { o
  * Order configurator: plan → theme → languages → add-ons → details, with a
  * live price summary. The server recomputes the price; this total is a preview.
  */
-export function OrderForm({ initialTheme, initialPackage, withDeposit, previewBaseUrl }: { initialTheme: string; initialPackage: string; withDeposit: boolean; previewBaseUrl: string }) {
+export function OrderForm({ initialTheme, initialPackage, withDeposit }: { initialTheme: string; initialPackage: string; withDeposit: boolean }) {
   const t = useTranslations('agency');
   const tc = useTranslations('contact');
   const locale = useLocale();
@@ -98,10 +99,13 @@ export function OrderForm({ initialTheme, initialPackage, withDeposit, previewBa
             {agency.themes.map((th) => (
               <div key={th.key} className={`card p-3 ${theme === th.key ? 'ring-2 ring-primary' : ''}`}>
                 <button type="button" onClick={() => setTheme(th.key)} aria-pressed={theme === th.key} className="block w-full text-left">
+                  <span className="mb-2 block aspect-[4/3] overflow-hidden rounded-input border border-line">
+                    <Shot theme={th.key} alt="" />
+                  </span>
                   <span className="block font-semibold text-ink">{th.name[lang]}</span>
                   <span className="block text-xs text-muted">{th.fit[lang]}</span>
                 </button>
-                <a href={`${previewBaseUrl}/${lang}?theme=${th.key}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-primary">{t('openFull')} ↗</a>
+                <a href={`/${locale}/templates/${th.key}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-primary">{t('openFull')} ↗</a>
               </div>
             ))}
           </div>

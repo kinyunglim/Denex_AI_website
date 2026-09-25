@@ -28,7 +28,7 @@ export default async function OrderPage({
       <h1 className="text-4xl text-ink">{t('orderTitle')}</h1>
       <p className="mt-3 max-w-2xl text-muted">{t('orderSub')}</p>
       <div className="mt-10">
-        <OrderForm initialTheme={theme} initialPackage={pkg} withDeposit={withStripe} previewBaseUrl={agency.previewBaseUrl} />
+        <OrderForm initialTheme={theme} initialPackage={pkg} withDeposit={withStripe} />
       </div>
     </section>
   );

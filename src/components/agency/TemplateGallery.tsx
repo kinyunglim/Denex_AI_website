@@ -2,12 +2,15 @@
 
 import { useState } from 'react';
 import { Link } from '@/src/i18n/navigation';
-import type { Theme } from '@/themes';
-import { MiniSite } from './visuals';
+import { Shot } from './visuals';
 
-export type GalleryItem = { key: string; name: string; fit: string; theme: Theme; previewUrl: string };
+export type GalleryItem = { key: string; name: string; fit: string };
 
-/** Filter tabs (with counts) over portrait template cards; hover reveals Preview / Choose. */
+/**
+ * Filter tabs (with counts) over portrait template cards. Each card shows the
+ * real template screenshot, which scrolls down on hover; the overlay links to
+ * the in-site preview page and the order form.
+ */
 export function TemplateGallery({ items, labels }: { items: GalleryItem[]; labels: { all: string; preview: string; choose: string } }) {
   const [filter, setFilter] = useState<string>('all');
   const tabs = [{ key: 'all', name: labels.all, count: items.length }, ...items.map((i) => ({ key: i.key, name: i.name, count: 1 }))];
@@ -35,14 +38,12 @@ export function TemplateGallery({ items, labels }: { items: GalleryItem[]; label
         {shown.map((item) => (
           <article key={item.key} className="group">
             <div className="relative aspect-[288/444] overflow-hidden rounded-card border border-line bg-surface shadow-card">
-              <div className="h-[140%] transition-transform duration-[2500ms] ease-in-out group-hover:-translate-y-[28%]">
-                <MiniSite theme={item.theme} variant="mobile" />
-              </div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-primary/80 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100">
-                <a href={item.previewUrl} target="_blank" rel="noopener noreferrer" className="rounded-button bg-surface px-6 py-2.5 text-sm font-medium text-ink hover:bg-surface-alt">
-                  {labels.preview} ↗
-                </a>
-                <Link href={`/order?theme=${item.key}`} className="rounded-button bg-accent px-6 py-2.5 text-sm font-medium text-on-primary hover:opacity-90">
+              <Shot theme={item.key} alt={item.name} scroll />
+              <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-2 bg-gradient-to-t from-primary/90 to-transparent px-3 pb-4 pt-16 opacity-100 transition-opacity sm:gap-3 lg:opacity-0 lg:group-focus-within:opacity-100 lg:group-hover:opacity-100">
+                <Link href={`/templates/${item.key}`} className="w-full max-w-40 rounded-button bg-surface px-4 py-2 text-center text-sm font-medium text-ink hover:bg-surface-alt">
+                  {labels.preview}
+                </Link>
+                <Link href={`/order?theme=${item.key}`} className="w-full max-w-40 rounded-button bg-accent px-4 py-2 text-center text-sm font-medium text-on-primary hover:opacity-90">
                   {labels.choose}
                 </Link>
               </div>

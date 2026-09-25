@@ -1,11 +1,10 @@
 import { Link } from '@/src/i18n/navigation';
 import { agency } from '@/agency.config';
-import { themes, type Theme } from '@/themes';
 import type { SiteContent } from '@/src/lib/content';
 import { Placeholder } from '@/src/components/site/Placeholder';
 import { copy, type Lang } from './home-copy';
 import { TemplateGallery } from './TemplateGallery';
-import { Devices, Icon, MiniSite, Ornaments } from './visuals';
+import { Devices, Icon, Ornaments, Shot } from './visuals';
 
 /**
  * Agency home page. Section order and layout follow webdesigntheme.com
@@ -22,15 +21,8 @@ function Title({ first, second, center = true, onDark = false }: { first: string
   );
 }
 
-export function AgencyHome({ lang, theme, locale, cases }: { lang: Lang; theme: Theme; locale: string; cases: SiteContent['cases'] }) {
-  const previewLocale = locale === 'en' ? 'en' : 'zh-Hant';
-  const gallery = agency.themes.map((t) => ({
-    key: t.key,
-    name: t.name[lang],
-    fit: t.fit[lang],
-    theme: themes[t.key as keyof typeof themes],
-    previewUrl: `${agency.previewBaseUrl}/${previewLocale}?theme=${t.key}`,
-  }));
+export function AgencyHome({ lang, cases }: { lang: Lang; cases: SiteContent['cases'] }) {
+  const gallery = agency.themes.map((t) => ({ key: t.key, name: t.name[lang], fit: t.fit[lang] }));
 
   return (
     <>
@@ -55,7 +47,7 @@ export function AgencyHome({ lang, theme, locale, cases }: { lang: Lang; theme: 
           </Link>
         </div>
         <div className="relative mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-          <Devices theme={theme} alt={copy.hero.badge[lang]} />
+          <Devices alt={copy.hero.badge[lang]} />
         </div>
       </section>
 
@@ -70,7 +62,7 @@ export function AgencyHome({ lang, theme, locale, cases }: { lang: Lang; theme: 
               <span className="h-2.5 w-2.5 rounded-full bg-line" />
             </div>
             <div className="aspect-[4/3]">
-              <MiniSite theme={themes.warm} />
+              <Shot theme="warm" alt="" />
             </div>
           </div>
         </div>
@@ -161,7 +153,7 @@ export function AgencyHome({ lang, theme, locale, cases }: { lang: Lang; theme: 
                 style={{ left: `${i * 14}%`, top: `${(i % 2) * 18 + i * 6}%`, zIndex: i }}
               >
                 <div className="aspect-[16/10]">
-                  <MiniSite theme={g.theme} />
+                  <Shot theme={g.key} alt="" />
                 </div>
               </div>
             ))}

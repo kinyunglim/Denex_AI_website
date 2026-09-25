@@ -13,8 +13,8 @@ import { AgencyHeader } from '@/src/components/agency/AgencyHeader';
 import { AgencyFooter } from '@/src/components/agency/AgencyFooter';
 import { BackToTop } from '@/src/components/agency/AgencyNav';
 import { copy, langOf } from '@/src/components/agency/home-copy';
+import { ChatWidget } from '@/src/components/agency/ChatWidget';
 import { PreviewBar } from '@/src/components/site/PreviewBar';
-import { WhatsAppButton } from '@/src/components/site/WhatsAppButton';
 import { ServiceWorkerRegister } from '@/src/components/site/ServiceWorkerRegister';
 import { FontLoader } from '@/src/components/site/FontLoader';
 import '../globals.css';
@@ -45,13 +45,23 @@ export async function generateViewport(): Promise<Viewport> {
   return { themeColor: theme.colors.primary };
 }
 
+/** Chat widget strings for one language (keeps the full copy file out of the client bundle). */
+function chatLabels(lang: 'zh-Hant' | 'en') {
+  const c = copy.chat;
+  return {
+    open: c.open[lang], title: c.title[lang], status: c.status[lang], greeting: c.greeting[lang],
+    suggestions: c.suggestions.map((s) => s[lang]), placeholder: c.placeholder[lang], send: c.send[lang],
+    close: c.close[lang], reset: c.reset[lang], disclaimer: c.disclaimer[lang], unavailable: c.unavailable[lang],
+    busy: c.busy[lang], error: c.error[lang], order: c.order[lang], contact: c.contact[lang],
+  };
+}
+
 export default async function LocaleLayout({ children, params }: { children: ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
   const themeName = await getActiveTheme();
-  const business = await getBusiness();
   const style = themeToCssVars(themes[themeName]) as CSSProperties;
   const fontsHref = googleFontsHref(themes[themeName]);
 
@@ -65,7 +75,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <main className="flex-1">{children}</main>
           <AgencyFooter locale={locale as Locale} />
           <BackToTop label={copy.footer.top[langOf(locale)]} />
-          {business.whatsapp && <WhatsAppButton number={business.whatsapp} />}
+          {/* WhatsApp lives in the top bar; this corner belongs to the AI assistant. */}
+          <ChatWidget locale={locale} labels={chatLabels(langOf(locale))} />
           <ServiceWorkerRegister />
         </NextIntlClientProvider>
       </body>

@@ -1,5 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react';
-import type { Theme } from '@/themes';
+import type { ReactNode } from 'react';
 
 /** Line icons for the storefront (24px grid, stroke = currentColor). */
 const ICONS: Record<string, ReactNode> = {
@@ -39,62 +38,31 @@ export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
   );
 }
 
-/**
- * A miniature website drawn in a theme's own colours: used inside the hero
- * devices and the template cards so no screenshots are needed.
- * Hex values come from the theme objects (data), not from this component.
- */
-export function MiniSite({ theme, variant = 'desktop' }: { theme: Theme; variant?: 'desktop' | 'mobile' }) {
-  const c = theme.colors;
-  const v = (color: string): CSSProperties => ({ backgroundColor: color });
-  const mobile = variant === 'mobile';
+/** Path of a template screenshot (captured by scripts/capture-templates.mjs). */
+export const shotSrc = (theme: string, view: 'desktop' | 'mobile' = 'desktop') => `/templates/${theme}-${view}.jpg`;
+
+/** A real template screenshot cropped to its top; on hover (group) it scrolls down the page. */
+export function Shot({ theme, view = 'desktop', alt, scroll = false }: { theme: string; view?: 'desktop' | 'mobile'; alt: string; scroll?: boolean }) {
   return (
-    <div className="flex h-full w-full flex-col overflow-hidden" style={v(c.bg)} aria-hidden="true">
-      <div className="flex items-center justify-between px-[6%] py-[4%]" style={v(c.surface)}>
-        <span className="block h-[6px] w-[22%] rounded-full" style={v(c.primary)} />
-        {mobile ? (
-          <span className="block h-[6px] w-[10%] rounded-full" style={v(c.muted)} />
-        ) : (
-          <span className="flex w-[42%] justify-end gap-[8%]">
-            {[0, 1, 2].map((i) => <span key={i} className="block h-[4px] flex-1 rounded-full" style={v(c.muted)} />)}
-            <span className="block h-[8px] flex-1 rounded-full" style={v(c.primary)} />
-          </span>
-        )}
-      </div>
-      <div className={`flex ${mobile ? 'flex-col' : 'items-center'} gap-[5%] px-[6%] py-[7%]`} style={v(c.heroBg)}>
-        <div className="flex flex-1 flex-col gap-[6px]">
-          <span className="block h-[5px] w-[30%] rounded-full" style={v(c.accent)} />
-          <span className="block h-[9px] w-[90%] rounded-full" style={v(c.onHero)} />
-          <span className="block h-[9px] w-[70%] rounded-full" style={v(c.onHero)} />
-          <span className="mt-[4px] block h-[4px] w-[80%] rounded-full opacity-60" style={v(c.onHero)} />
-          <span className="mt-[6px] block h-[10px] w-[34%] rounded-full" style={v(c.primary === c.heroBg ? c.accent : c.primary)} />
-        </div>
-        <div className={`${mobile ? 'h-[70px] w-full' : 'aspect-[4/3] w-[42%]'} rounded-[6px]`} style={v(c.surfaceAlt)}>
-          <div className="m-[12%] h-[60%] rounded-full opacity-40" style={v(c.accent)} />
-        </div>
-      </div>
-      <div className={`grid ${mobile ? 'grid-cols-1' : 'grid-cols-3'} gap-[4%] px-[6%] py-[6%]`}>
-        {(mobile ? [0, 1] : [0, 1, 2]).map((i) => (
-          <div key={i} className="flex flex-col gap-[5px] rounded-[5px] border p-[8%]" style={{ ...v(c.surface), borderColor: c.line }}>
-            <span className="block h-[5px] w-[60%] rounded-full" style={v(c.ink)} />
-            <span className="block h-[3px] w-[90%] rounded-full opacity-50" style={v(c.muted)} />
-            <span className="block h-[3px] w-[70%] rounded-full opacity-50" style={v(c.muted)} />
-          </div>
-        ))}
-      </div>
-    </div>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={shotSrc(theme, view)}
+      alt={alt}
+      loading="lazy"
+      className={`h-full w-full object-cover object-top ${scroll ? 'transition-[object-position] duration-[5000ms] ease-in-out group-hover:object-bottom' : ''}`}
+    />
   );
 }
 
-/** Laptop + tablet + phone composition for the hero. */
-export function Devices({ theme, alt }: { theme: Theme; alt: string }) {
+/** Laptop + tablet + phone composition for the hero, showing real template screenshots. */
+export function Devices({ alt }: { alt: string }) {
   return (
     <div role="img" aria-label={alt} className="relative mx-auto aspect-[16/10] w-full max-w-4xl">
       {/* Laptop */}
       <div className="absolute left-[14%] right-[14%] top-0">
         <div className="rounded-t-[14px] border-[10px] border-b-0 border-ink bg-ink">
-          <div className="aspect-[16/10] overflow-hidden rounded-[4px]">
-            <MiniSite theme={theme} />
+          <div className="aspect-[16/10] overflow-hidden rounded-[4px] bg-surface">
+            <Shot theme="corporate" alt="" />
           </div>
         </div>
         <div className="relative -mx-[8%] h-[14px] rounded-b-[14px] bg-line shadow-card">
@@ -103,14 +71,14 @@ export function Devices({ theme, alt }: { theme: Theme; alt: string }) {
       </div>
       {/* Tablet */}
       <div className="absolute bottom-[4%] left-0 w-[30%] -rotate-6 rounded-[16px] border-[7px] border-ink bg-ink shadow-card">
-        <div className="aspect-[4/3] overflow-hidden rounded-[6px]">
-          <MiniSite theme={theme} />
+        <div className="aspect-[4/3] overflow-hidden rounded-[6px] bg-surface">
+          <Shot theme="warm" alt="" />
         </div>
       </div>
       {/* Phone */}
       <div className="absolute bottom-0 right-[2%] w-[15%] rotate-6 rounded-[18px] border-[6px] border-ink bg-ink shadow-card">
-        <div className="aspect-[9/19] overflow-hidden rounded-[10px]">
-          <MiniSite theme={theme} variant="mobile" />
+        <div className="aspect-[9/19] overflow-hidden rounded-[10px] bg-surface">
+          <Shot theme="product" view="mobile" alt="" />
         </div>
       </div>
     </div>
