@@ -34,4 +34,5 @@ Stack: Next.js 16 (App Router) + MongoDB (Atlas) + Zod 4 + next-intl 4 + Tailwin
 
 ## Agency additions
 - `agency.config.ts` — packages, add-ons, prices, deposit rate. `src/modules/orders/` — pricing (pure), orders service (Stripe manual-capture deposit via `payment-gateway.ts`), notifications, production worker (`production.ts`, `scripts/order-worker.ts`). Admin: `app/admin/(app)/orders`. Public: `app/[locale]/templates|pricing|order`.
-- Keep `src/` in sync with client-starter where possible (merge `template/main`); agency-only code lives in the paths above plus `SiteHeader.tsx` links.
+- Storefront look: layout modelled on webdesigntheme.com in navy. `src/components/agency/` — `AgencyHeader`, `AgencyFooter`, `AgencyHome` (home sections), `home-copy.ts` (all storefront copy; numbers derived from agency.config.ts), `visuals.tsx` (icons, logo mark, CSS device/mini-site mockups). `themes/corporate.ts` here is the storefront theme (Rubik font), not the client template.
+- Keep `src/` in sync with client-starter where possible (merge `template/main`); agency-only code lives in the paths above plus `app/[locale]/layout.tsx` and `page.tsx`.

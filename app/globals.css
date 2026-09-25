@@ -82,3 +82,36 @@ h1, h2, h3, .heading {
 @media print {
   .no-print { display: none !important; }
 }
+
+/* --- Agency storefront ------------------------------------------------------ */
+
+/* Pill button with an offset outline behind it. */
+.btn-offset {
+  @apply relative isolate;
+}
+.btn-offset::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translate(5px, 5px);
+  border: 1.5px solid var(--c-ink);
+  border-radius: inherit;
+  transition: transform .2s;
+}
+.btn-offset:hover::after {
+  transform: translate(0, 0);
+}
+
+.section-title {
+  @apply text-3xl leading-tight text-ink sm:text-[2.6rem];
+}
+
+.hl {
+  @apply text-accent;
+}
+
+html {
+  scroll-padding-top: 8rem;
+  scroll-behavior: smooth;
+}

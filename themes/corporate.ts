@@ -1,28 +1,31 @@
 import type { Theme } from './types';
 
-/** Corporate — cool navy, restrained; modelled on DenEx. */
+/**
+ * Corporate — navy. On the agency site this is the storefront look
+ * (layout modelled on webdesigntheme.com, with navy in place of yellow).
+ */
 export const corporate: Theme = {
   name: 'corporate',
   label: { 'zh-Hant': '企業專業', en: 'Corporate' },
   colors: {
-    bg: '#F8FAFC',
+    bg: '#FFFFFF',
     surface: '#FFFFFF',
-    surfaceAlt: '#EDF3F9',
-    ink: '#14263A',
-    muted: '#5A6B82',
-    line: '#E2E8F0',
+    surfaceAlt: '#F1F5FC',
+    ink: '#0F1B2D',
+    muted: '#4B5A70',
+    line: '#E1E8F2',
     primary: '#082B57',
     primaryHover: '#0E3D78',
     onPrimary: '#FFFFFF',
-    accent: '#0E76C7',
-    heroBg: '#082B57',
-    onHero: '#FFFFFF',
+    accent: '#1F6FEB',
+    heroBg: '#F1F5FC',
+    onHero: '#0F1B2D',
   },
-  fonts: { heading: 'notoSansTc', body: 'notoSansTc' },
+  fonts: { heading: 'rubik', body: 'rubik' },
   headingWeight: 500,
-  headingTracking: '-0.005em',
-  radius: { card: '14px', button: '999px', input: '10px' },
-  shadow: '0 18px 50px rgba(8,43,87,.10)',
+  headingTracking: '-0.01em',
+  radius: { card: '20px', button: '999px', input: '12px' },
+  shadow: '0 20px 50px rgba(8,43,87,.10)',
   imageFilter: 'none',
-  hero: 'split',
+  hero: 'center',
 };

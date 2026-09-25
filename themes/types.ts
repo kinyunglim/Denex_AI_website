@@ -2,7 +2,7 @@
  * Design tokens for one theme. Components use only the Tailwind classes these
  * feed (bg-bg, text-ink, bg-primary, rounded-card, font-heading, …) — never hex.
  */
-export type FontKey = 'notoSansTc' | 'notoSerifTc' | 'inter' | 'playfair' | 'spaceGrotesk' | 'dmSans';
+export type FontKey = 'notoSansTc' | 'notoSerifTc' | 'inter' | 'playfair' | 'spaceGrotesk' | 'dmSans' | 'rubik';
 
 export type Theme = {
   name: string;

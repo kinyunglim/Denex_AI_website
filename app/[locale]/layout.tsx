@@ -9,8 +9,10 @@ import { googleFontsHref, themeToCssVars } from '@/src/lib/theme';
 import { Locale, pickLocalized } from '@/src/lib/config';
 import { isPreviewMode } from '@/src/lib/site';
 import { getActiveTheme, getBusiness, getContent } from '@/src/lib/site-context';
-import { SiteHeader } from '@/src/components/site/SiteHeader';
-import { SiteFooter } from '@/src/components/site/SiteFooter';
+import { AgencyHeader } from '@/src/components/agency/AgencyHeader';
+import { AgencyFooter } from '@/src/components/agency/AgencyFooter';
+import { BackToTop } from '@/src/components/agency/AgencyNav';
+import { copy, langOf } from '@/src/components/agency/home-copy';
 import { PreviewBar } from '@/src/components/site/PreviewBar';
 import { WhatsAppButton } from '@/src/components/site/WhatsAppButton';
 import { ServiceWorkerRegister } from '@/src/components/site/ServiceWorkerRegister';
@@ -59,9 +61,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <FontLoader href={fontsHref} />
         <NextIntlClientProvider>
           {isPreviewMode() && <PreviewBar current={themeName} />}
-          <SiteHeader locale={locale as Locale} />
+          <AgencyHeader locale={locale as Locale} />
           <main className="flex-1">{children}</main>
-          <SiteFooter locale={locale as Locale} />
+          <AgencyFooter locale={locale as Locale} />
+          <BackToTop label={copy.footer.top[langOf(locale)]} />
           {business.whatsapp && <WhatsAppButton number={business.whatsapp} />}
           <ServiceWorkerRegister />
         </NextIntlClientProvider>

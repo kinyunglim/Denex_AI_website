@@ -14,6 +14,7 @@ export const FONT_FAMILIES: Record<FontKey, { family: string; query: string }> =
   playfair: { family: 'Playfair Display', query: 'Playfair+Display:wght@500;700' },
   spaceGrotesk: { family: 'Space Grotesk', query: 'Space+Grotesk:wght@500;700' },
   dmSans: { family: 'DM Sans', query: 'DM+Sans:wght@400;500;700' },
+  rubik: { family: 'Rubik', query: 'Rubik:wght@400;500;700' },
 };
 
 const fontStack = (key: FontKey) =>
