@@ -24,10 +24,13 @@ export async function AgencyFooter({ locale }: { locale: Locale }) {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 text-sm sm:grid-cols-2 sm:px-6 lg:grid-cols-[2fr_1fr_1fr_1.3fr]">
         <div>
           <div className="flex items-center gap-2.5">
-            <LogoMark className="h-11 w-11" />
+            <LogoMark src={business.logo} className="h-11 w-11" />
             <span className="heading text-lg">{name}</span>
           </div>
           <p className="mt-4 max-w-sm leading-relaxed opacity-75">{copy.footer.tagline[lang]}</p>
+          <a href="https://denexconsulting.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-accent hover:underline">
+            {copy.footer.parent[lang]} ↗
+          </a>
         </div>
         <nav>
           <p className="heading text-base text-accent">{copy.footer.site[lang]}</p>

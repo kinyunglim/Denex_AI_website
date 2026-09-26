@@ -15,6 +15,6 @@ export default function manifest(): MetadataRoute.Manifest {
     display: 'standalone',
     background_color: theme.colors.bg,
     theme_color: theme.colors.primary,
-    icons: [{ src: '/icon.svg', sizes: 'any', type: 'image/svg+xml' }],
+    icons: [{ src: '/denex-logo.png', sizes: '1920x1920', type: 'image/png' }],
   };
 }

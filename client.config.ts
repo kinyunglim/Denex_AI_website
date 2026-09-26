@@ -7,9 +7,9 @@ import { defineClientConfig } from './src/lib/config';
 export default defineClientConfig({
   "business": {
     "name": {
-      "zh-Hant": "啟點網站工作室",
-      "zh-Hans": "启点网站工作室",
-      "en": "Launchpad Web Studio"
+      "zh-Hant": "DenEx AI Websites",
+      "zh-Hans": "DenEx AI Websites",
+      "en": "DenEx AI Websites"
     },
     "phone": "",
     "whatsapp": "",
@@ -18,7 +18,7 @@ export default defineClientConfig({
       "zh-Hant": "香港",
       "en": "Hong Kong"
     },
-    "logo": "/logo.svg"
+    "logo": "/denex-logo.png"
   },
   "locales": [
     "zh-Hant",

@@ -29,7 +29,7 @@ cd ../client-starter && corepack yarn dev:preview --port 3100   # 範本預覽�
 | `client.config.ts` | 你公司名稱、聯絡資料、**`notify.email`（收訂單通知，記得填）** |
 | `content/*.json` | 主頁文案 |
 
-公司名稱「啟點網站工作室 / Launchpad Web Studio」只係暫定名，請喺 `client.config.ts` 改成你的公司名。
+品牌：**DenEx AI Websites**（DenEx Consulting 旗下服務，logo 係 `public/denex-logo.png`）。DenEx 主網站 Services 05 會連過嚟。
 
 ## 環境變數（除 client-starter 的 `.env.example` 外）
 

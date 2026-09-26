@@ -27,14 +27,13 @@ export function Icon({ name, className = 'h-6 w-6' }: { name: string; className?
   );
 }
 
-/** Brand mark: a navy disc with an accent orbit (stands in until a real logo exists). */
-export function LogoMark({ className = 'h-10 w-10' }: { className?: string }) {
+/** Brand logo (client.config.ts business.logo) on a white tile, so it reads on light and navy backgrounds. */
+export function LogoMark({ src, className = 'h-10 w-10' }: { src: string; className?: string }) {
   return (
-    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <circle cx="24" cy="24" r="20" className="fill-primary" />
-      <ellipse cx="24" cy="24" rx="22" ry="8" transform="rotate(-28 24 24)" fill="none" strokeWidth="3" className="stroke-accent" />
-      <path d="M24 13c1 5.6 3.4 8 9 11-5.6 1-8 3.4-9 11-1-7.6-3.4-10-9-11 5.6-3 8-5.4 9-11Z" className="fill-on-primary" />
-    </svg>
+    <span className={`inline-flex shrink-0 items-center justify-center overflow-hidden rounded-input bg-surface ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt="" className="h-full w-full object-contain" />
+    </span>
   );
 }
 

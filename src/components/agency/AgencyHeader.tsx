@@ -52,7 +52,7 @@ export async function AgencyHeader({ locale }: { locale: Locale }) {
             <LanguageSwitcher locales={routing.locales} />
           </div>
           <Link href="/" className="col-start-1 flex items-center gap-2.5 justify-self-start lg:col-start-2 lg:justify-self-center">
-            <LogoMark className="h-10 w-10 lg:h-12 lg:w-12" />
+            <LogoMark src={business.logo} className="h-10 w-10 lg:h-12 lg:w-12" />
             <span className="heading whitespace-nowrap text-base font-medium leading-tight text-ink lg:text-lg">{name}</span>
           </Link>
           <div className="col-start-3 flex items-center justify-end gap-2">

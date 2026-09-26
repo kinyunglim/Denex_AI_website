@@ -186,6 +186,7 @@ export const copy = {
     contact: { 'zh-Hant': '聯絡', en: 'Contact' },
     rights: { 'zh-Hant': '版權所有', en: 'All rights reserved.' },
     top: { 'zh-Hant': '返回頂部', en: 'Back to top' },
+    parent: { 'zh-Hant': 'DenEx Consulting 旗下服務', en: 'A DenEx Consulting service' },
   },
 } satisfies Record<string, unknown>;
 

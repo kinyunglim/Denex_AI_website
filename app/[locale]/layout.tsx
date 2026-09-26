@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { default: `${name} — ${content.hero.title}`, template: `%s | ${name}` },
     description: content.hero.subtitle,
     manifest: '/manifest.webmanifest',
-    icons: { icon: '/icon.svg', apple: '/icon.svg' },
+    icons: { icon: '/denex-logo.png', apple: '/denex-logo.png' },
     openGraph: { title: name, description: content.hero.subtitle },
     alternates: { languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])) },
     robots: isPreviewMode() ? { index: false, follow: false } : undefined,
