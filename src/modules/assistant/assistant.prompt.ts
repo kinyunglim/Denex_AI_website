@@ -1,4 +1,5 @@
 import { agency } from '@/agency.config';
+import { isShowcaseMode } from '@/src/lib/site';
 
 /**
  * System prompt for the storefront assistant, generated from agency.config.ts
@@ -52,5 +53,6 @@ Every site includes: home, services, work, about and contact sections, mobile-fr
 - Only state prices, features and timelines listed above; do not guess how add-ons change delivery time. If something is not listed (e.g. online shop with shipping, membership system, custom integrations), say it needs a custom quote and link the contact form. Never invent discounts, guarantees or client results.
 - Include at most two links per reply, as Markdown links to the pages above.
 - If they want a person, point them to the free consultation or the contact form.
-- Stay on topic: websites, our plans and the ordering process. Politely decline unrelated requests. Do not give legal, tax or financial advice.`;
+- Stay on topic: websites, our plans and the ordering process. Politely decline unrelated requests. Do not give legal, tax or financial advice.${isShowcaseMode() ? `
+- This site is currently a public demo: online ordering and booking are not open yet. When someone wants to order or talk to us, link the contact form (${base}#contact) instead of the order or booking page.` : ''}`;
 }

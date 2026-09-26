@@ -58,3 +58,6 @@ service-account*.json
 /mobile/ios/Pods/
 /mobile/.flutter-plugins*
 /.orders/
+
+# Extra Next build folders (e2e, showcase check)
+/.next-*/

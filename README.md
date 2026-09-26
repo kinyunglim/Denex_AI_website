@@ -55,6 +55,22 @@ corepack yarn order:worker --once   # 只處理一張
 - 失敗會記錄完整 log，訂單頁可以按「重試製作」。
 - 生成後嘅上線步驟（Atlas、Vercel、網域、客人帳號）見訂單頁的「上線清單」同 client-starter 的 `docs/SETUP.md`。
 
+## 公開示範版（Vercel，唔使資料庫）
+
+設定 `SHOWCASE_MODE=1` 就可以唔接資料庫上線俾人睇：主頁、範本、價錢、AI 助手照用；聯絡表單唔會儲資料、落單同預約暫停、後台隱藏。
+
+Vercel 環境變數：
+
+| 變數 | 值 |
+|---|---|
+| `SHOWCASE_MODE` | `1` |
+| `MINIMAX_API_KEY` | 你嘅 MiniMax key（AI 助手） |
+| `ENABLE_EXPERIMENTAL_COREPACK` | `1`（用 yarn 4） |
+| `MONGOMS_DISABLE_POSTINSTALL` | `1`（安裝時唔下載測試用 MongoDB） |
+| `NEXT_PUBLIC_SITE_URL` | 上線後嘅網址，例如 `https://denex-ai-websites.vercel.app` |
+
+本機試：`SHOWCASE_MODE=1 NEXT_DIST_DIR=.next-showcase corepack yarn next build`，然後 `node scripts/showcase-start.mjs`（port 3500）。
+
 ## 範本截圖
 
 範本頁同主頁用嘅係真網站截圖（`public/templates/`）。改咗 client-starter 嘅風格或示範內容之後，重新影：

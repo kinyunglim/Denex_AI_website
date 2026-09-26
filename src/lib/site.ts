@@ -26,6 +26,15 @@ export function isPreviewMode(): boolean {
   return process.env.PREVIEW_MODE === '1';
 }
 
+/**
+ * Agency storefront showcase (SHOWCASE_MODE=1): the agency's own site and copy,
+ * deployed without a database. Forms store nothing, ordering and booking are
+ * closed, the back office is hidden. Used for a public demo before Atlas is set up.
+ */
+export function isShowcaseMode(): boolean {
+  return process.env.SHOWCASE_MODE === '1';
+}
+
 /** Theme used in preview mode when the visitor hasn't picked one. */
 export function defaultPreviewTheme(): ThemeName {
   const t = process.env.PREVIEW_THEME;

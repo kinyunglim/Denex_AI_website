@@ -2,7 +2,7 @@ import { ObjectId, WithId } from 'mongodb';
 import { parseInput } from '@/src/lib/api';
 import { NotFoundError } from '@/src/lib/errors';
 import { Mailer } from '@/src/lib/email';
-import { getConfig, isPreviewMode } from '@/src/lib/site';
+import { getConfig, isPreviewMode, isShowcaseMode } from '@/src/lib/site';
 import { pickLocalized } from '@/src/lib/config';
 import { CrmService } from '@/src/modules/crm/crm.service';
 import { SubmissionDao } from './contact-form.dao';
@@ -35,7 +35,7 @@ export class ContactFormService {
     // Bots fill the hidden field; pretend success so they don't retry.
     if (data.website) return { accepted: true };
     // Preview sites are public showcases: accept but store nothing.
-    if (isPreviewMode()) return { accepted: true };
+    if (isPreviewMode() || isShowcaseMode()) return { accepted: true };
 
     const { contact } = await CrmService.findOrCreateContact({
       name: data.name,

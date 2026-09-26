@@ -24,8 +24,15 @@ function corsHeaders(request: NextRequest): Headers {
   return headers;
 }
 
+/** Paths that need the database; hidden on a showcase deployment (SHOWCASE_MODE=1). */
+const DB_ONLY = ['/admin', '/api/admin', '/api/auth', '/api/user', '/api/booking', '/api/stripe', '/api/orders/stripe-webhook'];
+
 export default function proxy(request: NextRequest): NextResponse {
   const { pathname, searchParams } = request.nextUrl;
+
+  if (process.env.SHOWCASE_MODE === '1' && DB_ONLY.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
+    return new NextResponse('Not found', { status: 404 });
+  }
 
   if (pathname.startsWith('/api/')) {
     const cors = corsHeaders(request);

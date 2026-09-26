@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { requireModulePage } from '@/src/lib/modules';
-import { getConfig } from '@/src/lib/site';
+import { redirect } from 'next/navigation';
+import { getConfig, isShowcaseMode } from '@/src/lib/site';
 import { BookingWizard } from '@/src/components/site/BookingWizard';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -12,6 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function BookPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  // Showcase deployment has no database: send visitors to the contact form instead.
+  if (isShowcaseMode()) redirect(`/${locale}#contact`);
   requireModulePage('booking');
   const t = await getTranslations('booking');
   const cfg = getConfig();
