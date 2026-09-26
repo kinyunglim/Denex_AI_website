@@ -38,7 +38,8 @@ cd ../client-starter && corepack yarn dev:preview --port 3100   # 範本預覽�
 | `NEXT_PUBLIC_PREVIEW_BASE_URL` | client-starter 示範部署網址（Vercel project，`PREVIEW_MODE=1`） |
 | `STRIPE_SECRET_KEY` | 有設定先會收訂金；冇設定時訂單直接進入「等待確認」 |
 | `ORDER_STRIPE_WEBHOOK_SECRET` | Stripe webhook `https://你的網址/api/orders/stripe-webhook`，事件：`checkout.session.completed`、`checkout.session.expired` |
-| `ANTHROPIC_API_KEY` | AI 聊天助手（Claude）。冇設定時，聊天視窗會顯示「落單 / 聯絡我們」連結 |
+| `MINIMAX_API_KEY` | AI 聊天助手用 MiniMax（優先）；`MINIMAX_MODEL` 預設 `MiniMax-M3` |
+| `ANTHROPIC_API_KEY` | 冇 MiniMax key 時改用 Claude。兩樣都冇，聊天視窗會顯示「落單 / 聯絡我們」連結 |
 | `ORDER_WEBHOOK_URL` | 可選：Slack / Discord / Make / Zapier 的 incoming webhook，新訂單即時通知 |
 | `CLIENT_STARTER_DIR` | worker 用，預設 `../client-starter` |
 | `CLIENTS_DIR` | worker 生成客人 repo 的位置，預設 `../clients` |
