@@ -25,7 +25,7 @@ export type ChatInput = z.infer<typeof ChatInput>;
 const MINIMAX_BASE_URL = 'https://api.minimax.io/anthropic';
 const CLAUDE_MODEL = 'claude-opus-5';
 const MINIMAX_MODEL = process.env.MINIMAX_MODEL || 'MiniMax-M3';
-const useMiniMax = () => Boolean(process.env.MINIMAX_API_KEY);
+const isMiniMax = () => Boolean(process.env.MINIMAX_API_KEY);
 const REFUSAL_TEXT = {
   'zh-Hant': '呢個問題我幫唔到你。有其他關於網站或者方案嘅問題，歡迎再問；或者用聯絡表單直接搵我哋。',
   'zh-Hans': '这个问题我帮不到你。有其他关于网站或方案的问题，欢迎再问；或者用联络表单直接找我们。',
@@ -34,11 +34,11 @@ const REFUSAL_TEXT = {
 
 let client: Anthropic | null = null;
 const getClient = () =>
-  (client ??= useMiniMax() ? new Anthropic({ apiKey: process.env.MINIMAX_API_KEY, baseURL: MINIMAX_BASE_URL }) : new Anthropic());
+  (client ??= isMiniMax() ? new Anthropic({ apiKey: process.env.MINIMAX_API_KEY, baseURL: MINIMAX_BASE_URL }) : new Anthropic());
 
 export const AssistantService = {
   isEnabled(): boolean {
-    return useMiniMax() || Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
+    return isMiniMax() || Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
   },
 
   parse(body: unknown): ChatInput {
@@ -58,7 +58,7 @@ export const AssistantService = {
 
 The visitor is browsing the ${lang} version of the site; use /${lang === 'zh-Hans' ? 'zh-Hant' : lang} in links.`;
           const messages = input.messages.map((m) => ({ role: m.role, content: m.content }));
-          const stream = useMiniMax()
+          const stream = isMiniMax()
             ? // MiniMax supports the core Messages API only (no betas / effort / fallbacks).
               getClient().messages.stream({ model: MINIMAX_MODEL, max_tokens: 4096, system, messages })
             : getClient().beta.messages.stream({
