@@ -54,9 +54,7 @@ export const AssistantService = {
     return new ReadableStream<Uint8Array>({
       async start(controller) {
         try {
-          const system = `${buildSystemPrompt()}
-
-The visitor is browsing the ${lang} version of the site; use /${lang === 'zh-Hans' ? 'zh-Hant' : lang} in links.`;
+          const system = buildSystemPrompt(`/${lang === 'zh-Hans' ? 'zh-Hant' : lang}`);
           const messages = input.messages.map((m) => ({ role: m.role, content: m.content }));
           const stream = isMiniMax()
             ? // MiniMax supports the core Messages API only (no betas / effort / fallbacks).
