@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
 import { routing } from '@/src/i18n/routing';
+import { THEMES } from '@/src/lib/config';
 
 /**
  * Next.js 16 proxy (formerly middleware):
@@ -10,7 +11,6 @@ import { routing } from '@/src/i18n/routing';
  *                remembered in a cookie so prospects can flip between themes.
  */
 const intl = createMiddleware(routing);
-const THEMES = ['corporate', 'warm', 'product', 'bold'];
 
 function corsHeaders(request: NextRequest): Headers {
   const headers = new Headers();
@@ -46,7 +46,7 @@ export default function proxy(request: NextRequest): NextResponse {
 
   const response = intl(request);
   const theme = searchParams.get('theme');
-  if (process.env.PREVIEW_MODE === '1' && theme && THEMES.includes(theme)) {
+  if (process.env.PREVIEW_MODE === '1' && theme && (THEMES as readonly string[]).includes(theme)) {
     response.cookies.set('preview_theme', theme, { path: '/', sameSite: 'lax', maxAge: 60 * 60 * 24 * 30 });
   }
   return response;

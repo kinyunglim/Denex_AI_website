@@ -1,0 +1,300 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "笑悅牙科",
+      "zh-Hans": "笑悦牙科",
+      "en": "SmileCare Dental"
+    },
+    "phone": "+852 2388 6600",
+    "whatsapp": "+852 9388 6600",
+    "email": "hello@smilecare.example",
+    "address": {
+      "zh-Hant": "香港旺角彌敦道 688 號 12 樓",
+      "zh-Hans": "香港旺角弥敦道 688 号 12 楼",
+      "en": "12/F, 688 Nathan Road, Mong Kok, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "洗牙 · 矯齒 · 種植牙",
+        "title": "輕鬆睇牙，安心微笑",
+        "subtitle": "註冊牙醫主理，網上即時預約，收費透明，唔會臨時加價。",
+        "cta": "預約檢查",
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "診療項目",
+        "items": [
+          {
+            "title": "洗牙及口腔檢查",
+            "description": "包括 X 光、洗牙拋光同牙齒健康報告。",
+            "price": "HK$680 起"
+          },
+          {
+            "title": "隱形牙箍",
+            "description": "3D 掃描度身訂造，療程進度一目了然。",
+            "price": "HK$28,000 起"
+          },
+          {
+            "title": "種植牙",
+            "description": "先做評估，再按骨質度身制定療程。",
+            "price": "HK$16,800 起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "治療例子",
+        "items": [
+          {
+            "title": "隱形牙箍 14 個月",
+            "description": "牙齒擠迫改善，唔使戴鋼線牙箍。",
+            "image": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "單顆種植牙",
+            "description": "替換缺牙，咬嘢同真牙一樣穩陣。",
+            "image": "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "洗牙美白",
+            "description": "一次療程去除茶漬，牙齒明顯亮咗。",
+            "image": "https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於診所",
+        "body": "笑悅牙科成立於 2015 年，由兩位註冊牙醫主理。診所位於旺角，鄰近港鐵站，設有兒童友善診症室。",
+        "image": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "有問題想問牙醫？",
+        "body": "留低聯絡方法，我哋會喺一個工作天內回覆。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "洗牙 · 矫齿 · 种植牙",
+        "title": "轻松睇牙，安心微笑",
+        "subtitle": "注册牙医主理，网上即时预约，收费透明，唔会临时加价。",
+        "cta": "预约检查",
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "诊疗项目",
+        "items": [
+          {
+            "title": "洗牙及口腔检查",
+            "description": "包括 X 光、洗牙抛光同牙齿健康报告。",
+            "price": "HK$680 起"
+          },
+          {
+            "title": "隐形牙箍",
+            "description": "3D 扫描度身订造，疗程进度一目了然。",
+            "price": "HK$28,000 起"
+          },
+          {
+            "title": "种植牙",
+            "description": "先做评估，再按骨质度身制定疗程。",
+            "price": "HK$16,800 起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "治疗例子",
+        "items": [
+          {
+            "title": "隐形牙箍 14 个月",
+            "description": "牙齿挤迫改善，唔使戴钢线牙箍。",
+            "image": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "单颗种植牙",
+            "description": "替换缺牙，咬嘢同真牙一样稳阵。",
+            "image": "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "洗牙美白",
+            "description": "一次疗程去除茶渍，牙齿明显亮咗。",
+            "image": "https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于诊所",
+        "body": "笑悦牙科成立于 2015 年，由两位注册牙医主理。诊所位于旺角，邻近港铁站，设有儿童友善诊症室。",
+        "image": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "有问题想问牙医？",
+        "body": "留低联络方法，我哋会喺一个工作天内回复。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Cleaning · Aligners · Implants",
+        "title": "Easy dental visits, confident smiles",
+        "subtitle": "Registered dentists, instant online booking and clear prices with no surprises.",
+        "cta": "Book a check-up",
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Treatments",
+        "items": [
+          {
+            "title": "Cleaning & check-up",
+            "description": "X-rays, scale and polish, plus a dental health report.",
+            "price": "From HK$680"
+          },
+          {
+            "title": "Clear aligners",
+            "description": "Custom-made from a 3D scan, with progress you can follow.",
+            "price": "From HK$28,000"
+          },
+          {
+            "title": "Dental implants",
+            "description": "Assessment first, then a plan based on your bone condition.",
+            "price": "From HK$16,800"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Treatment examples",
+        "items": [
+          {
+            "title": "Clear aligners, 14 months",
+            "description": "Crowding fixed without metal braces.",
+            "image": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Single implant",
+            "description": "A missing tooth replaced, as steady as a natural one.",
+            "image": "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Cleaning & whitening",
+            "description": "Tea stains removed in one visit.",
+            "image": "https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About the clinic",
+        "body": "SmileCare Dental opened in 2015 and is run by two registered dentists. We are near Mong Kok MTR, with a child-friendly treatment room.",
+        "image": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "A question for the dentist?",
+        "body": "Leave your details and we will reply within one working day."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "checkup",
+        "name": {
+          "zh-Hant": "洗牙及檢查",
+          "zh-Hans": "洗牙及检查",
+          "en": "Cleaning & check-up"
+        },
+        "durationMin": 45,
+        "price": 680
+      },
+      {
+        "key": "aligner",
+        "name": {
+          "zh-Hant": "隱形牙箍諮詢",
+          "zh-Hans": "隐形牙箍咨询",
+          "en": "Aligner consultation"
+        },
+        "durationMin": 30,
+        "price": 300
+      }
+    ],
+    "staff": [
+      {
+        "key": "drlee",
+        "name": "李醫生",
+        "services": [
+          "checkup",
+          "aligner"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 2,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 3,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 4,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 5,
+            "startMin": 600,
+            "endMin": 1140
+          }
+        ]
+      },
+      {
+        "key": "drwong",
+        "name": "黃醫生",
+        "services": [
+          "checkup"
+        ],
+        "hours": [
+          {
+            "weekday": 2,
+            "startMin": 540,
+            "endMin": 1020
+          },
+          {
+            "weekday": 4,
+            "startMin": 540,
+            "endMin": 1020
+          },
+          {
+            "weekday": 6,
+            "startMin": 540,
+            "endMin": 1020
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Karen Chan",
+      "phone": "+85261230101",
+      "email": "karen@example.com",
+      "tags": [
+        "洗牙"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Peter Lau",
+      "phone": "+85261230102",
+      "email": "peter@example.com",
+      "tags": [
+        "隱形牙箍"
+      ],
+      "status": "lead"
+    }
+  ]
+}

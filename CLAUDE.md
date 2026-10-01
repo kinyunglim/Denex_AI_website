@@ -14,7 +14,7 @@ Stack: Next.js 16 (App Router) + MongoDB (Atlas) + Zod 4 + next-intl 4 + Tailwin
 - `yarn client:init --answers answers.json` · `yarn client:check` · `yarn admin:create --email … --name …` · `yarn seed:demo --theme warm`
 
 ## The one file to edit per client
-`client.config.ts` — business details, `locales` (first = default), `theme` (corporate | warm | product | bold), `modules`, home `sections`, `notify.email`, timezone, currency. Validated by `src/lib/config.ts` (bad config fails the build). Website copy lives in `content/<locale>.json`; UI strings in `messages/<locale>.json`.
+`client.config.ts` — business details, `locales` (first = default), `theme` (corporate | warm | product | bold | clinic | beauty | restaurant | education | interior | tech | florist | pets — each has demo content in `demo/<theme>.json`), `modules`, home `sections`, `notify.email`, timezone, currency. Validated by `src/lib/config.ts` (bad config fails the build). Website copy lives in `content/<locale>.json`; UI strings in `messages/<locale>.json`.
 
 ## Architecture (keep the VTCS layering)
 - `src/modules/<name>/` — `*.model.ts` (Zod + types) → `*.dao.ts` (DB only) → `*.service.ts` (rules) → tests in `__tests__/`

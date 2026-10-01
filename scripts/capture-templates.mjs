@@ -21,7 +21,10 @@ const arg = (name, fallback) => {
 };
 const base = arg('base', process.env.NEXT_PUBLIC_PREVIEW_BASE_URL || 'http://localhost:3100');
 const locale = arg('locale', 'zh-Hant');
-const themes = ['corporate', 'warm', 'product', 'bold'];
+// Every theme in client-starter (keep in sync with THEMES in src/lib/config.ts); pass --only a,b to limit.
+const all = ['corporate', 'warm', 'product', 'bold', 'clinic', 'beauty', 'restaurant', 'education', 'interior', 'tech', 'florist', 'pets'];
+const only = arg('only', '');
+const themes = only ? only.split(',') : all;
 const here = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(here, '..', 'public', 'templates');
 const channel = process.env.PW_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined);

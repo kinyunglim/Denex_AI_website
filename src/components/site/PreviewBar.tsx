@@ -9,6 +9,14 @@ const THEMES: { key: string; label: string }[] = [
   { key: 'warm', label: 'Warm 溫暖' },
   { key: 'product', label: 'Product 產品' },
   { key: 'bold', label: 'Bold 大膽' },
+  { key: 'clinic', label: 'Clinic 醫療' },
+  { key: 'beauty', label: 'Beauty 美容' },
+  { key: 'restaurant', label: 'Restaurant 餐廳' },
+  { key: 'education', label: 'Education 教育' },
+  { key: 'interior', label: 'Interior 室內設計' },
+  { key: 'tech', label: 'Tech 科技' },
+  { key: 'florist', label: 'Florist 花藝' },
+  { key: 'pets', label: 'Pets 寵物' },
 ];
 
 function Bar({ current }: { current: string }) {

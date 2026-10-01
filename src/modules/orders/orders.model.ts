@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { ObjectId } from 'mongodb';
 import type { Quote } from './pricing';
+import { THEMES, type ThemeName } from '@/src/lib/config';
 
 /**
  * `agency_orders`: one website order from a prospect, from checkout to delivery.
@@ -25,7 +26,7 @@ export type Order = {
   ref: string;
   packageKey: string;
   addOns: string[];
-  theme: 'corporate' | 'warm' | 'product' | 'bold';
+  theme: ThemeName;
   locales: ('zh-Hant' | 'zh-Hans' | 'en')[];
   business: {
     nameZhHant: string;
@@ -56,7 +57,7 @@ export const OrderInputSchema = z
   .object({
     packageKey: z.string().min(1),
     addOns: z.array(z.string()).max(30).default([]),
-    theme: z.enum(['corporate', 'warm', 'product', 'bold']),
+    theme: z.enum(THEMES),
     locales: z.array(z.enum(['zh-Hant', 'zh-Hans', 'en'])).min(1).max(3),
     business: z.object({
       nameZhHant: z.string().trim().max(120).default(''),

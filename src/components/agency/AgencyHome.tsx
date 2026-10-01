@@ -22,7 +22,8 @@ function Title({ first, second, center = true, onDark = false }: { first: string
 }
 
 export function AgencyHome({ lang, cases }: { lang: Lang; cases: SiteContent['cases'] }) {
-  const gallery = agency.themes.map((t) => ({ key: t.key, name: t.name[lang], fit: t.fit[lang] }));
+  const gallery = agency.themes.map((t) => ({ key: t.key, name: t.name[lang], fit: t.fit[lang], category: t.category }));
+  const categories = agency.categories.map((c) => ({ key: c.key, name: c.name[lang] }));
 
   return (
     <>
@@ -146,7 +147,7 @@ export function AgencyHome({ lang, cases }: { lang: Lang; cases: SiteContent['ca
             </Link>
           </div>
           <div className="relative mx-auto h-72 w-full max-w-lg sm:h-80" aria-hidden="true">
-            {gallery.map((g, i) => (
+            {gallery.slice(0, 4).map((g, i) => (
               <div
                 key={g.key}
                 className="absolute w-[58%] overflow-hidden rounded-[12px] border-4 border-on-primary/10 shadow-card"
@@ -167,6 +168,8 @@ export function AgencyHome({ lang, cases }: { lang: Lang; cases: SiteContent['ca
         <p className="mx-auto mt-4 max-w-xl text-center text-muted">{copy.gallery.body[lang]}</p>
         <TemplateGallery
           items={gallery}
+          categories={categories}
+          limit={8}
           labels={{ all: copy.gallery.all[lang], preview: copy.gallery.preview[lang], choose: copy.gallery.choose[lang] }}
         />
         <div className="mt-12 text-center">

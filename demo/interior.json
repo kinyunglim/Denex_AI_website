@@ -1,0 +1,271 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "方圓室內設計",
+      "zh-Hans": "方圆室内设计",
+      "en": "Form & Space Interiors"
+    },
+    "phone": "+852 2156 7788",
+    "whatsapp": "+852 9156 7788",
+    "email": "studio@formspace.example",
+    "address": {
+      "zh-Hant": "香港黃竹坑道 21 號 16 樓",
+      "zh-Hans": "香港黄竹坑道 21 号 16 楼",
+      "en": "16/F, 21 Wong Chuk Hang Road, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "住宅 · 商業空間 · 翻新",
+        "title": "細單位，都可以住得寬敞",
+        "subtitle": "由度尺、3D 設計到完工，一個團隊跟到尾，報價逐項列明。",
+        "cta": "預約上門度尺",
+        "image": "https://images.unsplash.com/photo-1600494448850-6013c64ba722?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "服務",
+        "items": [
+          {
+            "title": "住宅設計及施工",
+            "description": "收納規劃、訂造傢俬、全屋翻新。",
+            "price": "每呎 HK$680 起"
+          },
+          {
+            "title": "商業空間",
+            "description": "寫字樓、零售店同診所設計。",
+            "price": "按項目報價"
+          },
+          {
+            "title": "3D 設計方案",
+            "description": "開工前睇清楚效果，減少改動。",
+            "price": "HK$8,000 起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "作品",
+        "items": [
+          {
+            "title": "將軍澳 3 房",
+            "description": "開放式廚房，加大收納空間。",
+            "image": "https://images.unsplash.com/photo-1671197244266-73129c97c096?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "西半山 2 房",
+            "description": "保留海景，用淺色木材放大空間感。",
+            "image": "https://images.unsplash.com/photo-1646987916641-1f3c8992daa2?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "觀塘共享辦公室",
+            "description": "20 個工作位連會議室，8 星期完工。",
+            "image": "https://images.unsplash.com/photo-1656122381069-9ec666d95cf1?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於我們",
+        "body": "方圓由兩位註冊室內設計師成立，十年來完成超過 200 個住宅同商業項目。我哋重視實用多過花巧。",
+        "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "傾下你嘅空間",
+        "body": "話我哋知單位面積同預算，我哋會安排免費初步諮詢。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "住宅 · 商业空间 · 翻新",
+        "title": "细单位，都可以住得宽敞",
+        "subtitle": "由度尺、3D 设计到完工，一个团队跟到尾，报价逐项列明。",
+        "cta": "预约上门度尺",
+        "image": "https://images.unsplash.com/photo-1600494448850-6013c64ba722?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "服务",
+        "items": [
+          {
+            "title": "住宅设计及施工",
+            "description": "收纳规划、订造家私、全屋翻新。",
+            "price": "每呎 HK$680 起"
+          },
+          {
+            "title": "商业空间",
+            "description": "写字楼、零售店同诊所设计。",
+            "price": "按项目报价"
+          },
+          {
+            "title": "3D 设计方案",
+            "description": "开工前睇清楚效果，减少改动。",
+            "price": "HK$8,000 起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "作品",
+        "items": [
+          {
+            "title": "将军澳 3 房",
+            "description": "开放式厨房，加大收纳空间。",
+            "image": "https://images.unsplash.com/photo-1671197244266-73129c97c096?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "西半山 2 房",
+            "description": "保留海景，用浅色木材放大空间感。",
+            "image": "https://images.unsplash.com/photo-1646987916641-1f3c8992daa2?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "观塘共享办公室",
+            "description": "20 个工作位连会议室，8 星期完工。",
+            "image": "https://images.unsplash.com/photo-1656122381069-9ec666d95cf1?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于我们",
+        "body": "方圆由两位注册室内设计师成立，十年来完成超过 200 个住宅同商业项目。我哋重视实用多过花巧。",
+        "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "倾下你嘅空间",
+        "body": "话我哋知单位面积同预算，我哋会安排免费初步咨询。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Homes · Commercial · Renovation",
+        "title": "Small flats can still feel spacious",
+        "subtitle": "From measuring and 3D design to handover, one team throughout, with itemised quotes.",
+        "cta": "Book a site visit",
+        "image": "https://images.unsplash.com/photo-1600494448850-6013c64ba722?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Services",
+        "items": [
+          {
+            "title": "Home design & build",
+            "description": "Storage planning, custom furniture, full renovations.",
+            "price": "From HK$680 / sq ft"
+          },
+          {
+            "title": "Commercial spaces",
+            "description": "Offices, retail shops and clinics.",
+            "price": "Quoted per project"
+          },
+          {
+            "title": "3D design proposal",
+            "description": "See the result before work starts, with fewer changes later.",
+            "price": "From HK$8,000"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Projects",
+        "items": [
+          {
+            "title": "Tseung Kwan O, 3 bedrooms",
+            "description": "Open kitchen and extra storage.",
+            "image": "https://images.unsplash.com/photo-1671197244266-73129c97c096?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Mid-Levels West, 2 bedrooms",
+            "description": "Sea view kept, light timber to open up the space.",
+            "image": "https://images.unsplash.com/photo-1646987916641-1f3c8992daa2?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Kwun Tong co-working office",
+            "description": "20 desks and a meeting room, finished in 8 weeks.",
+            "image": "https://images.unsplash.com/photo-1656122381069-9ec666d95cf1?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Form & Space was founded by two registered interior designers and has completed over 200 home and commercial projects. Practical first, decorative second.",
+        "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Tell us about your space",
+        "body": "Share the size and budget and we will arrange a free first consultation."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "visit",
+        "name": {
+          "zh-Hant": "上門度尺",
+          "zh-Hans": "上门度尺",
+          "en": "Site visit"
+        },
+        "durationMin": 60,
+        "price": 0
+      }
+    ],
+    "staff": [
+      {
+        "key": "design",
+        "name": "設計團隊",
+        "services": [
+          "visit"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 2,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 3,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 4,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 5,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 6,
+            "startMin": 600,
+            "endMin": 1080
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Eric Yuen",
+      "phone": "+85261230501",
+      "email": "eric@example.com",
+      "tags": [
+        "住宅",
+        "3 房"
+      ],
+      "status": "lead"
+    },
+    {
+      "name": "Grace Mak",
+      "phone": "+85261230502",
+      "email": "grace@example.com",
+      "tags": [
+        "寫字樓"
+      ],
+      "status": "active"
+    }
+  ]
+}

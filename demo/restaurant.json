@@ -1,0 +1,286 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "灣畔小館",
+      "zh-Hans": "湾畔小馆",
+      "en": "Harbourside Kitchen"
+    },
+    "phone": "+852 2811 2288",
+    "whatsapp": "+852 9811 2288",
+    "email": "book@harbourside.example",
+    "address": {
+      "zh-Hant": "香港西環堅尼地城新海旁街 18 號地舖",
+      "zh-Hans": "香港西环坚尼地城新海旁街 18 号地铺",
+      "en": "G/F, 18 New Praya, Kennedy Town, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "粵式小菜 · 點心 · 私人宴會",
+        "title": "屋企味道，用心炮製",
+        "subtitle": "每朝街市入貨，晏晝點心、晚市小菜，網上訂枱即時確認。",
+        "cta": "網上訂枱",
+        "image": "https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "餐牌精選",
+        "items": [
+          {
+            "title": "手工點心",
+            "description": "蝦餃、燒賣、流沙包，每日新鮮包製。",
+            "price": "HK$32 起"
+          },
+          {
+            "title": "晚市小菜",
+            "description": "豉汁蒸魚、薑蔥龍蝦、啫啫雞煲。",
+            "price": "HK$128 起"
+          },
+          {
+            "title": "私人宴會",
+            "description": "最多 40 位，可訂製菜單同佈置。",
+            "price": "HK$488 / 位起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "店主推介",
+        "items": [
+          {
+            "title": "週末家庭套餐",
+            "description": "四人份小菜加湯，夠晒一家人食。",
+            "image": "https://images.unsplash.com/photo-1559667709-eabb5b50117a?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "主廚時令菜",
+            "description": "每月按時令轉一次，限量供應。",
+            "image": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "公司聚餐",
+            "description": "包場服務，連投影同酒水安排。",
+            "image": "https://images.unsplash.com/photo-1729394405518-eaf2a0203aa7?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於小館",
+        "body": "灣畔小館由兩代廚師主理，喺西環開咗十年。我哋唔用味精，醬汁全部自家調配。",
+        "image": "https://images.unsplash.com/photo-1669410647983-ef742ccdfe6d?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "訂枱或宴會查詢",
+        "body": "大型聚會請提早三日聯絡我哋。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "粤式小菜 · 点心 · 私人宴会",
+        "title": "屋企味道，用心炮制",
+        "subtitle": "每朝街市入货，晏昼点心、晚市小菜，网上订台即时确认。",
+        "cta": "网上订台",
+        "image": "https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "餐牌精选",
+        "items": [
+          {
+            "title": "手工点心",
+            "description": "虾饺、烧卖、流沙包，每日新鲜包制。",
+            "price": "HK$32 起"
+          },
+          {
+            "title": "晚市小菜",
+            "description": "豉汁蒸鱼、姜葱龙虾、啫啫鸡煲。",
+            "price": "HK$128 起"
+          },
+          {
+            "title": "私人宴会",
+            "description": "最多 40 位，可订制菜单同布置。",
+            "price": "HK$488 / 位起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "店主推介",
+        "items": [
+          {
+            "title": "周末家庭套餐",
+            "description": "四人份小菜加汤，够晒一家人食。",
+            "image": "https://images.unsplash.com/photo-1559667709-eabb5b50117a?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "主厨时令菜",
+            "description": "每月按时令转一次，限量供应。",
+            "image": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "公司聚餐",
+            "description": "包场服务，连投影同酒水安排。",
+            "image": "https://images.unsplash.com/photo-1729394405518-eaf2a0203aa7?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于小馆",
+        "body": "湾畔小馆由两代厨师主理，喺西环开咗十年。我哋唔用味精，酱汁全部自家调配。",
+        "image": "https://images.unsplash.com/photo-1669410647983-ef742ccdfe6d?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "订台或宴会查询",
+        "body": "大型聚会请提早三日联络我哋。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Cantonese dishes · Dim sum · Private events",
+        "title": "Home-style flavours, made with care",
+        "subtitle": "Fresh from the market every morning: dim sum at lunch, dishes at dinner, and instant online table booking.",
+        "cta": "Book a table",
+        "image": "https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "From the menu",
+        "items": [
+          {
+            "title": "Handmade dim sum",
+            "description": "Har gow, siu mai and custard buns, made fresh daily.",
+            "price": "From HK$32"
+          },
+          {
+            "title": "Dinner dishes",
+            "description": "Steamed fish with black bean, ginger-scallion lobster, sizzling chicken.",
+            "price": "From HK$128"
+          },
+          {
+            "title": "Private dining",
+            "description": "Up to 40 guests, with a custom menu and set-up.",
+            "price": "From HK$488 / guest"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Our picks",
+        "items": [
+          {
+            "title": "Weekend family set",
+            "description": "Dishes and soup for four, enough for the whole family.",
+            "image": "https://images.unsplash.com/photo-1559667709-eabb5b50117a?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Chef's seasonal dish",
+            "description": "Changes monthly with the season, in limited supply.",
+            "image": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Company dinners",
+            "description": "Whole-venue bookings with projector and drinks arranged.",
+            "image": "https://images.unsplash.com/photo-1729394405518-eaf2a0203aa7?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Harbourside Kitchen is run by two generations of chefs and has served Kennedy Town for ten years. No MSG; every sauce is made in-house.",
+        "image": "https://images.unsplash.com/photo-1669410647983-ef742ccdfe6d?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Bookings and events",
+        "body": "For large parties, please contact us three days ahead."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "lunch",
+        "name": {
+          "zh-Hant": "午市訂枱",
+          "zh-Hans": "午市订台",
+          "en": "Lunch table"
+        },
+        "durationMin": 90,
+        "price": 0
+      },
+      {
+        "key": "dinner",
+        "name": {
+          "zh-Hant": "晚市訂枱",
+          "zh-Hans": "晚市订台",
+          "en": "Dinner table"
+        },
+        "durationMin": 120,
+        "price": 0
+      }
+    ],
+    "staff": [
+      {
+        "key": "floor",
+        "name": "樓面",
+        "services": [
+          "lunch",
+          "dinner"
+        ],
+        "hours": [
+          {
+            "weekday": 0,
+            "startMin": 660,
+            "endMin": 1320
+          },
+          {
+            "weekday": 1,
+            "startMin": 660,
+            "endMin": 1320
+          },
+          {
+            "weekday": 2,
+            "startMin": 660,
+            "endMin": 1320
+          },
+          {
+            "weekday": 3,
+            "startMin": 660,
+            "endMin": 1320
+          },
+          {
+            "weekday": 4,
+            "startMin": 660,
+            "endMin": 1320
+          },
+          {
+            "weekday": 5,
+            "startMin": 660,
+            "endMin": 1320
+          },
+          {
+            "weekday": 6,
+            "startMin": 660,
+            "endMin": 1320
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Raymond Ng",
+      "phone": "+85261230301",
+      "email": "raymond@example.com",
+      "tags": [
+        "宴會"
+      ],
+      "status": "lead"
+    },
+    {
+      "name": "Sandy Leung",
+      "phone": "+85261230302",
+      "email": "sandy@example.com",
+      "tags": [
+        "熟客"
+      ],
+      "status": "active"
+    }
+  ]
+}

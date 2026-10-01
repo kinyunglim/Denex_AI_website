@@ -16,7 +16,15 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 export function Hero({ content, theme, ctaHref }: { content: SiteContent['hero']; theme: Theme; ctaHref: string }) {
   if (theme.hero === 'center') {
     return (
-      <section id="hero" className="bg-hero text-on-hero">
+      <section id="hero" className="relative isolate overflow-hidden bg-hero text-on-hero">
+        {content.image && (
+          <>
+            {/* Photo behind a veil in the hero colour, so text keeps the theme's contrast. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={content.image} alt="" className="themed-img absolute inset-0 -z-20 h-full w-full object-cover" />
+            <div aria-hidden="true" className="absolute inset-0 -z-10 bg-hero/80" />
+          </>
+        )}
         <div className="mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-32">
           {content.eyebrow && <p className="text-sm font-semibold uppercase tracking-widest opacity-80">{content.eyebrow}</p>}
           <h1 className="mt-4 text-4xl sm:text-6xl">{content.title}</h1>

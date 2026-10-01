@@ -22,7 +22,7 @@
         "title": "香港直送，全球冷鏈",
         "subtitle": "精選港產及華南海產，提供規格、檢疫文件及到岸成本報價。",
         "cta": "索取報價",
-        "image": ""
+        "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1400&q=75"
       },
       "services": {
         "title": "我們提供",
@@ -50,24 +50,24 @@
           {
             "title": "新加坡酒店集團",
             "description": "每週穩定供應活蟹及貝類。",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1703565426315-4209c2e88eea?auto=format&fit=crop&w=900&q=75"
           },
           {
             "title": "加拿大進口商",
             "description": "首次出口乾貨海味，三星期完成清關。",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=900&q=75"
           },
           {
             "title": "中東超市",
             "description": "急凍蝦類長期合約。",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1670684684445-a4504dca0bbc?auto=format&fit=crop&w=900&q=75"
           }
         ]
       },
       "about": {
         "title": "關於海匯",
         "body": "海匯擁有 20 年海產貿易經驗，與超過 60 家認證供應商合作，專注品質穩定同準時交貨。",
-        "image": ""
+        "image": "https://images.unsplash.com/photo-1741739813128-cb658a9a0f9a?auto=format&fit=crop&w=1200&q=75"
       },
       "contact": {
         "title": "聯絡銷售團隊",
@@ -80,7 +80,7 @@
         "title": "香港直送，全球冷链",
         "subtitle": "精选港产及华南海产，提供规格、检疫文件及到岸成本报价。",
         "cta": "索取报价",
-        "image": ""
+        "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1400&q=75"
       },
       "services": {
         "title": "我们提供",
@@ -108,24 +108,24 @@
           {
             "title": "新加坡酒店集团",
             "description": "每周稳定供应活蟹及贝类。",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1703565426315-4209c2e88eea?auto=format&fit=crop&w=900&q=75"
           },
           {
             "title": "加拿大进口商",
             "description": "首次出口干货海味，三周完成清关。",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=900&q=75"
           },
           {
             "title": "中东超市",
             "description": "急冻虾类长期合约。",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1670684684445-a4504dca0bbc?auto=format&fit=crop&w=900&q=75"
           }
         ]
       },
       "about": {
         "title": "关于海汇",
         "body": "海汇拥有 20 年海产贸易经验，与超过 60 家认证供应商合作，专注品质稳定和准时交货。",
-        "image": ""
+        "image": "https://images.unsplash.com/photo-1741739813128-cb658a9a0f9a?auto=format&fit=crop&w=1200&q=75"
       },
       "contact": {
         "title": "联系销售团队",
@@ -138,7 +138,7 @@
         "title": "From Hong Kong, cold-chain worldwide",
         "subtitle": "Selected Hong Kong and South China seafood, with specs, health documents and landed-cost quotes.",
         "cta": "Request a quote",
-        "image": ""
+        "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=1400&q=75"
       },
       "services": {
         "title": "What we offer",
@@ -166,24 +166,24 @@
           {
             "title": "Singapore hotel group",
             "description": "Weekly supply of live crab and shellfish.",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1703565426315-4209c2e88eea?auto=format&fit=crop&w=900&q=75"
           },
           {
             "title": "Canadian importer",
             "description": "First dried-seafood shipment cleared in three weeks.",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=900&q=75"
           },
           {
             "title": "Middle East supermarket",
             "description": "Long-term frozen prawn contract.",
-            "image": ""
+            "image": "https://images.unsplash.com/photo-1670684684445-a4504dca0bbc?auto=format&fit=crop&w=900&q=75"
           }
         ]
       },
       "about": {
         "title": "About TideLink",
         "body": "Twenty years in seafood trading, working with 60+ certified suppliers. We focus on consistent quality and on-time delivery.",
-        "image": ""
+        "image": "https://images.unsplash.com/photo-1741739813128-cb658a9a0f9a?auto=format&fit=crop&w=1200&q=75"
       },
       "contact": {
         "title": "Talk to sales",
@@ -254,7 +254,7 @@
         "en": "IQF, peeled and deveined, multiple sizes."
       },
       "category": "frozen",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1548587468-971ebe4c8c3b?auto=format&fit=crop&w=900&q=75",
       "specs": [
         {
           "label": "Size",
@@ -282,7 +282,7 @@
         "en": "Air-flown with guaranteed survival rate."
       },
       "category": "live",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1509415173911-37ff7a1aa29c?auto=format&fit=crop&w=900&q=75",
       "specs": [
         {
           "label": "Weight",
@@ -306,7 +306,7 @@
         "en": "Whole dried scallops, retail-pack ready."
       },
       "category": "dried",
-      "image": "",
+      "image": "https://images.unsplash.com/photo-1651323018466-b36b7df1d2b1?auto=format&fit=crop&w=900&q=75",
       "specs": [
         {
           "label": "Grade",

@@ -8,7 +8,10 @@ import { z } from 'zod';
 export const LOCALES = ['zh-Hant', 'zh-Hans', 'en'] as const;
 export type Locale = (typeof LOCALES)[number];
 
-export const THEMES = ['corporate', 'warm', 'product', 'bold'] as const;
+export const THEMES = [
+  'corporate', 'warm', 'product', 'bold',
+  'clinic', 'beauty', 'restaurant', 'education', 'interior', 'tech', 'florist', 'pets',
+] as const;
 export type ThemeName = (typeof THEMES)[number];
 
 export const MODULE_NAMES = ['booking', 'payments', 'stripe', 'gcal', 'catalog', 'mobile'] as const;

@@ -1,0 +1,309 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "柔光美學",
+      "zh-Hans": "柔光美学",
+      "en": "Lumière Beauty Studio"
+    },
+    "phone": "+852 2522 3388",
+    "whatsapp": "+852 9522 3388",
+    "email": "hello@lumiere.example",
+    "address": {
+      "zh-Hant": "香港中環雲咸街 30 號 5 樓",
+      "zh-Hans": "香港中环云咸街 30 号 5 楼",
+      "en": "5/F, 30 Wyndham Street, Central, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "面部護理 · 美甲 · 皮膚管理",
+        "title": "為自己留一小時",
+        "subtitle": "一對一皮膚分析，度身訂造護理療程，唔會硬銷套票。",
+        "cta": "預約療程",
+        "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "療程",
+        "items": [
+          {
+            "title": "深層補濕面部護理",
+            "description": "清潔、導入同面膜，適合乾燥同敏感肌。",
+            "price": "HK$880 / 75 分鐘"
+          },
+          {
+            "title": "日式凝膠美甲",
+            "description": "純色或設計款，持久唔傷甲。",
+            "price": "HK$380 起"
+          },
+          {
+            "title": "皮膚分析",
+            "description": "儀器檢測加美容師建議，首次免費。",
+            "price": "首次免費"
+          }
+        ]
+      },
+      "cases": {
+        "title": "客人分享",
+        "items": [
+          {
+            "title": "換季敏感",
+            "description": "連續 4 次補濕療程，泛紅明顯減少。",
+            "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "婚禮前美甲",
+            "description": "配合婚紗顏色設計，持久到蜜月。",
+            "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "家居護膚建議",
+            "description": "按膚質揀產品，日常保養更簡單。",
+            "image": "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於我們",
+        "body": "柔光美學由資深美容師 Vivian 創立，堅持小店式服務：每位客人由同一位美容師跟進，療程記錄清清楚楚。",
+        "image": "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "想了解適合你嘅療程？",
+        "body": "WhatsApp 或留言，我哋會盡快回覆你。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "面部护理 · 美甲 · 皮肤管理",
+        "title": "为自己留一小时",
+        "subtitle": "一对一皮肤分析，度身订造护理疗程，唔会硬销套票。",
+        "cta": "预约疗程",
+        "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "疗程",
+        "items": [
+          {
+            "title": "深层补湿面部护理",
+            "description": "清洁、导入同面膜，适合干燥同敏感肌。",
+            "price": "HK$880 / 75 分钟"
+          },
+          {
+            "title": "日式凝胶美甲",
+            "description": "纯色或设计款，持久唔伤甲。",
+            "price": "HK$380 起"
+          },
+          {
+            "title": "皮肤分析",
+            "description": "仪器检测加美容师建议，首次免费。",
+            "price": "首次免费"
+          }
+        ]
+      },
+      "cases": {
+        "title": "客人分享",
+        "items": [
+          {
+            "title": "换季敏感",
+            "description": "连续 4 次补湿疗程，泛红明显减少。",
+            "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "婚礼前美甲",
+            "description": "配合婚纱颜色设计，持久到蜜月。",
+            "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "家居护肤建议",
+            "description": "按肤质拣产品，日常保养更简单。",
+            "image": "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于我们",
+        "body": "柔光美学由资深美容师 Vivian 创立，坚持小店式服务：每位客人由同一位美容师跟进，疗程记录清清楚楚。",
+        "image": "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "想了解适合你嘅疗程？",
+        "body": "WhatsApp 或留言，我哋会尽快回复你。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Facials · Nails · Skin care",
+        "title": "An hour just for you",
+        "subtitle": "One-to-one skin analysis and tailored treatments, with no hard-sell packages.",
+        "cta": "Book a treatment",
+        "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Treatments",
+        "items": [
+          {
+            "title": "Deep hydration facial",
+            "description": "Cleanse, infusion and mask for dry and sensitive skin.",
+            "price": "HK$880 / 75 min"
+          },
+          {
+            "title": "Japanese gel manicure",
+            "description": "Plain or designed, long-lasting and gentle on nails.",
+            "price": "From HK$380"
+          },
+          {
+            "title": "Skin analysis",
+            "description": "Device check plus advice from our therapist; first visit free.",
+            "price": "Free first visit"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Client stories",
+        "items": [
+          {
+            "title": "Seasonal sensitivity",
+            "description": "Redness visibly reduced after four hydration sessions.",
+            "image": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Bridal nails",
+            "description": "Designed to match the gown, lasting through the honeymoon.",
+            "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Home care advice",
+            "description": "Products picked for your skin type make daily care simpler.",
+            "image": "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Lumière was founded by senior therapist Vivian. Each client is looked after by the same therapist, with clear treatment records.",
+        "image": "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Not sure which treatment suits you?",
+        "body": "WhatsApp us or leave a message and we will get back to you."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "facial",
+        "name": {
+          "zh-Hant": "補濕面部護理",
+          "zh-Hans": "补湿面部护理",
+          "en": "Hydration facial"
+        },
+        "durationMin": 75,
+        "price": 880
+      },
+      {
+        "key": "nails",
+        "name": {
+          "zh-Hant": "凝膠美甲",
+          "zh-Hans": "凝胶美甲",
+          "en": "Gel manicure"
+        },
+        "durationMin": 60,
+        "price": 380
+      }
+    ],
+    "staff": [
+      {
+        "key": "vivian",
+        "name": "Vivian",
+        "services": [
+          "facial"
+        ],
+        "hours": [
+          {
+            "weekday": 2,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 3,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 4,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 5,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 6,
+            "startMin": 660,
+            "endMin": 1200
+          }
+        ]
+      },
+      {
+        "key": "ivy",
+        "name": "Ivy",
+        "services": [
+          "nails"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 3,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 5,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 6,
+            "startMin": 660,
+            "endMin": 1200
+          },
+          {
+            "weekday": 0,
+            "startMin": 660,
+            "endMin": 1200
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Cherry Ho",
+      "phone": "+85261230201",
+      "email": "cherry@example.com",
+      "tags": [
+        "面部護理"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Amy Tse",
+      "phone": "+85261230202",
+      "email": "amy@example.com",
+      "tags": [
+        "美甲"
+      ],
+      "status": "active"
+    }
+  ]
+}

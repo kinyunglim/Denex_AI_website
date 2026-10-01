@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const i = args.indexOf('--theme');
 const theme = i >= 0 ? args[i + 1] : 'warm';
 const reset = args.includes('--reset');
-if (!['corporate', 'warm', 'product', 'bold'].includes(theme)) {
+if (!['corporate', 'warm', 'product', 'bold', 'clinic', 'beauty', 'restaurant', 'education', 'interior', 'tech', 'florist', 'pets'].includes(theme)) {
   console.error(`Unknown theme "${theme}"`);
   process.exit(1);
 }

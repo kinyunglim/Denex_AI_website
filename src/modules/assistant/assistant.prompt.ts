@@ -33,7 +33,7 @@ export function buildSystemPrompt(base: string): string {
 ${catalogue()}
 
 # How ordering works
-1. Visitors try the four styles on the Templates page (real demo sites, desktop and mobile views).
+1. Visitors try the ${agency.themes.length} styles on the Templates page (real demo sites for different industries, desktop and mobile views).
 2. On the Order page they pick a plan, style, languages and add-ons; the price updates live.
 3. A ${Math.round(agency.depositRate * 100)}% deposit of the one-off price is held on their card and only charged after we confirm the order. If we decline, the hold is released.
 4. We build the site from our proven system, load their copy and photos, train their team, then launch. The monthly fee covers hosting, SSL, daily backups and security updates.

@@ -1,0 +1,265 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "數碼引擎",
+      "zh-Hans": "数码引擎",
+      "en": "PixelForge IT Solutions"
+    },
+    "phone": "+852 3618 9900",
+    "whatsapp": "+852 9618 9900",
+    "email": "hello@pixelforge.example",
+    "address": {
+      "zh-Hant": "香港數碼港道 100 號數碼港 3 座",
+      "zh-Hans": "香港数码港道 100 号数码港 3 座",
+      "en": "Cyberport 3, 100 Cyberport Road, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "雲端 · 系統開發 · IT 支援",
+        "title": "將繁瑣嘅工作交俾系統",
+        "subtitle": "為中小企度身開發系統、搬上雲端，再提供每月 IT 支援。",
+        "cta": "預約技術諮詢",
+        "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "服務",
+        "items": [
+          {
+            "title": "雲端遷移",
+            "description": "將舊伺服器搬上 AWS 或 Azure，減少停機。",
+            "price": "HK$25,000 起"
+          },
+          {
+            "title": "系統及 App 開發",
+            "description": "訂單、存貨、會員系統，連手機 App。",
+            "price": "按需求報價"
+          },
+          {
+            "title": "IT 支援月費",
+            "description": "電腦、網絡、電郵同資料備份。",
+            "price": "HK$3,800 / 月起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "項目",
+        "items": [
+          {
+            "title": "物流公司雲端遷移",
+            "description": "週末完成切換，星期一照常開工。",
+            "image": "https://images.unsplash.com/photo-1680992046626-418f7e910589?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "貿易公司 ERP",
+            "description": "訂單同存貨同步，月結由三日減到半日。",
+            "image": "https://images.unsplash.com/photo-1603201667230-bd139210db18?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "會員 App",
+            "description": "iOS 同 Android 上架，首月 3,000 下載。",
+            "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於我們",
+        "body": "數碼引擎由一班前銀行同電訊工程師成立，專做中小企 IT。我哋用簡單語言解釋技術，唔會賣你用唔著嘅嘢。",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "講下你嘅需要",
+        "body": "留低公司規模同想解決嘅問題，我哋安排工程師聯絡你。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "云端 · 系统开发 · IT 支援",
+        "title": "将繁琐嘅工作交俾系统",
+        "subtitle": "为中小企度身开发系统、搬上云端，再提供每月 IT 支援。",
+        "cta": "预约技术咨询",
+        "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "服务",
+        "items": [
+          {
+            "title": "云端迁移",
+            "description": "将旧伺服器搬上 AWS 或 Azure，减少停机。",
+            "price": "HK$25,000 起"
+          },
+          {
+            "title": "系统及 App 开发",
+            "description": "订单、存货、会员系统，连手机 App。",
+            "price": "按需求报价"
+          },
+          {
+            "title": "IT 支援月费",
+            "description": "电脑、网络、电邮同资料备份。",
+            "price": "HK$3,800 / 月起"
+          }
+        ]
+      },
+      "cases": {
+        "title": "项目",
+        "items": [
+          {
+            "title": "物流公司云端迁移",
+            "description": "周末完成切换，星期一照常开工。",
+            "image": "https://images.unsplash.com/photo-1680992046626-418f7e910589?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "贸易公司 ERP",
+            "description": "订单同存货同步，月结由三日减到半日。",
+            "image": "https://images.unsplash.com/photo-1603201667230-bd139210db18?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "会员 App",
+            "description": "iOS 同 Android 上架，首月 3,000 下载。",
+            "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于我们",
+        "body": "数码引擎由一班前银行同电讯工程师成立，专做中小企 IT。我哋用简单语言解释技术，唔会卖你用唔著嘅嘢。",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "讲下你嘅需要",
+        "body": "留低公司规模同想解决嘅问题，我哋安排工程师联络你。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Cloud · Software · IT support",
+        "title": "Hand the busywork to a system",
+        "subtitle": "Custom systems for SMEs, cloud migration and monthly IT support.",
+        "cta": "Book a tech consultation",
+        "image": "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Services",
+        "items": [
+          {
+            "title": "Cloud migration",
+            "description": "Move old servers to AWS or Azure with minimal downtime.",
+            "price": "From HK$25,000"
+          },
+          {
+            "title": "Software & app development",
+            "description": "Orders, inventory and membership systems, plus mobile apps.",
+            "price": "Quoted per scope"
+          },
+          {
+            "title": "Managed IT support",
+            "description": "Computers, network, email and backups.",
+            "price": "From HK$3,800 / month"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Projects",
+        "items": [
+          {
+            "title": "Logistics cloud migration",
+            "description": "Switched over a weekend; business as usual on Monday.",
+            "image": "https://images.unsplash.com/photo-1680992046626-418f7e910589?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Trading company ERP",
+            "description": "Orders and stock in sync; month-end from three days to half a day.",
+            "image": "https://images.unsplash.com/photo-1603201667230-bd139210db18?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Membership app",
+            "description": "Live on iOS and Android, 3,000 downloads in the first month.",
+            "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "PixelForge was founded by former banking and telecom engineers and focuses on SME IT. We explain technology in plain language and never sell what you do not need.",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Tell us what you need",
+        "body": "Share your company size and the problem to solve, and an engineer will contact you."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "consult",
+        "name": {
+          "zh-Hant": "技術諮詢",
+          "zh-Hans": "技术咨询",
+          "en": "Tech consultation"
+        },
+        "durationMin": 45,
+        "price": 0
+      }
+    ],
+    "staff": [
+      {
+        "key": "eng",
+        "name": "工程團隊",
+        "services": [
+          "consult"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 2,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 3,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 4,
+            "startMin": 540,
+            "endMin": 1080
+          },
+          {
+            "weekday": 5,
+            "startMin": 540,
+            "endMin": 1080
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Kelvin Fung",
+      "phone": "+85261230601",
+      "email": "kelvin@example.com",
+      "tags": [
+        "雲端"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Winnie Choi",
+      "phone": "+85261230602",
+      "email": "winnie@example.com",
+      "tags": [
+        "App"
+      ],
+      "status": "lead"
+    }
+  ]
+}

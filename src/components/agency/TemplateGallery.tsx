@@ -4,17 +4,33 @@ import { useState } from 'react';
 import { Link } from '@/src/i18n/navigation';
 import { Shot } from './visuals';
 
-export type GalleryItem = { key: string; name: string; fit: string };
+export type GalleryItem = { key: string; name: string; fit: string; category: string };
+export type GalleryCategory = { key: string; name: string };
 
 /**
- * Filter tabs (with counts) over portrait template cards. Each card shows the
- * real template screenshot, which scrolls down on hover; the overlay links to
- * the in-site preview page and the order form.
+ * Category filter tabs (with counts) over portrait template cards. Each card
+ * shows the real template screenshot, which scrolls down on hover; the overlay
+ * links to the in-site preview page and the order form. `limit` caps the
+ * "All" tab (the home page shows a selection; /templates shows everything).
  */
-export function TemplateGallery({ items, labels }: { items: GalleryItem[]; labels: { all: string; preview: string; choose: string } }) {
+export function TemplateGallery({
+  items,
+  categories,
+  labels,
+  limit,
+}: {
+  items: GalleryItem[];
+  categories: GalleryCategory[];
+  labels: { all: string; preview: string; choose: string };
+  limit?: number;
+}) {
   const [filter, setFilter] = useState<string>('all');
-  const tabs = [{ key: 'all', name: labels.all, count: items.length }, ...items.map((i) => ({ key: i.key, name: i.name, count: 1 }))];
-  const shown = filter === 'all' ? items : items.filter((i) => i.key === filter);
+  const tabs = [
+    { key: 'all', name: labels.all, count: items.length },
+    ...categories.map((c) => ({ key: c.key, name: c.name, count: items.filter((i) => i.category === c.key).length })),
+  ].filter((t) => t.count > 0);
+  const filtered = filter === 'all' ? items : items.filter((i) => i.category === filter);
+  const shown = filter === 'all' && limit ? filtered.slice(0, limit) : filtered;
 
   return (
     <>

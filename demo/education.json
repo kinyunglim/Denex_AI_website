@@ -1,0 +1,296 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "啟思學苑",
+      "zh-Hans": "启思学苑",
+      "en": "BrightPath Learning Centre"
+    },
+    "phone": "+852 2690 5566",
+    "whatsapp": "+852 9690 5566",
+    "email": "info@brightpath.example",
+    "address": {
+      "zh-Hant": "新界沙田正街 3 號 8 樓",
+      "zh-Hans": "新界沙田正街 3 号 8 楼",
+      "en": "8/F, 3 Sha Tin Centre Street, Sha Tin, New Territories"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "小學 · 中學 · DSE",
+        "title": "搵到方法，成績自然進步",
+        "subtitle": "小班教學，最多 6 人；每月家長報告，進度清清楚楚。",
+        "cta": "預約試堂",
+        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "課程",
+        "items": [
+          {
+            "title": "小學英文及數學",
+            "description": "打好基礎，配合校本進度溫習。",
+            "price": "HK$220 / 堂"
+          },
+          {
+            "title": "DSE 英文",
+            "description": "Paper 1 至 4 全面操練，附模擬試。",
+            "price": "HK$320 / 堂"
+          },
+          {
+            "title": "網上一對一",
+            "description": "Zoom 上堂，時間更靈活。",
+            "price": "HK$450 / 小時"
+          }
+        ]
+      },
+      "cases": {
+        "title": "學生進步",
+        "items": [
+          {
+            "title": "DSE 英文",
+            "description": "由 Level 3 進步到 Level 5。",
+            "image": "https://images.unsplash.com/photo-1514369118554-e20d93546b30?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "小四數學",
+            "description": "一個學期內，測驗由 60 分升到 85 分。",
+            "image": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "網上補習",
+            "description": "海外升學前補底，順利適應新課程。",
+            "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於學苑",
+        "body": "啟思學苑嘅導師全部有教學文憑，教學方式重理解多過死記。我哋相信每個學生都有適合佢嘅學習方法。",
+        "image": "https://images.unsplash.com/photo-1631885661110-aa12f8b42b25?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "想了解課程？",
+        "body": "留低子女年級同科目，我哋會安排試堂。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "小学 · 中学 · DSE",
+        "title": "揾到方法，成绩自然进步",
+        "subtitle": "小班教学，最多 6 人；每月家长报告，进度清清楚楚。",
+        "cta": "预约试堂",
+        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "课程",
+        "items": [
+          {
+            "title": "小学英文及数学",
+            "description": "打好基础，配合校本进度温习。",
+            "price": "HK$220 / 堂"
+          },
+          {
+            "title": "DSE 英文",
+            "description": "Paper 1 至 4 全面操练，附模拟试。",
+            "price": "HK$320 / 堂"
+          },
+          {
+            "title": "网上一对一",
+            "description": "Zoom 上堂，时间更灵活。",
+            "price": "HK$450 / 小时"
+          }
+        ]
+      },
+      "cases": {
+        "title": "学生进步",
+        "items": [
+          {
+            "title": "DSE 英文",
+            "description": "由 Level 3 进步到 Level 5。",
+            "image": "https://images.unsplash.com/photo-1514369118554-e20d93546b30?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "小四数学",
+            "description": "一个学期内，测验由 60 分升到 85 分。",
+            "image": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "网上补习",
+            "description": "海外升学前补底，顺利适应新课程。",
+            "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于学苑",
+        "body": "启思学苑嘅导师全部有教学文凭，教学方式重理解多过死记。我哋相信每个学生都有适合佢嘅学习方法。",
+        "image": "https://images.unsplash.com/photo-1631885661110-aa12f8b42b25?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "想了解课程？",
+        "body": "留低子女年级同科目，我哋会安排试堂。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Primary · Secondary · DSE",
+        "title": "Find the method, and the grades follow",
+        "subtitle": "Small classes of up to six, with a monthly report for parents.",
+        "cta": "Book a trial lesson",
+        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Courses",
+        "items": [
+          {
+            "title": "Primary English & Maths",
+            "description": "Strong foundations, in step with the school syllabus.",
+            "price": "HK$220 / lesson"
+          },
+          {
+            "title": "DSE English",
+            "description": "All four papers with mock exams.",
+            "price": "HK$320 / lesson"
+          },
+          {
+            "title": "Online one-to-one",
+            "description": "Lessons on Zoom at flexible times.",
+            "price": "HK$450 / hour"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Student progress",
+        "items": [
+          {
+            "title": "DSE English",
+            "description": "From Level 3 to Level 5.",
+            "image": "https://images.unsplash.com/photo-1514369118554-e20d93546b30?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Primary 4 Maths",
+            "description": "Test scores up from 60 to 85 in one term.",
+            "image": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Online tutoring",
+            "description": "Caught up before studying abroad and settled in quickly.",
+            "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Every BrightPath tutor holds a teaching diploma, and we teach for understanding rather than memorising. Every student has a way of learning that suits them.",
+        "image": "https://images.unsplash.com/photo-1631885661110-aa12f8b42b25?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Questions about our courses?",
+        "body": "Tell us your child's grade and subject and we will arrange a trial lesson."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "trial",
+        "name": {
+          "zh-Hant": "試堂",
+          "zh-Hans": "试堂",
+          "en": "Trial lesson"
+        },
+        "durationMin": 60,
+        "price": 0
+      },
+      {
+        "key": "online",
+        "name": {
+          "zh-Hant": "網上一對一",
+          "zh-Hans": "网上一对一",
+          "en": "Online one-to-one"
+        },
+        "durationMin": 60,
+        "price": 450
+      }
+    ],
+    "staff": [
+      {
+        "key": "msyip",
+        "name": "葉老師",
+        "services": [
+          "trial",
+          "online"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 900,
+            "endMin": 1260
+          },
+          {
+            "weekday": 2,
+            "startMin": 900,
+            "endMin": 1260
+          },
+          {
+            "weekday": 3,
+            "startMin": 900,
+            "endMin": 1260
+          },
+          {
+            "weekday": 4,
+            "startMin": 900,
+            "endMin": 1260
+          },
+          {
+            "weekday": 5,
+            "startMin": 900,
+            "endMin": 1260
+          }
+        ]
+      },
+      {
+        "key": "mrkwok",
+        "name": "郭老師",
+        "services": [
+          "trial"
+        ],
+        "hours": [
+          {
+            "weekday": 6,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 0,
+            "startMin": 600,
+            "endMin": 1080
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Mrs Cheung",
+      "phone": "+85261230401",
+      "email": "cheung@example.com",
+      "tags": [
+        "小四",
+        "數學"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Jason Lam",
+      "phone": "+85261230402",
+      "email": "jason@example.com",
+      "tags": [
+        "DSE"
+      ],
+      "status": "lead"
+    }
+  ]
+}

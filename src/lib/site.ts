@@ -4,6 +4,14 @@ import demoCorporate from '@/demo/corporate.json';
 import demoWarm from '@/demo/warm.json';
 import demoProduct from '@/demo/product.json';
 import demoBold from '@/demo/bold.json';
+import demoClinic from '@/demo/clinic.json';
+import demoBeauty from '@/demo/beauty.json';
+import demoRestaurant from '@/demo/restaurant.json';
+import demoEducation from '@/demo/education.json';
+import demoInterior from '@/demo/interior.json';
+import demoTech from '@/demo/tech.json';
+import demoFlorist from '@/demo/florist.json';
+import demoPets from '@/demo/pets.json';
 import { DemoData, DemoDataSchema } from '@/src/lib/demo';
 
 /**
@@ -18,6 +26,14 @@ const DEMO: Record<ThemeName, DemoData> = {
   warm: DemoDataSchema.parse(demoWarm),
   product: DemoDataSchema.parse(demoProduct),
   bold: DemoDataSchema.parse(demoBold),
+  clinic: DemoDataSchema.parse(demoClinic),
+  beauty: DemoDataSchema.parse(demoBeauty),
+  restaurant: DemoDataSchema.parse(demoRestaurant),
+  education: DemoDataSchema.parse(demoEducation),
+  interior: DemoDataSchema.parse(demoInterior),
+  tech: DemoDataSchema.parse(demoTech),
+  florist: DemoDataSchema.parse(demoFlorist),
+  pets: DemoDataSchema.parse(demoPets),
 };
 
 let cached: ClientConfig | null = null;

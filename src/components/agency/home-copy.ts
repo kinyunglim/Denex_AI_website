@@ -100,7 +100,7 @@ export const copy = {
     all: { 'zh-Hant': '全部', en: 'All' },
     preview: { 'zh-Hant': '預覽', en: 'Preview' },
     choose: { 'zh-Hant': '揀呢款', en: 'Choose' },
-    more: { 'zh-Hant': '睇全部範本', en: 'View all templates' },
+    more: { 'zh-Hant': `睇全部 ${agency.themes.length} 個範本`, en: `View all ${agency.themes.length} templates` },
   },
   preview: {
     back: { 'zh-Hant': "← 所有範本", en: "← All templates" },

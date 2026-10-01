@@ -1,0 +1,315 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "毛孩樂園",
+      "zh-Hans": "毛孩乐园",
+      "en": "Happy Paws Grooming"
+    },
+    "phone": "+852 2711 4455",
+    "whatsapp": "+852 9711 4455",
+    "email": "woof@happypaws.example",
+    "address": {
+      "zh-Hant": "九龍九龍城衙前圍道 60 號地舖",
+      "zh-Hans": "九龙九龙城衙前围道 60 号地铺",
+      "en": "G/F, 60 Nga Tsin Wai Road, Kowloon City, Kowloon"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "狗狗美容 · 貓貓美容 · 接送",
+        "title": "靚靚仔仔返屋企",
+        "subtitle": "一對一美容，唔關籠；網上預約，美容完 WhatsApp 相俾你。",
+        "cta": "預約美容",
+        "image": "https://images.unsplash.com/photo-1719464454959-9cf304ef4774?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "美容服務",
+        "items": [
+          {
+            "title": "小型犬全套美容",
+            "description": "沖涼、吹毛、剪毛、剪甲、清耳。",
+            "price": "HK$380 起"
+          },
+          {
+            "title": "貓貓美容",
+            "description": "安靜獨立房間，減少貓貓緊張。",
+            "price": "HK$480 起"
+          },
+          {
+            "title": "上門接送",
+            "description": "九龍區接送，美容完送返屋企。",
+            "price": "HK$120 / 程"
+          }
+        ]
+      },
+      "cases": {
+        "title": "毛孩相簿",
+        "items": [
+          {
+            "title": "松鼠狗 Mocha",
+            "description": "泰迪造型，圓碌碌好可愛。",
+            "image": "https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "西施 Lucky",
+            "description": "夏天剪短毛，涼爽又易打理。",
+            "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "波斯貓 Snow",
+            "description": "去毛結，第一次美容都好乖。",
+            "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於我們",
+        "body": "毛孩樂園嘅美容師全部有國際證書，而且自己都養狗養貓。我哋唔用鎮靜劑，慢慢嚟，等毛孩舒服先開始。",
+        "image": "https://images.unsplash.com/photo-1528846104175-4fd300ee59da?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "問下美容師",
+        "body": "話我哋知毛孩品種同體重，我哋幫你報價。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "狗狗美容 · 猫猫美容 · 接送",
+        "title": "靓靓仔仔返屋企",
+        "subtitle": "一对一美容，唔关笼；网上预约，美容完 WhatsApp 相俾你。",
+        "cta": "预约美容",
+        "image": "https://images.unsplash.com/photo-1719464454959-9cf304ef4774?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "美容服务",
+        "items": [
+          {
+            "title": "小型犬全套美容",
+            "description": "冲凉、吹毛、剪毛、剪甲、清耳。",
+            "price": "HK$380 起"
+          },
+          {
+            "title": "猫猫美容",
+            "description": "安静独立房间，减少猫猫紧张。",
+            "price": "HK$480 起"
+          },
+          {
+            "title": "上门接送",
+            "description": "九龙区接送，美容完送返屋企。",
+            "price": "HK$120 / 程"
+          }
+        ]
+      },
+      "cases": {
+        "title": "毛孩相簿",
+        "items": [
+          {
+            "title": "松鼠狗 Mocha",
+            "description": "泰迪造型，圆碌碌好可爱。",
+            "image": "https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "西施 Lucky",
+            "description": "夏天剪短毛，凉爽又易打理。",
+            "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "波斯猫 Snow",
+            "description": "去毛结，第一次美容都好乖。",
+            "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于我们",
+        "body": "毛孩乐园嘅美容师全部有国际证书，而且自己都养狗养猫。我哋唔用镇静剂，慢慢嚟，等毛孩舒服先开始。",
+        "image": "https://images.unsplash.com/photo-1528846104175-4fd300ee59da?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "问下美容师",
+        "body": "话我哋知毛孩品种同体重，我哋帮你报价。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Dog grooming · Cat grooming · Pick-up",
+        "title": "Home looking their best",
+        "subtitle": "One-to-one grooming with no cages. Book online and we WhatsApp you photos when they are done.",
+        "cta": "Book grooming",
+        "image": "https://images.unsplash.com/photo-1719464454959-9cf304ef4774?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Grooming",
+        "items": [
+          {
+            "title": "Small dog full groom",
+            "description": "Bath, blow-dry, trim, nails and ears.",
+            "price": "From HK$380"
+          },
+          {
+            "title": "Cat grooming",
+            "description": "A quiet private room to keep cats calm.",
+            "price": "From HK$480"
+          },
+          {
+            "title": "Pick-up & drop-off",
+            "description": "Across Kowloon, home again after grooming.",
+            "price": "HK$120 / trip"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Pet gallery",
+        "items": [
+          {
+            "title": "Pomeranian Mocha",
+            "description": "Teddy-bear cut, round and fluffy.",
+            "image": "https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Shih Tzu Lucky",
+            "description": "Short summer cut, cool and easy to look after.",
+            "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Persian cat Snow",
+            "description": "Mats removed, calm even on a first visit.",
+            "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Every Happy Paws groomer holds an international certificate and has pets at home. We never use sedatives; we take our time and start when your pet is comfortable.",
+        "image": "https://images.unsplash.com/photo-1528846104175-4fd300ee59da?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Ask a groomer",
+        "body": "Tell us the breed and weight and we will give you a price."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "dog",
+        "name": {
+          "zh-Hant": "小型犬美容",
+          "zh-Hans": "小型犬美容",
+          "en": "Small dog groom"
+        },
+        "durationMin": 120,
+        "price": 380
+      },
+      {
+        "key": "cat",
+        "name": {
+          "zh-Hant": "貓貓美容",
+          "zh-Hans": "猫猫美容",
+          "en": "Cat groom"
+        },
+        "durationMin": 90,
+        "price": 480
+      }
+    ],
+    "staff": [
+      {
+        "key": "ken",
+        "name": "Ken",
+        "services": [
+          "dog"
+        ],
+        "hours": [
+          {
+            "weekday": 1,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 2,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 3,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 5,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 6,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 0,
+            "startMin": 600,
+            "endMin": 1140
+          }
+        ]
+      },
+      {
+        "key": "yan",
+        "name": "Yan",
+        "services": [
+          "dog",
+          "cat"
+        ],
+        "hours": [
+          {
+            "weekday": 2,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 3,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 4,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 5,
+            "startMin": 600,
+            "endMin": 1140
+          },
+          {
+            "weekday": 6,
+            "startMin": 600,
+            "endMin": 1140
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Ada Wong",
+      "phone": "+85261230801",
+      "email": "ada@example.com",
+      "tags": [
+        "松鼠狗"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "Tony Lo",
+      "phone": "+85261230802",
+      "email": "tony@example.com",
+      "tags": [
+        "貓"
+      ],
+      "status": "active"
+    }
+  ]
+}

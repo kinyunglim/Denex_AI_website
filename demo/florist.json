@@ -1,0 +1,271 @@
+{
+  "business": {
+    "name": {
+      "zh-Hant": "花語工房",
+      "zh-Hans": "花语工房",
+      "en": "Bloom Atelier"
+    },
+    "phone": "+852 2577 1122",
+    "whatsapp": "+852 9577 1122",
+    "email": "order@bloomatelier.example",
+    "address": {
+      "zh-Hant": "香港銅鑼灣渣甸坊 22 號地舖",
+      "zh-Hans": "香港铜锣湾渣甸坊 22 号地铺",
+      "en": "G/F, 22 Jardine's Crescent, Causeway Bay, Hong Kong"
+    },
+    "logo": "/logo.svg"
+  },
+  "content": {
+    "zh-Hant": {
+      "hero": {
+        "eyebrow": "花束 · 婚禮花藝 · 花藝班",
+        "title": "每一束花，都有佢嘅故事",
+        "subtitle": "當日新鮮花材，網上落單，港島九龍即日送到。",
+        "cta": "預約花藝班",
+        "image": "https://images.unsplash.com/photo-1639696194673-67b86204b885?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "服務",
+        "items": [
+          {
+            "title": "心意花束",
+            "description": "生日、紀念日、探病，附手寫心意卡。",
+            "price": "HK$480 起"
+          },
+          {
+            "title": "婚禮花藝",
+            "description": "新娘花球、襟花同場地佈置。",
+            "price": "HK$6,800 起"
+          },
+          {
+            "title": "週末花藝班",
+            "description": "2 小時，花材同工具全包，帶走作品。",
+            "price": "HK$580 / 位"
+          }
+        ]
+      },
+      "cases": {
+        "title": "作品",
+        "items": [
+          {
+            "title": "粉紅玫瑰花球",
+            "description": "春日婚禮，配合伴娘裙色。",
+            "image": "https://images.unsplash.com/photo-1523693916903-027d144a2b7d?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "親子花藝班",
+            "description": "小朋友同爸媽一齊插花。",
+            "image": "https://images.unsplash.com/photo-1642751652611-bb9a7cad58a3?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "乾花禮盒",
+            "description": "可以擺足一年，適合公司送禮。",
+            "image": "https://images.unsplash.com/photo-1622658641558-235f26dd270b?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "關於工房",
+        "body": "花語工房喺銅鑼灣開咗六年，花材每朝由花墟揀選。我哋鍾意自然、帶少少野生感嘅設計。",
+        "image": "https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "訂花或者查詢",
+        "body": "即日送花請喺下晝兩點前落單。"
+      }
+    },
+    "zh-Hans": {
+      "hero": {
+        "eyebrow": "花束 · 婚礼花艺 · 花艺班",
+        "title": "每一束花，都有佢嘅故事",
+        "subtitle": "当日新鲜花材，网上落单，港岛九龙即日送到。",
+        "cta": "预约花艺班",
+        "image": "https://images.unsplash.com/photo-1639696194673-67b86204b885?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "服务",
+        "items": [
+          {
+            "title": "心意花束",
+            "description": "生日、纪念日、探病，附手写心意卡。",
+            "price": "HK$480 起"
+          },
+          {
+            "title": "婚礼花艺",
+            "description": "新娘花球、襟花同场地布置。",
+            "price": "HK$6,800 起"
+          },
+          {
+            "title": "周末花艺班",
+            "description": "2 小时，花材同工具全包，带走作品。",
+            "price": "HK$580 / 位"
+          }
+        ]
+      },
+      "cases": {
+        "title": "作品",
+        "items": [
+          {
+            "title": "粉红玫瑰花球",
+            "description": "春日婚礼，配合伴娘裙色。",
+            "image": "https://images.unsplash.com/photo-1523693916903-027d144a2b7d?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "亲子花艺班",
+            "description": "小朋友同爸妈一齐插花。",
+            "image": "https://images.unsplash.com/photo-1642751652611-bb9a7cad58a3?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "干花礼盒",
+            "description": "可以摆足一年，适合公司送礼。",
+            "image": "https://images.unsplash.com/photo-1622658641558-235f26dd270b?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "关于工房",
+        "body": "花语工房喺铜锣湾开咗六年，花材每朝由花墟拣选。我哋钟意自然、带少少野生感嘅设计。",
+        "image": "https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "订花或者查询",
+        "body": "即日送花请喺下昼两点前落单。"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "Bouquets · Weddings · Workshops",
+        "title": "Every bouquet tells a story",
+        "subtitle": "Fresh flowers daily, order online, same-day delivery across Hong Kong Island and Kowloon.",
+        "cta": "Book a workshop",
+        "image": "https://images.unsplash.com/photo-1639696194673-67b86204b885?auto=format&fit=crop&w=1400&q=75"
+      },
+      "services": {
+        "title": "Services",
+        "items": [
+          {
+            "title": "Signature bouquets",
+            "description": "Birthdays, anniversaries and get-well wishes, with a handwritten card.",
+            "price": "From HK$480"
+          },
+          {
+            "title": "Wedding florals",
+            "description": "Bridal bouquets, boutonnieres and venue styling.",
+            "price": "From HK$6,800"
+          },
+          {
+            "title": "Weekend workshops",
+            "description": "Two hours, flowers and tools included; take your piece home.",
+            "price": "HK$580 / person"
+          }
+        ]
+      },
+      "cases": {
+        "title": "Work",
+        "items": [
+          {
+            "title": "Pink rose bridal bouquet",
+            "description": "A spring wedding, matched to the bridesmaids' dresses.",
+            "image": "https://images.unsplash.com/photo-1523693916903-027d144a2b7d?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Parent-child workshop",
+            "description": "Kids and parents arranging flowers together.",
+            "image": "https://images.unsplash.com/photo-1642751652611-bb9a7cad58a3?auto=format&fit=crop&w=900&q=75"
+          },
+          {
+            "title": "Dried flower gift box",
+            "description": "Lasts up to a year; popular as a corporate gift.",
+            "image": "https://images.unsplash.com/photo-1622658641558-235f26dd270b?auto=format&fit=crop&w=900&q=75"
+          }
+        ]
+      },
+      "about": {
+        "title": "About us",
+        "body": "Bloom Atelier has been in Causeway Bay for six years, choosing flowers at the flower market every morning. We like natural designs with a slightly wild touch.",
+        "image": "https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=1200&q=75"
+      },
+      "contact": {
+        "title": "Orders and enquiries",
+        "body": "For same-day delivery, please order before 2 pm."
+      }
+    }
+  },
+  "booking": {
+    "services": [
+      {
+        "key": "workshop",
+        "name": {
+          "zh-Hant": "週末花藝班",
+          "zh-Hans": "周末花艺班",
+          "en": "Weekend workshop"
+        },
+        "durationMin": 120,
+        "price": 580
+      },
+      {
+        "key": "wedding",
+        "name": {
+          "zh-Hant": "婚禮花藝諮詢",
+          "zh-Hans": "婚礼花艺咨询",
+          "en": "Wedding consultation"
+        },
+        "durationMin": 45,
+        "price": 0
+      }
+    ],
+    "staff": [
+      {
+        "key": "chloe",
+        "name": "Chloe",
+        "services": [
+          "workshop",
+          "wedding"
+        ],
+        "hours": [
+          {
+            "weekday": 6,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 0,
+            "startMin": 600,
+            "endMin": 1080
+          },
+          {
+            "weekday": 2,
+            "startMin": 720,
+            "endMin": 1140
+          },
+          {
+            "weekday": 4,
+            "startMin": 720,
+            "endMin": 1140
+          }
+        ]
+      }
+    ]
+  },
+  "products": [],
+  "contacts": [
+    {
+      "name": "Joanne Kwan",
+      "phone": "+85261230701",
+      "email": "joanne@example.com",
+      "tags": [
+        "婚禮"
+      ],
+      "status": "lead"
+    },
+    {
+      "name": "Michael Hui",
+      "phone": "+85261230702",
+      "email": "michael@example.com",
+      "tags": [
+        "花束"
+      ],
+      "status": "active"
+    }
+  ]
+}

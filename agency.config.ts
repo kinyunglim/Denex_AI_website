@@ -5,6 +5,7 @@
  */
 export type ModuleKey = 'booking' | 'payments' | 'stripe' | 'gcal' | 'catalog' | 'mobile';
 export type Text = { 'zh-Hant': string; en: string };
+export type TemplateCategory = 'pro' | 'health' | 'food' | 'life';
 
 export type Package = {
   key: string;
@@ -38,12 +39,27 @@ export const agency = {
   depositRate: 0.5,
   /** Where client-starter's preview deployment lives (PREVIEW_MODE=1). */
   previewBaseUrl: process.env.NEXT_PUBLIC_PREVIEW_BASE_URL || 'http://localhost:3100',
+  /** Template categories, used as filter tabs in the gallery. */
+  categories: [
+    { key: 'pro', name: { 'zh-Hant': '專業服務', en: 'Professional' } },
+    { key: 'health', name: { 'zh-Hant': '健康美容', en: 'Health & beauty' } },
+    { key: 'food', name: { 'zh-Hant': '餐飲零售', en: 'Food & retail' } },
+    { key: 'life', name: { 'zh-Hant': '生活教育', en: 'Lifestyle & education' } },
+  ] satisfies { key: TemplateCategory; name: Text }[],
   themes: [
-    { key: 'corporate', name: { 'zh-Hant': '企業專業', en: 'Corporate' }, fit: { 'zh-Hant': '顧問、律師、會計、金融', en: 'Consulting, legal, finance' } },
-    { key: 'warm', name: { 'zh-Hant': '溫暖生活', en: 'Warm' }, fit: { 'zh-Hant': '診所、健身、美容、教育', en: 'Clinics, fitness, beauty, education' } },
-    { key: 'product', name: { 'zh-Hant': '現代產品', en: 'Product' }, fit: { 'zh-Hant': '貿易、B2B、產品品牌', en: 'Trading, B2B, product brands' } },
-    { key: 'bold', name: { 'zh-Hant': '大膽潮流', en: 'Bold' }, fit: { 'zh-Hant': '餐飲、理髮、潮流、創意', en: 'F&B, barbers, lifestyle, creative' } },
-  ],
+    { key: 'corporate', category: 'pro', name: { 'zh-Hant': '企業專業', en: 'Corporate' }, fit: { 'zh-Hant': '顧問、律師、會計、金融', en: 'Consulting, legal, finance' } },
+    { key: 'tech', category: 'pro', name: { 'zh-Hant': '科技初創', en: 'Tech' }, fit: { 'zh-Hant': 'IT 服務、SaaS、初創', en: 'IT services, SaaS, start-ups' } },
+    { key: 'interior', category: 'pro', name: { 'zh-Hant': '室內設計', en: 'Interior' }, fit: { 'zh-Hant': '室內設計、地產、建築', en: 'Interior design, property, architecture' } },
+    { key: 'warm', category: 'health', name: { 'zh-Hant': '溫暖生活', en: 'Warm' }, fit: { 'zh-Hant': '物理治療、健身、瑜伽', en: 'Physio, fitness, yoga' } },
+    { key: 'clinic', category: 'health', name: { 'zh-Hant': '醫療診所', en: 'Clinic' }, fit: { 'zh-Hant': '牙科、醫務所、中醫', en: 'Dental, medical, TCM clinics' } },
+    { key: 'beauty', category: 'health', name: { 'zh-Hant': '美容優雅', en: 'Beauty' }, fit: { 'zh-Hant': '美容院、美甲、護膚', en: 'Beauty salons, nails, skincare' } },
+    { key: 'product', category: 'food', name: { 'zh-Hant': '現代產品', en: 'Product' }, fit: { 'zh-Hant': '貿易、B2B、產品品牌', en: 'Trading, B2B, product brands' } },
+    { key: 'restaurant', category: 'food', name: { 'zh-Hant': '餐廳美食', en: 'Restaurant' }, fit: { 'zh-Hant': '餐廳、咖啡店、餅店', en: 'Restaurants, cafes, bakeries' } },
+    { key: 'florist', category: 'food', name: { 'zh-Hant': '花藝自然', en: 'Florist' }, fit: { 'zh-Hant': '花店、有機店、手作', en: 'Florists, organic shops, crafts' } },
+    { key: 'bold', category: 'life', name: { 'zh-Hant': '大膽潮流', en: 'Bold' }, fit: { 'zh-Hant': '理髮、紋身、潮流店', en: 'Barbers, tattoo, streetwear' } },
+    { key: 'education', category: 'life', name: { 'zh-Hant': '教育補習', en: 'Education' }, fit: { 'zh-Hant': '補習社、興趣班、學校', en: 'Tutoring, classes, schools' } },
+    { key: 'pets', category: 'life', name: { 'zh-Hant': '寵物生活', en: 'Pets' }, fit: { 'zh-Hant': '寵物美容、獸醫、寵物店', en: 'Pet grooming, vets, pet shops' } },
+  ] satisfies { key: string; category: TemplateCategory; name: Text; fit: Text }[],
   packages: [
     {
       key: 'starter',
