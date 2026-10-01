@@ -4,6 +4,7 @@ import type { SiteContent } from '@/src/lib/content';
 import { Placeholder } from '@/src/components/site/Placeholder';
 import { copy, type Lang } from './home-copy';
 import { TemplateGallery } from './TemplateGallery';
+import { MarketingSection } from './MarketingSection';
 import { Devices, Icon, Ornaments, Shot } from './visuals';
 
 /**
@@ -13,7 +14,7 @@ import { Devices, Icon, Ornaments, Shot } from './visuals';
  */
 function Title({ first, second, center = true, onDark = false }: { first: string; second: string; center?: boolean; onDark?: boolean }) {
   return (
-    <h2 className={`section-title ${center ? 'text-center' : ''} ${onDark ? '!text-on-primary' : ''}`}>
+    <h2 className={`section-title ${center ? 'text-center' : ''} ${onDark ? 'on-dark !text-on-primary' : ''}`}>
       {first}
       <br />
       <span className="hl">{second}</span>
@@ -196,6 +197,8 @@ export function AgencyHome({ lang, cases }: { lang: Lang; cases: SiteContent['ca
           </Link>
         ))}
       </section>
+
+      <MarketingSection lang={lang} />
 
       {/* Advantages */}
       <section className="bg-surface-alt">

@@ -100,10 +100,13 @@
     "popular": "最受欢迎",
     "addOnsTitle": "加购服务",
     "groups": {
-      "feature": "功能",
-      "content": "内容",
+      "feature": "网站功能",
+      "search": "SEO 及 GEO",
+      "social": "社交媒体",
+      "ads": "广告投放",
+      "data": "数据及自动化",
+      "content": "内容制作",
       "brand": "品牌",
-      "growth": "推广",
       "care": "支持"
     },
     "included": "已包括",

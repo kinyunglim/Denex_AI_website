@@ -14,6 +14,7 @@ export async function AgencyFooter({ locale }: { locale: Locale }) {
   const links = [
     { href: '/', label: copy.nav.home[lang] },
     { href: '/templates', label: copy.nav.templates[lang] },
+    { href: '/services', label: copy.nav.services[lang] },
     { href: '/pricing', label: copy.nav.pricing[lang] },
     { href: '/order', label: copy.nav.order[lang] },
     { href: '/#contact', label: copy.nav.contact[lang] },

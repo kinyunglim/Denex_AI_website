@@ -18,6 +18,7 @@ export async function AgencyHeader({ locale }: { locale: Locale }) {
   const items = [
     { href: '/', label: copy.nav.home[lang] },
     { href: '/templates', label: copy.nav.templates[lang] },
+    { href: '/services', label: copy.nav.services[lang] },
     { href: '/pricing', label: copy.nav.pricing[lang] },
     { href: '/#cases', label: copy.nav.cases[lang] },
     { href: '/#why', label: copy.nav.about[lang] },

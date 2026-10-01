@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/src/i18n/navigation';
-import { agency, AddOn } from '@/agency.config';
+import { agency, ADD_ON_GROUPS } from '@/agency.config';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('agency');
   return { title: t('pricingTitle') };
 }
 
-const GROUPS: AddOn['group'][] = ['feature', 'content', 'brand', 'growth', 'care'];
+const GROUPS = ADD_ON_GROUPS;
 
 export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

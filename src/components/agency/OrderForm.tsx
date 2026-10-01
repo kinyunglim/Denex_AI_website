@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { FormEvent, useMemo, useState } from 'react';
-import { agency, AddOn, ModuleKey } from '@/agency.config';
+import { agency, AddOn, ADD_ON_GROUPS, ModuleKey } from '@/agency.config';
 import { quote } from '@/src/modules/orders/pricing';
 import { Shot } from './visuals';
 
@@ -125,25 +125,36 @@ export function OrderForm({ initialTheme, initialPackage, withDeposit }: { initi
 
         <fieldset>
           <legend className="mb-3 text-lg font-semibold text-ink">{t('step4')}</legend>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {selectable.map((a) => {
-              const included = Boolean(a.module && pkgModules.includes(a.module));
+          <div className="space-y-6">
+            {ADD_ON_GROUPS.map((g) => {
+              const items = selectable.filter((a) => a.group === g);
+              if (items.length === 0) return null;
               return (
-                <label key={a.key} className={`flex items-start gap-3 rounded-input border border-line bg-surface p-3 text-sm ${included ? 'opacity-60' : ''}`}>
-                  <input type="checkbox" className="mt-1" disabled={included} checked={included || addOns.includes(a.key)} onChange={() => setAddOns((cur) => toggle(cur, a.key))} />
-                  <span className="flex-1">
-                    <span className="block font-semibold text-ink">{a.name[lang]}</span>
-                    <span className="block text-muted">{a.description[lang]}</span>
-                  </span>
-                  <span className="shrink-0 text-right text-ink">
-                    {included ? t('included') : (
-                      <>
-                        {a.oneOff > 0 && <span className="block">{money.format(a.oneOff)}</span>}
-                        {a.monthly > 0 && <span className="block text-muted">+{money.format(a.monthly)}{t('perMonth')}</span>}
-                      </>
-                    )}
-                  </span>
-                </label>
+                <div key={g}>
+                  <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-muted">{t(`groups.${g}`)}</h3>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {items.map((a) => {
+                      const included = Boolean(a.module && pkgModules.includes(a.module));
+                      return (
+                        <label key={a.key} className={`flex items-start gap-3 rounded-input border border-line bg-surface p-3 text-sm ${included ? 'opacity-60' : ''}`}>
+                          <input type="checkbox" className="mt-1" disabled={included} checked={included || addOns.includes(a.key)} onChange={() => setAddOns((cur) => toggle(cur, a.key))} />
+                          <span className="flex-1">
+                            <span className="block font-semibold text-ink">{a.name[lang]}</span>
+                            <span className="block text-muted">{a.description[lang]}</span>
+                          </span>
+                          <span className="shrink-0 text-right text-ink">
+                            {included ? t('included') : (
+                              <>
+                                {a.oneOff > 0 && <span className="block">{money.format(a.oneOff)}</span>}
+                                {a.monthly > 0 && <span className="block text-muted">+{money.format(a.monthly)}{t('perMonth')}</span>}
+                              </>
+                            )}
+                          </span>
+                        </label>
+                      );
+                    })}
+                  </div>
+                </div>
               );
             })}
           </div>

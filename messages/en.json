@@ -100,10 +100,13 @@
     "popular": "Most popular",
     "addOnsTitle": "Add-ons",
     "groups": {
-      "feature": "Features",
+      "feature": "Website features",
+      "search": "SEO & GEO",
+      "social": "Social media",
+      "ads": "Advertising",
+      "data": "Data & automation",
       "content": "Content",
       "brand": "Brand",
-      "growth": "Growth",
       "care": "Support"
     },
     "included": "Included",

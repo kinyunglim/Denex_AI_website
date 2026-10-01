@@ -115,3 +115,9 @@ html {
   scroll-padding-top: 8rem;
   scroll-behavior: smooth;
 }
+
+/* Accent on dark (navy) bands: lighter mix of accent + on-primary for readable contrast. */
+.on-dark .hl,
+.text-accent-soft {
+  color: color-mix(in srgb, var(--c-accent) 45%, var(--c-on-primary));
+}
