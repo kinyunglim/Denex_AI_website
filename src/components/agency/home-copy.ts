@@ -135,7 +135,7 @@ export const copy = {
       { 'zh-Hant': "我開診所，邊個方案啱我？", en: "I run a clinic. Which plan fits?" },
       { 'zh-Hant': "幾耐可以上線？", en: "How long until the site is live?" },
       { 'zh-Hant': "訂金點收？", en: "How does the deposit work?" },
-      { 'zh-Hant': "4 款風格有咩分別？", en: "What is the difference between the styles?" },
+      { 'zh-Hant': `${agency.themes.length} 款風格有咩分別？`, en: "What is the difference between the styles?" },
     ],
     placeholder: { 'zh-Hant': "輸入你嘅問題…", en: "Type your question…" },
     send: { 'zh-Hant': "發送", en: "Send" },
