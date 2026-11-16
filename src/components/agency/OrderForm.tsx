@@ -30,7 +30,138 @@ export function OrderForm({ initialTheme, initialPackage, withDeposit }: { initi
   const selectedPackage = agency.packages.find(p => p.key === pkg)!;
   const q = useMemo(() => quote(pkg, [], locales.length), [pkg, locales]);
   function selectPackage(key: string) {
-    const …2053 tokens truncated…  {q.lines.map((l) => (
+    const next = agency.packages.find(p => p.key === key)!;
+    setPkg(key);
+    setLocales(next.languageCount === 1 ? [lang === 'en' ? 'en' : 'zh-Hant'] : next.languageCount === 2 ? ['zh-Hant', 'en'] : [...LOCALE_KEYS]);
+  }
+
+  const toggle = <T,>(list: T[], v: T) => (list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
+
+  async function submit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setBusy(true);
+    setError('');
+    const f = new FormData(e.currentTarget);
+    const s = (k: string) => String(f.get(k) ?? '');
+    try {
+      const res = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          packageKey: pkg,
+          addOns: [],
+          theme,
+          locales,
+          locale,
+          business: {
+            nameZhHant: s('nameZhHant'),
+            nameEn: s('nameEn'),
+            industry: s('industry'),
+            phone: s('phone'),
+            whatsapp: s('whatsapp'),
+            email: s('businessEmail'),
+            address: s('address'),
+            domain: s('domain'),
+          },
+          customer: { name: s('customerName'), email: s('customerEmail'), phone: s('customerPhone') },
+          notes: s('notes'),
+          website: s('website'),
+        }),
+      });
+      const body = (await res.json()) as Api;
+      if (!body.ok) {
+        setError(body.error.fields?.['business.nameEn'] ? t('businessName') : body.error.message);
+        setBusy(false);
+        return;
+      }
+      window.location.href = body.data.checkoutUrl ?? `/${locale}/order/${body.data.ref}`;
+    } catch {
+      setError(tc('error'));
+      setBusy(false);
+    }
+  }
+
+  return (
+    <form onSubmit={submit} className="grid gap-8 lg:grid-cols-3">
+      <div className="space-y-10 lg:col-span-2">
+        <fieldset>
+          <legend className="mb-3 text-lg font-semibold text-ink">{t('step1')}</legend>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {agency.packages.map((p) => (
+              <button type="button" key={p.key} onClick={() => selectPackage(p.key)} aria-pressed={pkg === p.key} className={`card p-4 text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary ${p.highlight ? '!border-2 !border-primary !bg-surface-alt !shadow-none' : ''} ${pkg === p.key ? 'ring-2 ring-primary' : 'hover:bg-surface-alt'}`}>
+                {p.highlight && <span className="mb-2 inline-block rounded-button bg-primary px-2 py-1 text-xs font-semibold text-on-primary">{t('popular')}</span>}
+                <span className="block font-semibold text-ink">{p.name[lang]}</span>
+                <span className="mt-1 block text-xs text-muted">{p.tagline[lang]}</span>
+                <span className="mt-1 block text-sm text-muted">{money.format(p.oneOff)} + {money.format(p.monthly)}{t('perMonth')}</span>
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
+        <section aria-labelledby="package-inclusions" className="rounded-card bg-surface-alt p-5">
+          <h2 id="package-inclusions" className="text-lg font-semibold text-ink">{selectedPackage.name[lang]} · {t('included')}</h2>
+          <ul className="mt-3 space-y-2 text-sm text-ink">{selectedPackage.includes.map(item => <li key={item.en}>{item[lang]}</li>)}</ul>
+          <p className="mt-4 text-sm text-muted">{selectedPackage.monthlyIncludes[lang]}</p>
+        </section>
+
+        <fieldset>
+          <legend className="mb-3 text-lg font-semibold text-ink">{t('step2')}</legend>
+          <div className="grid gap-3 sm:grid-cols-4">
+            {agency.themes.map((th) => (
+              <div key={th.key} className={`card p-3 ${theme === th.key ? 'ring-2 ring-primary' : ''}`}>
+                <button type="button" onClick={() => setTheme(th.key)} aria-pressed={theme === th.key} className="block w-full text-left">
+                  <span className="mb-2 block aspect-[4/3] overflow-hidden rounded-input border border-line">
+                    <Shot theme={th.key} alt="" />
+                  </span>
+                  <span className="block font-semibold text-ink">{th.name[lang]}</span>
+                  <span className="block text-xs text-muted">{th.fit[lang]}</span>
+                </button>
+                <a href={`/${locale}/templates/${th.key}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-primary">{t('openFull')} ↗</a>
+              </div>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend className="mb-3 text-lg font-semibold text-ink">{t('step3')}</legend>
+          <p className="mb-3 text-sm text-muted">{t('languageLimit', { n: selectedPackage.languageCount })}</p>
+          <div className="flex flex-wrap gap-3">
+            {LOCALE_KEYS.map((l) => (
+              <label key={l} className="flex items-center gap-2 rounded-button border border-line bg-surface px-4 py-2 text-sm text-ink">
+                <input type={pkg === 'starter' ? 'radio' : 'checkbox'} name="siteLanguages" disabled={(pkg === 'starter' && l === 'zh-Hans') || (pkg !== 'starter' && !locales.includes(l) && locales.length >= selectedPackage.languageCount)} checked={locales.includes(l)} onChange={() => setLocales((cur) => pkg === 'starter' ? [l] : (cur.includes(l) && cur.length === 1 ? cur : toggle(cur, l)))} />
+                {t(`langNames.${l}`)}
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset className="grid gap-4 sm:grid-cols-2">
+          <legend className="mb-3 text-lg font-semibold text-ink">{t('step5')}</legend>
+          <label className="block text-sm text-ink">{t('nameZh')}<input name="nameZhHant" className="field mt-1" /></label>
+          <label className="block text-sm text-ink">{t('nameEn')}<input name="nameEn" className="field mt-1" /></label>
+          <label className="block text-sm text-ink sm:col-span-2">{t('industry')}<input name="industry" className="field mt-1" /></label>
+          <label className="block text-sm text-ink">{tc('phone')}<input name="phone" type="tel" className="field mt-1" /></label>
+          <label className="block text-sm text-ink">WhatsApp<input name="whatsapp" type="tel" className="field mt-1" /></label>
+          <label className="block text-sm text-ink">{tc('email')}<input name="businessEmail" type="email" className="field mt-1" /></label>
+          <label className="block text-sm text-ink">{t('domain')}<input name="domain" placeholder="www.example.hk" className="field mt-1" /></label>
+          <label className="block text-sm text-ink sm:col-span-2">{t('address')}<input name="address" className="field mt-1" /></label>
+        </fieldset>
+
+        <fieldset className="grid gap-4 sm:grid-cols-3">
+          <legend className="mb-3 text-lg font-semibold text-ink">{t('step6')}</legend>
+          <label className="block text-sm text-ink">{t('yourName')} *<input name="customerName" required className="field mt-1" autoComplete="name" /></label>
+          <label className="block text-sm text-ink">{tc('email')} *<input name="customerEmail" type="email" required className="field mt-1" autoComplete="email" /></label>
+          <label className="block text-sm text-ink">{tc('phone')}<input name="customerPhone" type="tel" className="field mt-1" autoComplete="tel" /></label>
+          <label className="block text-sm text-ink sm:col-span-3">{t('notes')}<textarea name="notes" rows={3} className="field mt-1" /></label>
+          <div aria-hidden="true" className="absolute -left-[9999px]"><input name="website" tabIndex={-1} autoComplete="off" /></div>
+        </fieldset>
+      </div>
+
+      <aside aria-live="polite" className="lg:sticky lg:top-24 lg:self-start">
+        <div className="card p-5">
+          <h2 className="text-lg text-ink">{t('summary')}</h2>
+          <ul className="mt-4 space-y-2 text-sm">
+            {q.lines.map((l) => (
               <li key={l.key} className="flex justify-between gap-3">
                 <span className="text-ink">{l.name[lang]}{l.qty > 1 ? ` × ${l.qty}` : ''}{l.auto ? <span className="block text-xs text-muted">{t('auto')}</span> : null}</span>
                 <span className="shrink-0 text-right text-muted">{money.format(l.oneOff)}{l.monthly ? <span className="block">+{money.format(l.monthly)}</span> : null}</span>
