@@ -120,7 +120,7 @@ export const agency = {
       "en": "Manage enquiries, bookings and payments in one place."
     },
     "oneOff": 13800,
-    "monthly": 1380,
+    "monthly": 1080,
     "modules": [
       "booking",
       "payments",
