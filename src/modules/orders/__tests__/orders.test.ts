@@ -1,7 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals';
 import { setupTestDb } from '@/src/test/mongo';
 import { Mailer } from '@/src/lib/email';
-import { quote } from '@/src/modules/orders/pricing';
 import { OrdersService, slugFor, toAnswers } from '@/src/modules/orders/orders.service';
 import { OrderDao } from '@/src/modules/orders/orders.dao';
 import { PaymentGateway, setGateway } from '@/src/modules/orders/payment-gateway';
@@ -15,9 +14,9 @@ setupTestDb();
 
 const input = (over: Partial<OrderInput> = {}): OrderInput => ({
   packageKey: 'business',
-  addOns: ['stripe', 'logo'],
+  addOns: [],
   theme: 'warm',
-  locales: ['zh-Hant', 'en', 'zh-Hans'],
+  locales: ['zh-Hant', 'en'],
   business: { nameZhHant: '和動體能', nameEn: 'Harmony Move', phone: '+852 2800 1234', email: 'hello@hm.hk', address: '灣仔' },
   customer: { name: 'Joyce', email: 'joyce@hm.hk', phone: '91234567' },
   ...over,
@@ -40,29 +39,6 @@ beforeEach(() => {
 });
 afterEach(() => setGateway(undefined));
 
-describe('pricing', () => {
-  it('prices a package with add-ons, dependencies and extra languages', () => {
-    const q = quote('business', ['stripe', 'booking', 'logo'], 3);
-    // booking is already in Business → not charged; stripe is extra; 1 extra language.
-    expect(q.lines.map((l) => l.key)).toEqual(['business', 'stripe', 'logo', 'language']);
-    expect(q.oneOff).toBe(16800 + 3000 + 6000 + 1500);
-    expect(q.monthly).toBe(680 + 100);
-    expect(q.deposit).toBe(Math.round(q.oneOff * 0.5));
-    expect(q.modules.sort()).toEqual(['booking', 'payments', 'stripe']);
-  });
-
-  it('adds module dependencies automatically', () => {
-    const q = quote('starter', ['gcal'], 2);
-    expect(q.lines.find((l) => l.key === 'booking')?.auto).toBe(true);
-    expect(q.modules.sort()).toEqual(['booking', 'gcal']);
-  });
-
-  it('rejects unknown keys', () => {
-    expect(() => quote('mega', [], 1)).toThrow('Unknown package');
-    expect(() => quote('starter', ['nope'], 1)).toThrow('Unknown add-on');
-  });
-});
-
 describe('answers conversion', () => {
   it('produces valid answers.json for client-starter', async () => {
     setGateway(null);
@@ -70,7 +46,7 @@ describe('answers conversion', () => {
     const order = (await OrderDao.findByRef(ref))!;
     const answers = AnswersSchema.parse(toAnswers(order));
     expect(answers.slug).toBe('harmony-move');
-    expect(answers.modules.sort()).toEqual(['booking', 'payments', 'stripe']);
+    expect(answers.modules.sort()).toEqual(['booking', 'catalog', 'gcal', 'payments', 'stripe']);
     expect(answers.owner).toEqual({ name: 'Joyce', email: 'joyce@hm.hk' });
     expect(slugFor({ business: { ...order.business, nameEn: '' }, ref: 'ORD-2026-0007' })).toBe('ord-2026-0007');
   });

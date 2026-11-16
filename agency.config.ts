@@ -20,6 +20,9 @@ export type Package = {
   includes: Text[];
   deliveryDays: number;
   highlight?: boolean;
+  languageCount: number;
+  accounts: number;
+  monthlyIncludes: Text;
 };
 
 export type AddOn = {
@@ -64,94 +67,229 @@ export const agency = {
     { key: 'pets', category: 'life', name: { 'zh-Hant': '寵物生活', en: 'Pets' }, fit: { 'zh-Hant': '寵物美容、獸醫、寵物店', en: 'Pet grooming, vets, pet shops' } },
   ] satisfies { key: string; category: TemplateCategory; name: Text; fit: Text }[],
   packages: [
-    {
-      key: 'starter',
-      name: { 'zh-Hant': '起步網站', en: 'Starter' },
-      tagline: { 'zh-Hant': '專業網站 + 客戶名單', en: 'A professional site with a simple CRM' },
-      oneOff: 8800,
-      monthly: 380,
-      modules: [],
-      deliveryDays: 7,
-      includes: [
-        { 'zh-Hant': '5 個主頁區塊（服務、案例、關於、聯絡）', en: '5 home sections (services, work, about, contact)' },
-        { 'zh-Hant': '2 種語言', en: '2 languages' },
-        { 'zh-Hant': '聯絡表單 + WhatsApp 按鈕', en: 'Contact form + WhatsApp button' },
-        { 'zh-Hant': '客戶管理、Excel 匯入匯出', en: 'Contacts CRM, Excel import/export' },
-        { 'zh-Hant': '寄存、SSL、每日備份', en: 'Hosting, SSL, daily backups' },
-      ],
+  {
+    "key": "starter",
+    "name": {
+      "zh-Hant": "起步網站",
+      "en": "Starter"
     },
-    {
-      key: 'business',
-      name: { 'zh-Hant': '生意網站', en: 'Business' },
-      tagline: { 'zh-Hant': '網上預約 + 收款收據', en: 'Online booking, payments and receipts' },
-      oneOff: 16800,
-      monthly: 680,
-      modules: ['booking', 'payments'],
-      deliveryDays: 14,
-      highlight: true,
-      includes: [
-        { 'zh-Hant': '起步網站全部功能', en: 'Everything in Starter' },
-        { 'zh-Hant': '網上預約（服務、員工、休假）', en: 'Online booking (services, staff, time off)' },
-        { 'zh-Hant': '收款記錄 + 中英收據', en: 'Payment records + bilingual receipts' },
-        { 'zh-Hant': '預約確認電郵', en: 'Booking confirmation emails' },
-        { 'zh-Hant': '員工帳號及權限', en: 'Staff accounts and roles' },
-      ],
+    "tagline": {
+      "zh-Hant": "建立基本網上形象，方便客人搵到你。",
+      "en": "A simple online presence so customers can find you."
     },
-    {
-      key: 'pro',
-      name: { 'zh-Hant': '專業全套', en: 'Pro' },
-      tagline: { 'zh-Hant': '網上付款 + 產品目錄 + 日曆同步', en: 'Online payments, catalogue and calendar sync' },
-      oneOff: 28800,
-      monthly: 1280,
-      modules: ['booking', 'payments', 'stripe', 'catalog', 'gcal'],
-      deliveryDays: 21,
-      includes: [
-        { 'zh-Hant': '生意網站全部功能', en: 'Everything in Business' },
-        { 'zh-Hant': 'Stripe 網上付款連結', en: 'Stripe payment links' },
-        { 'zh-Hant': '產品目錄 + 查詢報價', en: 'Product catalogue + quote requests' },
-        { 'zh-Hant': 'Google Calendar 同步', en: 'Google Calendar sync' },
-        { 'zh-Hant': '3 種語言', en: '3 languages' },
-      ],
+    "oneOff": 7800,
+    "monthly": 280,
+    "modules": [],
+    "deliveryDays": 10,
+    "languageCount": 1,
+    "accounts": 1,
+    "includes": [
+      {
+        "zh-Hant": "單頁範本網站，最多 5 個內容區塊",
+        "en": "One-page template site, up to 5 sections"
+      },
+      {
+        "zh-Hant": "1 種語言：繁體中文或英文",
+        "en": "1 language: Traditional Chinese or English"
+      },
+      {
+        "zh-Hant": "套用 Logo、品牌顏色；手機及電腦版面",
+        "en": "Your logo and colours; mobile and desktop layouts"
+      },
+      {
+        "zh-Hant": "聯絡表單、查詢電郵、WhatsApp 按鈕及地圖",
+        "en": "Contact form, enquiry emails, WhatsApp button and map"
+      },
+      {
+        "zh-Hant": "內容管理後台，1 個管理員帳號",
+        "en": "Content editor with 1 administrator account"
+      },
+      {
+        "zh-Hant": "基本 SEO：標題、描述及網站地圖",
+        "en": "Basic SEO: titles, descriptions and sitemap"
+      },
+      {
+        "zh-Hant": "1 輪整合修改及 30 分鐘遙距教學",
+        "en": "1 revision round and 30-minute remote training"
+      },
+      {
+        "zh-Hant": "你提供文字及相片，我哋排版上載",
+        "en": "You supply copy and photos; we lay out and upload"
+      },
+      {
+        "zh-Hant": "不包含 CRM、預約或網上付款",
+        "en": "CRM, booking and online payments are not included"
+      }
+    ],
+    "monthlyIncludes": {
+      "zh-Hant": "寄存、SSL、每日備份、保安更新及系統故障處理；不包含日常內容代改。",
+      "en": "Hosting, SSL, daily backups, security updates and fault fixes. Content editing is not included."
+    }
+  },
+  {
+    "key": "business",
+    "name": {
+      "zh-Hant": "生意網站",
+      "en": "Business"
     },
-  ] satisfies Package[],
-  addOns: [
-    { key: 'booking', group: 'feature', module: 'booking', oneOff: 5000, monthly: 200, name: { 'zh-Hant': '網上預約', en: 'Online booking' }, description: { 'zh-Hant': '客人自己揀服務同時間', en: 'Customers pick a service and time themselves' } },
-    { key: 'payments', group: 'feature', module: 'payments', oneOff: 3000, monthly: 100, name: { 'zh-Hant': '收款及收據', en: 'Payments & receipts' }, description: { 'zh-Hant': '記錄收款，列印中英收據', en: 'Record payments, print bilingual receipts' } },
-    { key: 'stripe', group: 'feature', module: 'stripe', oneOff: 3000, monthly: 100, name: { 'zh-Hant': 'Stripe 網上付款', en: 'Stripe online payments' }, description: { 'zh-Hant': '發付款連結，信用卡 / Apple Pay 自動入賬', en: 'Send payment links; card / Apple Pay recorded automatically' } },
-    { key: 'gcal', group: 'feature', module: 'gcal', oneOff: 1500, monthly: 0, name: { 'zh-Hant': 'Google Calendar 同步', en: 'Google Calendar sync' }, description: { 'zh-Hant': '預約自動出現喺你嘅日曆', en: 'Bookings appear in your calendar' } },
-    { key: 'catalog', group: 'feature', module: 'catalog', oneOff: 4000, monthly: 100, name: { 'zh-Hant': '產品目錄', en: 'Product catalogue' }, description: { 'zh-Hant': '產品、規格、查詢報價', en: 'Products, specs, quote requests' } },
-    { key: 'mobile', group: 'feature', module: 'mobile', oneOff: 38000, monthly: 800, name: { 'zh-Hant': '手機 App（iOS + Android）', en: 'Mobile app (iOS + Android)' }, description: { 'zh-Hant': '同網站共用資料，包上架', en: 'Shares data with the site; store submission included' } },
-    { key: 'language', group: 'content', oneOff: 1500, monthly: 0, perUnit: { 'zh-Hant': '每種語言', en: 'per language' }, name: { 'zh-Hant': '額外語言', en: 'Extra language' }, description: { 'zh-Hant': '翻譯及上載全站內容', en: 'Translate and load all site copy' } },
-    { key: 'copywriting', group: 'content', oneOff: 2500, monthly: 0, name: { 'zh-Hant': '文案撰寫', en: 'Copywriting' }, description: { 'zh-Hant': '全站文案，以你嘅語氣撰寫', en: 'All site copy, written in your voice' } },
-    { key: 'photography', group: 'content', oneOff: 4500, monthly: 0, name: { 'zh-Hant': '半日攝影', en: 'Half-day photo shoot' }, description: { 'zh-Hant': '店舖、團隊、產品相', en: 'Premises, team and product photos' } },
-    { key: 'migration', group: 'content', oneOff: 2000, monthly: 0, name: { 'zh-Hant': 'Excel 資料搬遷', en: 'Excel data migration' }, description: { 'zh-Hant': '整理並匯入你現有嘅客戶名單', en: 'Clean and import your existing client list' } },
-    { key: 'logo', group: 'brand', oneOff: 6000, monthly: 0, name: { 'zh-Hant': 'Logo 及品牌套件', en: 'Logo & brand kit' }, description: { 'zh-Hant': 'Logo、顏色、字體、名片檔', en: 'Logo, colours, fonts, name-card files' } },
-    { key: 'domain-email', group: 'brand', oneOff: 1200, monthly: 0, name: { 'zh-Hant': '網域 + 公司電郵設定', en: 'Domain + business email setup' }, description: { 'zh-Hant': '登記網域，設定 Google Workspace / Microsoft 365', en: 'Register the domain, set up Google Workspace / Microsoft 365' } },
-    { key: 'seo', group: 'search', oneOff: 2500, monthly: 0, name: { 'zh-Hant': 'SEO 基礎設定 + Google 商家檔案', en: 'SEO setup + Google Business Profile' }, description: { 'zh-Hant': '關鍵字研究、Search Console、網站地圖、地圖商家', en: 'Keyword research, Search Console, sitemap, Maps listing' } },
-    { key: 'ads', group: 'ads', oneOff: 0, monthly: 2800, name: { 'zh-Hant': '廣告代操（Google / Meta）', en: 'Ads management (Google / Meta)' }, description: { 'zh-Hant': '每月優化及報告（廣告費另計）', en: 'Monthly optimisation + report (ad spend extra)' } },
-    { key: 'social', group: 'social', oneOff: 0, monthly: 3800, name: { 'zh-Hant': 'IG / Facebook 內容', en: 'IG / Facebook content' }, description: { 'zh-Hant': '每月 12 個帖文設計及文案', en: '12 designed posts a month with captions' } },
-
-    // --- Search: SEO & GEO
-    { key: 'seo-monthly', group: 'search', oneOff: 0, monthly: 4800, name: { 'zh-Hant': 'SEO 月度優化', en: 'Monthly SEO' }, description: { 'zh-Hant': '關鍵字排名追蹤、技術修正、每月 2 篇 SEO 文章', en: 'Rank tracking, technical fixes, 2 SEO articles a month' } },
-    { key: 'geo', group: 'search', oneOff: 3800, monthly: 1800, name: { 'zh-Hant': 'GEO（AI 搜尋優化）', en: 'GEO (AI search optimisation)' }, description: { 'zh-Hant': '令 ChatGPT、Gemini、Perplexity 同 Google AI 概覽都搵到你：結構化資料、FAQ 內容、品牌資料一致', en: 'Get found in ChatGPT, Gemini, Perplexity and Google AI Overviews: structured data, FAQ content, consistent brand facts' } },
-    { key: 'reviews', group: 'search', oneOff: 0, monthly: 800, name: { 'zh-Hant': 'Google 評價管理', en: 'Google review management' }, description: { 'zh-Hant': '自動邀請客人留評價、回覆範本、每月評價報告', en: 'Automatic review requests, reply templates, monthly review report' } },
-    // --- Social media
-    { key: 'reels', group: 'social', oneOff: 0, monthly: 4800, name: { 'zh-Hant': '短片 Reels / 小紅書 / TikTok', en: 'Short video (Reels / RED / TikTok)' }, description: { 'zh-Hant': '每月 4 條短片：腳本、拍攝剪接、字幕', en: '4 short videos a month: script, shoot and edit, subtitles' } },
-    { key: 'community', group: 'social', oneOff: 0, monthly: 2200, name: { 'zh-Hant': '社群管理', en: 'Community management' }, description: { 'zh-Hant': '工作日回覆留言同 DM，查詢直接入 CRM', en: 'Replies to comments and DMs on weekdays; enquiries go straight into the CRM' } },
-    { key: 'kol', group: 'social', oneOff: 3000, monthly: 0, name: { 'zh-Hant': 'KOL / 網紅合作', en: 'KOL / influencer campaign' }, description: { 'zh-Hant': '揀選、聯絡、跟進同成效報告（KOL 費用另計）', en: 'Selection, outreach, follow-up and results report (KOL fees extra)' } },
-    // --- Ads
-    { key: 'landing', group: 'ads', oneOff: 3500, monthly: 0, perUnit: { 'zh-Hant': '每頁', en: 'per page' }, name: { 'zh-Hant': '廣告著陸頁', en: 'Ad landing page' }, description: { 'zh-Hant': '為單一廣告活動設計，表單直接入 CRM', en: 'Built for one campaign, with the form feeding the CRM' } },
-    { key: 'remarketing', group: 'ads', oneOff: 1800, monthly: 0, name: { 'zh-Hant': '再營銷設定', en: 'Remarketing setup' }, description: { 'zh-Hant': '向睇過網站嘅人再次展示廣告（Google + Meta）', en: 'Show ads again to people who visited the site (Google + Meta)' } },
-    // --- Data & automation
-    { key: 'analytics', group: 'data', oneOff: 2800, monthly: 0, name: { 'zh-Hant': '數據追蹤設定', en: 'Analytics & tracking setup' }, description: { 'zh-Hant': 'GA4、Google Tag Manager、Meta Pixel、查詢同預約轉換事件', en: 'GA4, Google Tag Manager, Meta Pixel, enquiry and booking conversions' } },
-    { key: 'dashboard', group: 'data', oneOff: 0, monthly: 1200, name: { 'zh-Hant': 'KPI 儀表板 + 每月報告', en: 'KPI dashboard + monthly report' }, description: { 'zh-Hant': '流量、查詢、轉換率、獲客成本、廣告回報、排名，一頁睇晒', en: 'Traffic, leads, conversion rate, cost per customer, ROAS and rankings on one page' } },
-    { key: 'cro', group: 'data', oneOff: 0, monthly: 2500, name: { 'zh-Hant': '轉換率優化', en: 'Conversion rate optimisation' }, description: { 'zh-Hant': 'A/B 測試標題、按鈕同表單，每月一輪改善', en: 'A/B tests on headlines, buttons and forms, one round a month' } },
-    { key: 'edm', group: 'data', oneOff: 0, monthly: 1500, name: { 'zh-Hant': '電郵 / WhatsApp 推廣', en: 'Email / WhatsApp campaigns' }, description: { 'zh-Hant': '每月 2 次推廣，用 CRM 名單分組發送', en: '2 campaigns a month, sent to CRM segments' } },
-    { key: 'automation', group: 'data', oneOff: 3500, monthly: 0, name: { 'zh-Hant': '營銷自動化', en: 'Marketing automation' }, description: { 'zh-Hant': '新查詢自動跟進、生日優惠、舊客喚醒', en: 'Automatic follow-up on new leads, birthday offers, win-back messages' } },
-    { key: 'ai-chat', group: 'data', oneOff: 4800, monthly: 600, name: { 'zh-Hant': 'AI 客服助手', en: 'AI chat assistant' }, description: { 'zh-Hant': '喺你網站 24 小時解答查詢、推介服務，對話記錄入 CRM', en: 'Answers questions on your site around the clock and recommends services; chats logged in the CRM' } },
-    // --- Content
-    { key: 'video', group: 'content', oneOff: 8800, monthly: 0, name: { 'zh-Hant': '品牌宣傳短片', en: 'Brand video' }, description: { 'zh-Hant': '1 分鐘宣傳片，半日拍攝連剪接', en: '1-minute promo, half-day shoot plus edit' } },
-    { key: 'care', group: 'care', oneOff: 0, monthly: 600, name: { 'zh-Hant': '優先支援 + 每月更新', en: 'Priority support + monthly updates' }, description: { 'zh-Hant': '每月 4 次內容修改，1 個工作天內回覆', en: '4 content edits a month, 1-business-day response' } },
-    { key: 'training', group: 'care', oneOff: 1200, monthly: 0, name: { 'zh-Hant': '員工培訓（2 小時）', en: 'Staff training (2 h)' }, description: { 'zh-Hant': '教識你同員工用後台', en: 'Hands-on back-office training for your team' } },
-  ] satisfies AddOn[],
+    "tagline": {
+      "zh-Hant": "查詢、預約、付款，一個後台處理。",
+      "en": "Manage enquiries, bookings and payments in one place."
+    },
+    "oneOff": 12800,
+    "monthly": 580,
+    "modules": [
+      "booking",
+      "payments",
+      "stripe",
+      "catalog",
+      "gcal"
+    ],
+    "deliveryDays": 21,
+    "languageCount": 2,
+    "accounts": 5,
+    "highlight": true,
+    "includes": [
+      {
+        "zh-Hant": "起步網站功能，升級至最多 5 個獨立內容頁",
+        "en": "Starter features, expanded to up to 5 content pages"
+      },
+      {
+        "zh-Hant": "繁體中文及英文雙語；品牌化範本調整",
+        "en": "Traditional Chinese and English; branded template styling"
+      },
+      {
+        "zh-Hant": "基本文字整理及潤飾，2 輪整合修改",
+        "en": "Copy organisation and light editing; 2 revision rounds"
+      },
+      {
+        "zh-Hant": "CRM 客戶名單、查詢紀錄、備註及 Excel 匯入匯出",
+        "en": "CRM contacts, enquiries, notes and Excel import/export"
+      },
+      {
+        "zh-Hant": "網上預約、員工時間表、休假及確認電郵",
+        "en": "Booking, staff schedules, time off and confirmation emails"
+      },
+      {
+        "zh-Hant": "Google Calendar 單向同步，最多 5 個日曆",
+        "en": "One-way Google Calendar sync, up to 5 calendars"
+      },
+      {
+        "zh-Hant": "Stripe 付款連結、狀態同步、收款紀錄及中英收據",
+        "en": "Stripe payment links, status sync, records and bilingual receipts"
+      },
+      {
+        "zh-Hant": "產品／服務目錄及詢價，首次代上載最多 20 項",
+        "en": "Catalogue and quote requests; initial upload of up to 20 items"
+      },
+      {
+        "zh-Hant": "最多 5 個後台帳號；首次代設 10 項服務及 5 位員工",
+        "en": "Up to 5 accounts; setup of 10 services and 5 staff"
+      },
+      {
+        "zh-Hant": "GA4、Search Console、轉換追蹤及商家檔案設定協助",
+        "en": "GA4, Search Console, conversion tracking and Business Profile setup help"
+      },
+      {
+        "zh-Hant": "基本結構化資料及最多 10 組 FAQ",
+        "en": "Basic structured data and up to 10 FAQs"
+      },
+      {
+        "zh-Hant": "1 小時遙距培訓；上線後 30 日內一次內容微調",
+        "en": "1-hour remote training; one content adjustment within 30 days of launch"
+      }
+    ],
+    "monthlyIncludes": {
+      "zh-Hant": "包含起步方案所有維護、營運系統使用，以及每月最多 30 分鐘現有內容更新。",
+      "en": "Starter maintenance, operating system access and up to 30 minutes of existing-content updates each month."
+    }
+  },
+  {
+    "key": "pro",
+    "name": {
+      "zh-Hant": "專業全套",
+      "en": "Pro"
+    },
+    "tagline": {
+      "zh-Hant": "由品牌呈現到日常更新，交俾我哋跟進。",
+      "en": "From brand presentation to ongoing updates, we take care of it."
+    },
+    "oneOff": 28800,
+    "monthly": 1280,
+    "modules": [
+      "booking",
+      "payments",
+      "stripe",
+      "catalog",
+      "gcal"
+    ],
+    "deliveryDays": 30,
+    "languageCount": 3,
+    "accounts": 10,
+    "includes": [
+      {
+        "zh-Hant": "生意網站全部功能，升級至最多 10 個內容頁",
+        "en": "All Business features, expanded to up to 10 content pages"
+      },
+      {
+        "zh-Hant": "專屬首頁及主要內頁視覺設計，以現有系統製作",
+        "en": "Tailored homepage and key-page visual design on our existing system"
+      },
+      {
+        "zh-Hant": "繁體、簡體及英文三語",
+        "en": "Traditional Chinese, Simplified Chinese and English"
+      },
+      {
+        "zh-Hant": "一次品牌訪談、文案及三語整理，最多 6,000 中文字及對應譯文",
+        "en": "Brand interview, copywriting and three-language content; up to 6,000 Chinese characters plus translations"
+      },
+      {
+        "zh-Hant": "3 輪整合修改",
+        "en": "3 consolidated revision rounds"
+      },
+      {
+        "zh-Hant": "一次香港單一地點 3 小時攝影，15 張精修相片",
+        "en": "One 3-hour shoot at one Hong Kong location; 15 retouched photos"
+      },
+      {
+        "zh-Hant": "首次代上載最多 50 項產品／服務；整理匯入 5,000 筆客戶資料",
+        "en": "Initial upload of 50 catalogue items; clean and import 5,000 contacts"
+      },
+      {
+        "zh-Hant": "最多 10 個帳號；首次代設 20 項服務及 10 位員工",
+        "en": "Up to 10 accounts; setup of 20 services and 10 staff"
+      },
+      {
+        "zh-Hant": "最多 3 條標準電郵自動跟進流程",
+        "en": "Up to 3 standard automated email follow-up workflows"
+      },
+      {
+        "zh-Hant": "AI 網站客服，每月包含 500 次回覆",
+        "en": "Website AI assistant with 500 replies per month"
+      },
+      {
+        "zh-Hant": "關鍵字研究、主要頁面 SEO、FAQ 及品牌資料整理",
+        "en": "Keyword research, key-page SEO, FAQs and brand information"
+      },
+      {
+        "zh-Hant": "數據儀表板及每季一次 30 分鐘成效檢視",
+        "en": "Analytics dashboard and a 30-minute quarterly review"
+      },
+      {
+        "zh-Hant": "指定服務聯絡人；工作日 1 個工作天內首次回覆",
+        "en": "Named service contact; first response within 1 business day"
+      },
+      {
+        "zh-Hant": "兩次各 1 小時員工培訓",
+        "en": "Two 1-hour staff training sessions"
+      }
+    ],
+    "monthlyIncludes": {
+      "zh-Hant": "包含生意方案所有維護、AI 客服指定用量、數據儀表板、季度檢視，以及每月最多 90 分鐘內容更新或小幅版面調整。",
+      "en": "Business maintenance, included AI usage, analytics dashboard, quarterly reviews and up to 90 minutes of content updates or minor layout changes each month."
+    }
+  }
+] satisfies Package[],
+  // Legacy orders retain their saved quotes; new orders use fixed packages only.
+  addOns: [] as AddOn[],
 };

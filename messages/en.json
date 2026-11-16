@@ -92,12 +92,12 @@
     "fit": "Best for",
     "openFull": "Open full preview",
     "choose": "Choose this",
-    "pricingTitle": "Pricing",
-    "pricingSub": "One-off build fee + monthly plan (hosting, backups, security updates). Every plan includes three months of free edits.",
+    "pricingTitle": "Website plans and pricing",
+    "pricingSub": "Three complete packages. One build fee plus a clear monthly fee for hosting, backups, security and the services listed in your plan.",
     "perMonth": "/ month",
     "oneOff": "one-off",
     "delivery": "About {n} working days",
-    "popular": "Most popular",
+    "popular": "Best value",
     "addOnsTitle": "Add-ons",
     "groups": {
       "feature": "Website features",
@@ -115,9 +115,8 @@
     "step1": "1. Plan",
     "step2": "2. Style",
     "step3": "3. Languages",
-    "step4": "4. Add-ons",
-    "step5": "5. Your business",
-    "step6": "6. Contact person",
+    "step5": "4. Business details",
+    "step6": "5. Contact person",
     "nameZh": "Business name (Chinese)",
     "nameEn": "Business name (English)",
     "industry": "Industry / main services",
@@ -157,6 +156,8 @@
     "businessName": "Please enter a business name",
     "auto": "added automatically",
     "address": "Address",
-    "termsNoteNoDeposit": "By ordering you agree to the prices above. After we confirm, we will send a formal quote and payment details."
+    "termsNoteNoDeposit": "By ordering you agree to the prices above. After we confirm, we will send a formal quote and payment details.",
+    "languageLimit": "Choose up to {n} language(s) included in your plan. Upgrade for more languages; no automatic extra charges.",
+    "packageFeeNote": "Monthly fees start at launch. Domain, business email, payment processing, advertising and third-party messaging fees are separate. Extra work requires an agreed quote."
   }
 }

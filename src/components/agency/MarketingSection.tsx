@@ -1,29 +1,11 @@
 import { Link } from '@/src/i18n/navigation';
-import { agency, type AddOn } from '@/agency.config';
 import { copy, type Lang } from './home-copy';
 import { Icon } from './visuals';
 
-const hkd = (n: number) => `HK$${n.toLocaleString('en-US')}`;
 
-/**
- * Cheapest entry price among some add-ons, as "HK$2,500 起" or "HK$800／月起".
- * One-off prices win over monthly ones when both exist, since they are the
- * easier first step for a customer.
- */
-export function fromPrice(keys: string[], lang: Lang): string {
-  const items = (agency.addOns as AddOn[]).filter((a) => keys.includes(a.key));
-  const m = copy.marketing;
-  const oneOffs = items.filter((a) => a.oneOff > 0).map((a) => a.oneOff);
-  const monthlies = items.filter((a) => a.oneOff === 0 && a.monthly > 0).map((a) => a.monthly);
-  if (oneOffs.length) {
-    const v = hkd(Math.min(...oneOffs));
-    return lang === 'en' ? `${m.from.en} ${v}` : `${v} ${m.from['zh-Hant']}`;
-  }
-  if (monthlies.length) {
-    const v = `${hkd(Math.min(...monthlies))}${m.perMonth[lang]}`;
-    return lang === 'en' ? `${m.from.en} ${v}` : `${v}${m.from['zh-Hant']}`;
-  }
-  return '';
+/** Services outside a package are scoped before any charge. */
+export function fromPrice(_keys: string[], lang: Lang): string {
+  return lang === 'en' ? 'See package inclusions or request a quote' : '按方案包含範圍提供，額外需要另行報價';
 }
 
 /** Home page band: the marketing services beyond website + CRM. */

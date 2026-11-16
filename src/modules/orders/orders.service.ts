@@ -1,6 +1,6 @@
 import { ObjectId, WithId } from 'mongodb';
 import { parseInput } from '@/src/lib/api';
-import { AppError, ConflictError, NotFoundError } from '@/src/lib/errors';
+import { AppError, ConflictError, NotFoundError, ValidationError } from '@/src/lib/errors';
 import { CrmService } from '@/src/modules/crm/crm.service';
 import { PaymentsService } from '@/src/modules/payments/payments.service';
 import { AnswersInput } from '@/src/lib/answers';
@@ -98,6 +98,9 @@ export class OrdersService {
     if (data.locales[0] !== 'en' && !data.business.nameZhHant) data.business.nameZhHant = data.business.nameEn;
 
     const q = quote(data.packageKey, data.addOns, data.locales.length);
+    if (data.packageKey === 'starter' && data.locales.includes('zh-Hans')) {
+      throw new ValidationError('起步方案只提供繁體中文或英文。 / Starter supports Traditional Chinese or English.');
+    }
     const { contact } = await CrmService.findOrCreateContact({
       name: data.customer.name,
       email: data.customer.email,
