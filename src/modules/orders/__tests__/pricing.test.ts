@@ -3,9 +3,9 @@ import { quote } from '../pricing';
 
 describe('fixed package quotes', () => {
   it.each([
-    ['starter', 1, 7800, 280, 3900],
-    ['business', 2, 12800, 580, 6400],
-    ['pro', 3, 28800, 1280, 14400],
+    ['starter', 1, 9800, 680, 4900],
+    ['business', 2, 13800, 1380, 6900],
+    ['pro', 3, 28800, 1880, 14400],
   ] as const)('%s charges exactly the published package and deposit', (key, languages, oneOff, monthly, deposit) => {
     const result = quote(key, [], languages);
     expect(result).toMatchObject({ packageKey: key, oneOff, monthly, deposit, currency: 'HKD' });

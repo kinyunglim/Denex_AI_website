@@ -4,12 +4,15 @@ import { buildSystemPrompt } from '../assistant.prompt';
 import { AssistantService } from '../assistant.service';
 
 describe('assistant prompt', () => {
-  it('lists every plan, add-on and style with prices from agency.config', () => {
+  it('lists every plan and style with prices from agency.config', () => {
     const prompt = buildSystemPrompt('/en');
     expect(prompt).not.toContain('{lang}');
     expect(prompt).toContain('/en/order');
-    for (const p of agency.packages) expect(prompt).toContain(`HK$${p.oneOff.toLocaleString('en-US')}`);
-    for (const a of agency.addOns) expect(prompt).toContain(a.name.en);
+    for (const p of agency.packages) {
+      expect(prompt).toContain(`HK$${p.oneOff.toLocaleString('en-US')}`);
+      expect(prompt).toContain(`HK$${p.monthly.toLocaleString('en-US')}/month`);
+      expect(prompt).toContain(p.monthlyIncludes.en);
+    }
     for (const t of agency.themes) expect(prompt).toContain(`key: ${t.key}`);
   });
 

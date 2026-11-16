@@ -98,7 +98,6 @@
     "oneOff": "一次性",
     "delivery": "約 {n} 個工作天交付",
     "popular": "最抵之選",
-    "addOnsTitle": "加購服務",
     "groups": {
       "feature": "網站功能",
       "search": "SEO 及 GEO",
@@ -149,7 +148,7 @@
     "backHome": "返回主頁",
     "langNames": {
       "zh-Hant": "繁體中文",
-      "zh-Hans": "简体中文",
+      "zh-Hans": "簡體中文",
       "en": "English"
     },
     "required": "必填",

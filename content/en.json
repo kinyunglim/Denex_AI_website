@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "Websites · Booking · CRM",
-    "title": "A website that actually runs your business, in two weeks",
-    "subtitle": "Customers book, enquire and pay directly, and every one of them lands in your client list. Try the templates first; order when you're happy.",
+    "title": "A website for your next stage of business",
+    "subtitle": "Choose Starter for a simple online presence, Business for booking, payments and CRM, or Pro for tailored design and managed support.",
     "cta": "Book a free 30-minute call",
     "image": ""
   },
@@ -10,19 +10,19 @@
     "title": "What we build",
     "items": [
       {
-        "title": "Business website",
-        "description": "Traditional Chinese / English / Simplified Chinese, mobile-first, with SEO and Google Business Profile.",
-        "price": "From HK$8,800"
+        "title": "Starter",
+        "description": "A simple online presence so customers can find you.",
+        "price": "HK$9,800 one-time + HK$680/month"
       },
       {
-        "title": "Online booking & payments",
-        "description": "Customers pick their own time; you see the whole week in one screen. Payments issue receipts automatically.",
-        "price": "From HK$16,800"
+        "title": "Business",
+        "description": "Manage enquiries, bookings and payments in one place.",
+        "price": "HK$13,800 one-time + HK$1,380/month"
       },
       {
-        "title": "Client management (CRM)",
-        "description": "Import your Excel list in one go; every enquiry, booking and payment per client on one page.",
-        "price": "Included in every plan"
+        "title": "Pro",
+        "description": "From brand presentation to ongoing updates, we take care of it.",
+        "price": "HK$28,800 one-time + HK$1,880/month"
       }
     ]
   },
@@ -48,7 +48,7 @@
   },
   "about": {
     "title": "How it works",
-    "body": "1. Try the four styles on the Templates page.\n2. Pick a plan and add-ons and order online (the deposit is only charged after we confirm).\n3. We generate your site from our proven system, then tailor it with your copy and photos.\n4. We train your team before launch; hosting, backups and security updates are covered monthly.",
+    "body": "1. Try a style on the Templates page.\n2. Choose one of three complete packages and the languages it includes.\n3. We confirm the scope, prepare your content and build your site.\n4. We train you before launch; monthly maintenance and support follow your selected package.",
     "image": ""
   },
   "contact": {

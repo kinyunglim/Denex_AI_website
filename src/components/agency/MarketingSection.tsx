@@ -4,8 +4,12 @@ import { Icon } from './visuals';
 
 
 /** Services outside a package are scoped before any charge. */
-export function fromPrice(_keys: string[], lang: Lang): string {
-  return lang === 'en' ? 'See package inclusions or request a quote' : '按方案包含範圍提供，額外需要另行報價';
+export function serviceScope(keys: string[], lang: Lang): string {
+  const en = lang === 'en';
+  if (keys.includes('ai-chat')) return en ? 'Included in Pro' : '專業方案已包';
+  if (keys.includes('automation')) return en ? 'Email automation in Pro; WhatsApp by quote' : '專業方案包電郵自動化；WhatsApp 另報價';
+  if (keys.some(key => ['seo', 'geo', 'analytics'].includes(key))) return en ? 'Included scope varies by package' : '按方案包含範圍提供';
+  return en ? 'Separate scope and quote required' : '須另外確認範圍及報價';
 }
 
 /** Home page band: the marketing services beyond website + CRM. */
@@ -28,7 +32,7 @@ export function MarketingSection({ lang }: { lang: Lang }) {
               </span>
               <h3 className="mt-4 text-lg">{p.title[lang]}</h3>
               <p className="mt-2 text-sm leading-relaxed opacity-75">{p.body[lang]}</p>
-              <p className="text-accent-soft mt-4 text-sm font-medium">{fromPrice(p.keys, lang)}</p>
+              <p className="text-accent-soft mt-4 text-sm font-medium">{serviceScope(p.keys, lang)}</p>
             </li>
           ))}
         </ul>

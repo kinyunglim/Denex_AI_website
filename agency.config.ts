@@ -1,14 +1,11 @@
 /**
  * What the agency sells. Edit prices and wording here; the pricing page,
  * order form, price calculation and admin all read from this file.
- * Prices are HKD suggestions for the Hong Kong SME market.
+ * All published prices are in HKD.
  */
 export type ModuleKey = 'booking' | 'payments' | 'stripe' | 'gcal' | 'catalog' | 'mobile';
 export type Text = { 'zh-Hant': string; en: string };
 export type TemplateCategory = 'pro' | 'health' | 'food' | 'life';
-/** Add-on groups, in display order (pricing page, services page, order form). */
-export const ADD_ON_GROUPS = ['feature', 'search', 'social', 'ads', 'data', 'content', 'brand', 'care'] as const;
-export type AddOnGroup = (typeof ADD_ON_GROUPS)[number];
 
 export type Package = {
   key: string;
@@ -23,20 +20,6 @@ export type Package = {
   languageCount: number;
   accounts: number;
   monthlyIncludes: Text;
-};
-
-export type AddOn = {
-  key: string;
-  name: Text;
-  description: Text;
-  oneOff: number;
-  monthly: number;
-  /** Module switched on in the client's site, if any. */
-  module?: ModuleKey;
-  /** Hidden when the package already includes this module. */
-  group: AddOnGroup;
-  /** Priced per extra language, page, etc. */
-  perUnit?: Text;
 };
 
 export const agency = {
@@ -77,8 +60,8 @@ export const agency = {
       "zh-Hant": "建立基本網上形象，方便客人搵到你。",
       "en": "A simple online presence so customers can find you."
     },
-    "oneOff": 7800,
-    "monthly": 280,
+    "oneOff": 9800,
+    "monthly": 680,
     "modules": [],
     "deliveryDays": 10,
     "languageCount": 1,
@@ -136,8 +119,8 @@ export const agency = {
       "zh-Hant": "查詢、預約、付款，一個後台處理。",
       "en": "Manage enquiries, bookings and payments in one place."
     },
-    "oneOff": 12800,
-    "monthly": 580,
+    "oneOff": 13800,
+    "monthly": 1380,
     "modules": [
       "booking",
       "payments",
@@ -215,7 +198,7 @@ export const agency = {
       "en": "From brand presentation to ongoing updates, we take care of it."
     },
     "oneOff": 28800,
-    "monthly": 1280,
+    "monthly": 1880,
     "modules": [
       "booking",
       "payments",
@@ -290,6 +273,4 @@ export const agency = {
     }
   }
 ] satisfies Package[],
-  // Legacy orders retain their saved quotes; new orders use fixed packages only.
-  addOns: [] as AddOn[],
 };

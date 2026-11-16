@@ -3,8 +3,8 @@
 以 client-starter 生成，再加咗「訂單」模組。客人可以：
 
 1. **範本**（`/templates`）：即場試玩 4 款風格（iframe 嵌入 client-starter 的示範部署）
-2. **價錢**（`/pricing`）：3 個方案 + 17 項加購服務
-3. **落單**（`/order`）：揀方案、風格、語言、加購，即時計價，提交訂單（可選 Stripe 訂金預授權）
+2. **價錢**（`/pricing`）：3 個完整方案，功能及月費範圍清楚列明
+3. **落單**（`/order`）：揀方案、風格及方案包含嘅語言，即時計價，提交訂單（可選 Stripe 訂金預授權）
 4. **訂單狀態**（`/order/ORD-…`）
 
 你（擁有人）喺 `/admin/orders`：
@@ -25,7 +25,7 @@ cd ../client-starter && corepack yarn dev:preview --port 3100   # 範本預覽�
 
 | 檔案 | 內容 |
 |---|---|
-| `agency.config.ts` | 方案、加購、價錢、訂金比例（預設 50%）、範本說明 |
+| `agency.config.ts` | 方案、包含服務、價錢、訂金比例（預設 50%）、範本說明 |
 | `client.config.ts` | 你公司名稱、聯絡資料、**`notify.email`（收訂單通知，記得填）** |
 | `content/*.json` | 主頁文案 |
 

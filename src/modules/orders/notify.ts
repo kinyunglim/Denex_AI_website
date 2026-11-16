@@ -31,7 +31,7 @@ export async function notifyOrder(order: Order, event: OrderEvent, detail = ''):
   const summary = [
     `${order.ref} · ${name}`,
     `Package: ${order.packageKey} · Theme: ${order.theme} · Languages: ${order.locales.join('/')}`,
-    `Add-ons: ${order.addOns.join(', ') || '-'}`,
+    ...(order.addOns.length ? [`Legacy selections: ${order.addOns.join(', ')}`] : []),
     `Total: ${money(order.quote.oneOff, order.quote.currency)} + ${money(order.quote.monthly, order.quote.currency)}/month · Deposit ${money(order.quote.deposit, order.quote.currency)}`,
     `Customer: ${order.customer.name} · ${order.customer.email} · ${order.customer.phone}`,
     detail,

@@ -15,6 +15,8 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
   const t = await getTranslations('agency');
   const lang = locale === 'en' ? 'en' : 'zh-Hant';
   const en = lang === 'en';
+  const starter = agency.packages.find(p => p.key === 'starter')!;
+  const business = agency.packages.find(p => p.key === 'business')!;
   const money = new Intl.NumberFormat(en ? 'en-HK' : 'zh-HK', { style: 'currency', currency: agency.currency, maximumFractionDigits: 0 });
   const terms = en ? [
     ['Payment and monthly fees', 'The build fee is paid 50% on confirmation and 50% after acceptance, before launch. Monthly fees start at launch. Online deposit holds are captured only after we accept the order.'],
@@ -47,7 +49,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <p className="mt-6 text-4xl font-semibold tabular-nums text-ink">{money.format(p.oneOff)}</p>
             <p className="mt-1 text-sm text-muted">{en ? 'One-time build fee' : '一次性製作費'}</p>
             <p className="mt-3 text-lg font-semibold tabular-nums text-ink">+ {money.format(p.monthly)} {t('perMonth')}</p>
-            {p.highlight && <p className="mt-4 text-sm font-semibold text-primary">{en ? 'Just HK$5,000 more than Starter for booking, payments and CRM.' : '比起步多 HK$5,000，預約、付款、CRM 一次配齊。'}</p>}
+            {p.highlight && <p className="mt-4 text-sm font-semibold text-primary">{en ? `Compared with Starter: ${money.format(business.oneOff - starter.oneOff)} more to build and ${money.format(business.monthly - starter.monthly)} more per month, with booking, payments and CRM included.` : `比起步製作費多 ${money.format(business.oneOff - starter.oneOff)}、月費多 ${money.format(business.monthly - starter.monthly)}，預約、付款、CRM 一次配齊。`}</p>}
             <Link href={`/order?package=${p.key}`} className={`mt-6 w-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary ${p.highlight ? 'btn-primary' : 'btn-ghost'}`}>{en ? `Choose ${p.name.en}` : `選擇${p.name['zh-Hant']}`}</Link>
             <ul className="mt-7 space-y-3 text-sm leading-relaxed text-ink">
               {p.includes.map(item => <li key={item.en} className="flex items-start gap-2"><Icon name="shield" className="mt-0.5 h-4 w-4 shrink-0 text-primary" /><span>{item[lang]}</span></li>)}
@@ -63,7 +65,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
       </div>
       <section className="mt-16 border-t border-line pt-10" aria-labelledby="pricing-terms">
         <h2 id="pricing-terms" className="text-2xl text-ink">{en ? 'Clear scope, clear fees' : '收費及服務說明'}</h2>
-        <p className="mt-3 max-w-2xl text-muted">{en ? 'Common features are included in your package. Extra pages, apps or custom integrations are quoted before work begins.' : '常用功能已包入方案，毋須逐項加購。額外頁面、手機 App 或特殊整合，會先確認範圍及報價。'}</p>
+        <p className="mt-3 max-w-2xl text-muted">{en ? 'Common features are included in your package. Extra pages, apps or custom integrations are quoted before work begins.' : '常用功能已包入三個完整方案。額外頁面、手機 App 或特殊整合，會先確認範圍及報價。'}</p>
         <div className="mt-6 divide-y divide-line">
           {terms.map(([title,body]) => <details key={title} className="py-4"><summary className="cursor-pointer font-semibold text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">{title}</summary><p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{body}</p></details>)}
         </div>
